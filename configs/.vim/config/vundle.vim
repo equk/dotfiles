@@ -17,11 +17,15 @@ Bundle 'fatih/vim-go'
 Bundle 'rust-lang/rust.vim'
 Bundle 'Shougo/neocomplete.vim'
 Bundle 'ctrlpvim/ctrlp.vim'
-Bundle 'ervandew/supertab'
-Bundle 'majutsushi/tagbar'
+Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
 Bundle 'pangloss/vim-javascript'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'Yggdroot/indentLine'
+Bundle 'elzr/vim-json'
+Bundle 'hynek/vim-python-pep8-indent'
+Bundle 'cespare/vim-toml'
+Bundle 'stephpy/vim-yaml'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
