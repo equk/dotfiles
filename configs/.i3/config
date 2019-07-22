@@ -1,0 +1,214 @@
+# i3 config file (v4)
+#
+# Please see http://i3wm.org/docs/userguide.html for a complete reference!
+#
+# equilibriumuk - equk.co.uk
+#
+# configuration for 2 x Dell P2414H 1080p monitors
+
+set $mod Mod4
+
+set $Alt Mod1
+set $Win Mod4
+
+# lockscreen
+bindsym $mod+l exec xscreensaver-command -lock
+
+font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# start a terminal
+#bindsym $mod+Return exec i3-sensible-terminal
+#bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Return exec alacritty
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+# start dmenu (a program launcher)
+bindsym $mod+d exec ~/bin/dmenu_launch
+bindsym Control+space exec ~/bin/dmenu_launch
+bindsym $mod+s exec ~/bin/dmenu_launch
+
+# change focus
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+h split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen
+
+# change container layout (stacked, tabbed, toggle split)
+## bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# switch to workspace
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
+
+# set workspaces to specific monitor
+# DisplayPort-1 is left monitor
+workspace 1 output DisplayPort-1
+workspace 2 output DVI-D-0
+workspace 3 output DisplayPort-1
+workspace 4 output DVI-D-0
+workspace 5 output DisplayPort-1
+workspace 6 output DVI-D-0
+workspace 7 output DisplayPort-1
+workspace 8 output DVI-D-0
+workspace 9 output DisplayPort-1
+workspace 10 output DVI-D-0
+
+# reload i3 configuration
+bindsym $mod+Shift+c reload
+# restart i3
+bindsym $mod+Shift+r restart
+# exit i3 (logs you out of your X session)
+#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+#bindsym $mod+Shift+e exec oblogout
+bindsym $mod+Shift+E exec ~/.i3/tk_logout.py
+
+#enable alt+tab
+#bindsym $Alt+Tab focus right
+#bindsym $Alt+Shift+Tab focus left
+
+# i3-gaps
+smart_gaps on
+# gaps
+gaps inner 8
+gaps outer 0
+
+# default border setting
+for_window [class="^.*"] border normal 2pixel
+# set application specific options
+# use 'xprop' or 'xwininfo' to get window information
+for_window [class="Xfce4-terminal"] border 1pixel
+for_window [class="Google-chrome-stable"] border 1pixel
+for_window [class="Xfce4-notifyd"] floating enable, focus mode_toggle
+# for_window [class="Thunar"] floating enable
+for_window [class="Oblogout"] floating enable, border 1pixel
+for_window [class="I3-exit"] floating enable
+for_window [class="Chromium"] border 1pixel
+for_window [class="Firefox"] border 1pixel
+for_window [class="Opera"] border 1pixel
+for_window [class="Vlc"] border 1pixel
+for_window [class="Tk" title="tk_logout"] floating enable, border 1pixel
+# for_window [class="Steam" title="Friends"] floating enable, border none
+for_window [class="Thunar"] floating disable, border 1pixel
+#for_window [class="Spotify"] floating enable, border 1pixel
+# spotify fix only required for first start - once window sizing is set, can disable/comment line out
+#for_window [class="Wine"] floating enable
+for_window [class="Wine"] floating disable, border 1pixel
+for_window [class="openttd"] floating disable, border 1pixel
+for_window [class="Atom"] floating disable, border 1pixel
+for_window [class="Subl3"] floating disable, border 1pixel
+for_window [class="VirtualBox"] floating disable, border 1pixel
+for_window [class="Code"] floating disable, border 1pixel
+# linux eve online launcher (native qt)
+for_window [class="EVE"] floating disable, border 1pixel
+# linux shadowrun hongkong (native unity)
+for_window [title="SRHK"] floating disable, border 1pixel
+# linux dota 2 (windowed borderless fullscreen)
+for_window [class="dota2"] floating enable, border none, move position 0 0
+# alacritty terminal
+for_window [class="Alacritty"] floating disable, border 1pixel
+# chromiumos
+for_window [class="qemu-system-x86_64" title="QEMU \(chromiumos-0\)"] floating disable, border 1pixel
+# cloudready chromiumos
+for_window [class="qemu-system-x86_64" title="QEMU \(cloudready-0\)"] floating disable, border 1pixel
+# pheonixos
+for_window [class="qemu-system-x86_64" title="QEMU \(pheonixos-0\)"] floating disable, border 1pixel
+# windows 10
+for_window [class="qemu-system-x86_64" title="QEMU \(windows10-0\)"] floating disable, border 1pixel
+# peek (desktop recording)
+for_window [class="Peek"] floating enable
+# set all dialog windows to floating
+for_window [window_type="dialog"] floating enable
+
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+bar {
+        status_command ~/.i3/i3-conky
+        i3bar_command   i3bar
+        mode dock
+        position top
+        workspace_buttons yes
+        tray_output DisplayPort-1
+        font -*-terminus-medium-r-*-*-12-*-*-*-*-*-iso10646-*
+        colors {
+            # <bar>
+            background #222222
+            separator  #C792EA
+            statusline #999999
+
+            # <workclass>       <border> <bg> <text>
+            focused_workspace   #C792EA #8655a8 #ffffff
+            active_workspace    #565656 #444444 #ffffff
+            inactive_workspace  #373737 #222222 #888888
+            urgent_workspace    #ec7ea4 #eb709b #ffffff
+        }
+}
+
+client.focused          #C792EA #8655a8 #ffffff #eb709b
+client.focused_inactive #565656 #444444 #ffffff #666666
+client.unfocused        #373737 #222222 #888888 #444444
+client.urgent           #ec7ea4 #eb709b #ffffff #eb709b
+
+# Autostart
+exec --no-startup-id ~/.i3/autostart.sh
+exec --no-startup-id numlockx
+# start daemons
+exec --no-startup-id xscreensaver -no-splash
+exec --no-startup-id thunar --daemon
+exec --no-startup-id parcellite
+exec --no-startup-id compton -b
+# set wallpaper
+exec --no-startup-id nitrogen --restore
+# start applications
+##
+# start kalu archlinux update notifier
+exec --no-startup-id kalu
+# execute audiomixer
+exec pnmixer
+# execute redshift
+##exec --no-startup-id redshift-gtk
+

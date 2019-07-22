@@ -1,0 +1,135 @@
+{
+    // Disable telemetry
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    // Font options
+    "editor.fontSize": 14,
+    "editor.fontFamily": "Liberation Mono",
+    // Display whitespace chars for indent
+    "editor.renderWhitespace": "boundary",
+    // Theme options
+    "workbench.colorTheme": "Night Owl",
+    "workbench.activityBar.visible": false,
+    // Disable prettier on javascript
+    /*
+    "prettier.disableLanguages": [
+        "javascript",
+        "javascriptreact",
+        "vue"
+    ],
+    */
+    // ESLint
+    "eslint.autoFixOnSave": true,
+    "eslint.alwaysShowStatus": true,
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        {
+            "language": "vue",
+            "autoFix": true
+        }
+    ],
+    // Format on save
+    "editor.formatOnSave": true,
+    "[javascript]": {
+        "editor.formatOnSave": false,
+        "editor.tabSize": 2
+    },
+    "[vue]": {
+        "editor.formatOnSave": false,
+        "editor.tabSize": 2
+    },
+    "[html]": {
+        "editor.formatOnSave": false
+    },
+    "[scss]": {
+        "editor.formatOnSave": false
+    },
+    // Format Whitespace
+    "files.trimTrailingWhitespace": true,
+    "editor.trimAutoWhitespace": true,
+    // HTML Formatting
+    "html.format.wrapLineLength": 0,
+    // Rulers
+    "editor.rulers": [
+        80
+    ],
+    // Disable Word Wrap
+    "editor.wordWrap": "off",
+    // Color overrides
+    "workbench.colorCustomizations": {
+        "editor.selectionBackground": "#0066aa",
+        "editor.selectionHighlightBackground": "#991144",
+        "statusBar.background": "#007ACC",
+        "statusBar.foreground": "#ffffff",
+        "sideBar.border": "#8655a8"
+    },
+    // Cursor - 'block', 'line' or 'underline'
+    "editor.cursorStyle": "line",
+    "editor.cursorWidth": 0,
+    "editor.cursorBlinking": "blink",
+    // Highlight gutter & current line
+    "editor.renderLineHighlight": "all",
+    // Hide minimap
+    "editor.minimap.enabled": false,
+    // Use alacritty as external terminal
+    "terminal.external.linuxExec": "alacritty",
+    // Use github fonts for markdown preview
+    "markdown.preview.fontFamily": "-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol",
+    "markdown.preview.fontSize": 16,
+    // Use breadcrumbs for symbolpath
+    "breadcrumbs.enabled": true,
+    "breadcrumbs.symbolPath": "on",
+    "breadcrumbs.filePath": "off",
+    // Golang
+    "go.useLanguageServer": true,
+    "go.lintOnSave": "file",
+    "go.testOnSave": true,
+    "go.autocompleteUnimportedPackages": true,
+    // Golang Debugging
+    "go.delveConfig": {
+        "useApiV1": false,
+        "dlvLoadConfig": {
+            "followPointers": true,
+            "maxVariableRecurse": 3,
+            "maxStringLen": 64,
+            "maxArrayValues": 64,
+            "maxStructFields": -1
+        }
+    },
+    // Rust
+    "rust.unstable_features": false,
+    // Toggle menubar with Alt
+    "window.menuBarVisibility": "toggle",
+    // Enable json Settings Editor
+    "workbench.settings.editor": "json",
+    // Use Native Linux Titlebar
+    "window.titleBarStyle": "native",
+    // Ignore Extension Recommendations
+    "extensions.ignoreRecommendations": false,
+    // Use Material Icon Theme
+    "workbench.iconTheme": "material-icon-theme",
+    // Set default formatter for json
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    // Vetur vuejs
+    // disabled Vetur formatting as problematic
+    // wraping text in the middle of elements,
+    // causing space-before-function-paren errors,
+    // messing up comma-dangle by removing commas
+    // conflicting with eslint
+    "vetur.format.enable": false,
+    // Reactjs
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+    // Show git changes in gutter
+    "scm.diffDecorationsGutterWidth": 2,
+    // markdown options
+    "[markdown]": {
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": false,
+        "editor.tabSize": 2
+    }
+}

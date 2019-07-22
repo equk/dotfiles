@@ -26,7 +26,9 @@
 
 ![](./screenshots/tk_logout_07062014.png)
 
-## design
+---
+
+## script design
 
 I designed the script to copy files as an alternative to having symlinks everywhere.
 
@@ -61,7 +63,7 @@ files in `sys` relate to specific hardware.
 
     install.sh
 
-example:
+output:
 
     equk :: linux dotfiles install
     ------------------------------
@@ -81,7 +83,7 @@ example:
 
     backup.sh
 
-example:
+output:
 
     equk :: linux dotfiles backup
     -----------------------------
