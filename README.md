@@ -78,10 +78,17 @@ output:
     [+] Copying ./configs/.zsh/lib/tmux.zsh to /home/user/.zsh/lib/tmux.zsh
     [+] Copying ./configs/.zsh/lib/keyfix.zsh to /home/user/.zsh/lib/keyfix.zsh
 
+### vscode install
+
+to install vscode extensions run
+
+    cat lists/vscode_extensions.txt | xargs -n 1 code --install-extension
+
 ### vim install
 
 install Vundle and plugins
 
+    mkdir -p ~/.vim/bundle
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
     vim +PluginInstall +qall
 
