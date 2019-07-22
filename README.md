@@ -25,7 +25,7 @@ It also means I don't have symlinks across different disk mount points.
 install & backup features:
 
 - [x] create folder structure if required
-- [x] (install) prompt before overwriting existing configuration
+- [x] prompt before overwriting existing configuration
 - [x] check for changes using diff
 - [x] cli feedback for each config file
 - [x] checks user is not root
@@ -48,6 +48,27 @@ files in `sys` relate to specific hardware.
 ## install
 
     install.sh
+
+## backup
+
+    backup.sh
+
+example:
+
+    equk :: linux dotfiles backup
+    -----------------------------
+
+       git: https://github.com/equk
+       web: https://equk.co.uk
+
+    +++ copying dotfiles to /dotfiles/configs
+
+    [+] copying base files
+      [+] Copying /home/user/.bashrc
+      [+] Copying /home/user/.vimrc
+      [+] Copying /home/user/.zshrc
+      [+] Copying /home/user/.tmux.conf
+      [+] Copying /home/user/.compton.conf
 
 # Contact
 
