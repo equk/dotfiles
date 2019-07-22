@@ -1,0 +1,34 @@
+[core]
+quotepath = false
+editor = vim
+whitespace = space-before-tab,-indent-with-non-tab,trailing-space
+[color "branch"]
+current = yellow reverse
+local = yellow
+remote = green
+[color "diff"]
+meta = yellow bold
+frag = magenta bold # line info
+old = red           # deletions
+new = green         # additions
+[color "status"]
+added = yellow
+changed = green
+untracked = cyan
+[alias]
+l = log --pretty=oneline -n 20 --graph --abbrev-commit
+lg = log --color --decorate --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an (%G?)>%Creset' --abbrev-commit
+s = status -s
+# Show the diff between the latest commit and the current state
+d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+# `git di $number` shows the diff between the state `$number` revisions ago and the current state
+di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
+# Pull in remote changes for the current repository and all its submodules
+p = !"git pull; git submodule foreach git pull origin master"
+# Checkout a pull request from origin (of a github repository)
+pr = !"pr() { git fetch origin pull/$1/head:pr-$1; git checkout pr-$1; }; pr"
+# Clone a repository including all submodules
+c = clone --recursive
+# Switch to a branch, creating it if necessary
+go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
+undo = !git reset HEAD~1 --mixed

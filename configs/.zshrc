@@ -11,5 +11,9 @@ fi
 #fi
 # load everything in lib
 for config_file ($ZSH/lib/*.zsh); do
-  source $config_file
+    source $config_file
 done
+# load user config
+if [[ -r "${HOME}/.user" ]] && [[ -f "${HOME}/.user" ]]; then
+    source "${HOME}/.user"
+fi
