@@ -49,6 +49,22 @@ files in `sys` relate to specific hardware.
 
     install.sh
 
+example:
+
+    equk :: linux dotfiles install
+    ------------------------------
+
+        git: https://github.com/equk
+        web: https://equk.co.uk
+
+    +++ installing equk dotfiles
+
+    [+] Copying ./configs/.zsh/config.sh to /home/user/.zsh/config.sh
+    [+] Copying ./configs/.zsh/lib/completion.zsh to /home/user/.zsh/lib/completion.zsh
+    [+] Copying ./configs/.zsh/lib/tmux.zsh to /home/user/.zsh/lib/tmux.zsh
+    [+] Copying ./configs/.zsh/lib/keyfix.zsh to /home/user/.zsh/lib/keyfix.zsh
+
+
 ## backup
 
     backup.sh
