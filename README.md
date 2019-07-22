@@ -14,6 +14,18 @@
     GPU: AMD ATI Radeon RX Vega 56
     GPU Driver: amdgpu
 
+## screenshots
+
+![](./screenshots/linux_desktop.jpg)
+
+### i3bar conky
+
+![](./screenshots/i3bar_conky.png)
+
+### tk_logout
+
+![](./screenshots/tk_logout_07062014.png)
+
 ## design
 
 I designed the script to copy files as an alternative to having symlinks everywhere.
