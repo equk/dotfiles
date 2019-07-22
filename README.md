@@ -78,6 +78,14 @@ output:
     [+] Copying ./configs/.zsh/lib/tmux.zsh to /home/user/.zsh/lib/tmux.zsh
     [+] Copying ./configs/.zsh/lib/keyfix.zsh to /home/user/.zsh/lib/keyfix.zsh
 
+### vim install
+
+install Vundle and plugins
+
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    vim +PluginInstall +qall
+
+more info on plugins can be found in `lists/vim_plugins.md`
 
 ## backup
 
