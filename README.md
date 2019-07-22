@@ -14,3 +14,43 @@
     GPU: AMD ATI Radeon RX Vega 56
     GPU Driver: amdgpu
 
+## design
+
+I designed the script to copy files as an alternative to having symlinks everywhere.
+
+This allows me to control when I commit config changes to github (there may be times when testing settings etc).
+
+It also means I don't have symlinks across different disk mount points.
+
+install & backup features:
+
+- [x] create folder structure if required
+- [x] (install) prompt before overwriting existing configuration
+- [x] check for changes using diff
+- [x] cli feedback for each config file
+- [x] checks user is not root
+
+## folder structure
+
+    .
+    ├── backup.sh
+    ├── install.sh
+    ├── configs/
+    ├── lists/
+    └── sys/
+
+- `configs` contains config files from users `home` directory
+- `lists` contains vscode extensions list
+- `sys` contains files from linux system (eg: `/etc/`)
+
+files in `sys` relate to specific hardware.
+
+## install
+
+    install.sh
+
+# Contact
+
+Website: https://equk.co.uk
+
+Twitter: [@equilibriumuk](https://twitter.com/equilibriumuk)
