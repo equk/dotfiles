@@ -16,7 +16,7 @@
 
 ## screenshots
 
-![](./screenshots/linux_desktop.jpg)
+![](./screenshots/linux_desktop.png)
 
 ### i3bar conky
 
