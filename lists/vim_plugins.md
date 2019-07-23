@@ -19,6 +19,8 @@ Plugin Manager: [Vundle](https://github.com/VundleVim/Vundle.vim)
 - [github.com/hynek/vim-python-pep8-indent](https://github.com/hynek/vim-python-pep8-indent)
 - [github.com/cespare/vim-toml](https://github.com/cespare/vim-toml)
 - [github.com/stephpy/vim-yaml](https://github.com/stephpy/vim-yaml)
+- [github.com/mxw/vim-jsx](https://github.com/mxw/vim-jsx)
+- [https://github.com/w0rp/ale](https://github.com/w0rp/ale)
 
 ## Install
 

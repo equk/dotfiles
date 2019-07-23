@@ -26,6 +26,8 @@ Bundle 'elzr/vim-json'
 Bundle 'hynek/vim-python-pep8-indent'
 Bundle 'cespare/vim-toml'
 Bundle 'stephpy/vim-yaml'
+Bundle 'mxw/vim-jsx'
+Bundle 'w0rp/ale'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
