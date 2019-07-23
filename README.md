@@ -94,6 +94,15 @@ install Vundle and plugins
 
 more info on plugins can be found in `lists/vim_plugins.md`
 
+## vim colorscheme
+
+To install the `jellybeans` vim colorscheme
+
+    mkdir -p ~/.vim/colors
+    cd ~/.vim/colors
+    curl -O https://raw.githubusercontent.com/nanotech/jellybeans.vim/master/colors/jellybeans.vim
+
+
 ## backup
 
     backup.sh

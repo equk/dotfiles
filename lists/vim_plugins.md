@@ -20,7 +20,7 @@ Plugin Manager: [Vundle](https://github.com/VundleVim/Vundle.vim)
 - [github.com/cespare/vim-toml](https://github.com/cespare/vim-toml)
 - [github.com/stephpy/vim-yaml](https://github.com/stephpy/vim-yaml)
 - [github.com/mxw/vim-jsx](https://github.com/mxw/vim-jsx)
-- [https://github.com/w0rp/ale](https://github.com/w0rp/ale)
+- [github.com/w0rp/ale](https://github.com/w0rp/ale)
 
 ## Install
 
@@ -28,6 +28,15 @@ After copying configs with `install.sh`
 
 Install vundle
 
+    mkdir -p ~/.vim/bundle
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 run vim and type `:PluginInstall` or run `vim +PluginInstall +qall`
+
+## Colorscheme
+
+To install the `jellybeans` vim colorscheme
+
+    mkdir -p ~/.vim/colors
+    cd ~/.vim/colors
+    curl -O https://raw.githubusercontent.com/nanotech/jellybeans.vim/master/colors/jellybeans.vim
