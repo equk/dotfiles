@@ -91,9 +91,17 @@ au FileType go nmap <Leader>gd <Plug>(go-doc)
 au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
 
 " Settings for rust-vim
-" =========================
+" ======================
 
 let g:autofmt_autosave = 1
+
+" Settings for ale
+" =================
+
+let g:ale_fixers = {'javascript': ['standard'], 'json': ['jq']}
+let g:ale_linters = {'javascript': ['standard'],'CloudFormation' : ['cfn-lint']}
+let g:ale_sign_column_alwayus = 1
+let g:ale_fix_on_save = 1
 
 " Settings for neocomplete
 " =========================
