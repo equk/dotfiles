@@ -47,20 +47,21 @@ function copy() {
 
         if [ -a "$DESTINATION" ]; then
             if diff "$ORIGIN" "$DESTINATION" >/dev/null; then
-                echo -e "$bplus $ORIGIN already up to date"
+                echo -e "$bplus $DESTINATION already up to date"
                 return 2
             fi
 
             while true; do
-                echo -e "$bplus $DESTINATION already exists."
-                read -p "Do you want to overwrite it? " yn
+                echo -e "$rplus $DESTINATION already exists"
+                read -p "!!! Overwrite it? [Y/N]" yn
                 case $yn in
                 [Yy]*)
+                    echo -e "$gplus Copying $ORIGIN to $DESTINATION"
                     cp "$ORIGIN" "$DESTINATION"
-                    break
+                    return 2
                     ;;
                 [Nn]*) return 2 ;;
-                *) echo \"Please answer yes or no. \" ;;
+                *) echo -e "$rplus Expected yes or no." ;;
                 esac
             done
         else
