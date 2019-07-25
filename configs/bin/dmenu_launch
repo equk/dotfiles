@@ -1,0 +1,26 @@
+#!/bin/zsh
+##
+# script to exec dmenu
+# equk 2015 - equk.co.uk
+##
+
+## variables
+
+font="monospace-10"
+font_color="#ffffff"
+background="#011627"
+highlight="#000000"
+highlight_bg="#8655a8"
+
+# import zshrc (for paths etc)
+source $HOME/.zshrc
+
+## run command
+
+# Check for root ( quit if root :x )
+if [ $(whoami) = "root" ]; then
+    exit 1
+fi
+
+dmenu_cmd=$(dmenu_run -b -nb $background -nf $font_color -sf $highlight -sb $highlight_bg -fn $font)
+exec $dmenu_cmd
