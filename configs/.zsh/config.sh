@@ -3,7 +3,7 @@
 # Set Defaults
 export EDITOR="vim"
 export TERMINAL="alacritty"
-export BROWSER="$HOME/bin/chrome"
+export BROWSER=$(which firefox)
 export HISTCONTROL="ignoredups"
 
 # ls colors
