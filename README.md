@@ -1,8 +1,8 @@
 # dotfiles
 
     OS: Arch Linux
-    Kernel: 5.2.1-arch1-1-ARCH
-    Packages: 1265
+    Kernel: 5.2.3-1-EQUK
+    Packages: 1268
     Window Manager: i3
     GTK Theme: Adapta-Eta [GTK2/3]
     GTK Font: Noto Sans 10 [GTK2/3]
@@ -56,8 +56,6 @@ install & backup features:
 - `configs` contains config files from users `home` directory
 - `lists` contains vscode extensions list
 - `sys` contains files from linux system (eg: `/etc/`)
-
-files in `sys` relate to specific hardware.
 
 ## install
 
