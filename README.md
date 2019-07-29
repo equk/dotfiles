@@ -80,7 +80,7 @@ output:
 
 to install vscode extensions run
 
-    cat lists/vscode_extensions.txt | xargs -n 1 code --install-extension
+    xargs -n 1 -a lists/vscode_extensions.txt code --install-extension
 
 ### vim install
 
