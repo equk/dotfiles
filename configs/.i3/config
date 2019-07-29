@@ -128,7 +128,7 @@ for_window [class="Xfce4-notifyd"] floating enable, focus mode_toggle
 for_window [class="Oblogout"] floating enable, border 1pixel
 for_window [class="I3-exit"] floating enable
 for_window [class="Chromium"] border 1pixel
-for_window [class="Firefox"] border 1pixel
+for_window [class="firefox"] border 1pixel
 for_window [class="Opera"] border 1pixel
 for_window [class="Vlc"] border 1pixel
 for_window [class="Tk" title="tk_logout"] floating enable, border 1pixel
