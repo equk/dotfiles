@@ -20,7 +20,7 @@ bold="\033[1;37m"
 reset="\033[0m"
 
 # VARIABLES
-base_files=".bashrc .vimrc .zshrc .tmux.conf .compton.conf"
+base_files=".bashrc .vimrc .zshrc .tmux.conf .compton.conf .Xdefaults .Xresources"
 day=$(date '+%d/%m/%Y')
 
 gplus="[$green+$reset]"
