@@ -125,6 +125,7 @@ for_window [class="Xfce4-terminal"] border 1pixel
 for_window [class="Google-chrome-stable"] border 1pixel
 for_window [class="Xfce4-notifyd"] floating enable, focus mode_toggle
 # for_window [class="Thunar"] floating enable
+for_window [class="mpv"] floating disable, border 1pixel
 for_window [class="Oblogout"] floating enable, border 1pixel
 for_window [class="I3-exit"] floating enable
 for_window [class="Chromium"] border 1pixel

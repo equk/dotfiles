@@ -116,6 +116,9 @@ done
 echo -e "$gplus copying neofetch configuration files"
 copy ~/.config/neofetch/config.conf
 
+echo -e "$gplus copying mpv configuration files"
+copy ~/.config/mpv/mpv.conf
+
 # FINISHED
 echo -e ""
 echo -e "$green+++$reset finished copying equk configuration files"

@@ -272,21 +272,12 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 export WINEPREFIX=$HOME/win64/
 export WINEARCH=win64
 
-# set hardware accel for VDPAU to nvidia
-#export VDPAU_DRIVER=nvidia
-
 # alias for golang dnscrypt-proxy
 alias dnscrypt-edit='sudo vim /etc/dnscrypt-proxy/dnscrypt-proxy.toml'
 alias dnscrypt-resolvers='sudo vim /var/cache/dnscrypt-proxy/public-resolvers.md'
 
 # set QEMU to use ALSA for audio
 export QEMU_AUDIO_DRV=alsa
-
-# use subl3 instead of atom
-# atom using over 1GB of storage (also slow ... )
-# 823M  ~/.atom
-# 494M atom-editor-bin
-alias atom='subl3'
 
 # display error message for chrome
 alias chrome='notify-send "No Chrome Here" "Use Firefox Instead" -i firefox'
