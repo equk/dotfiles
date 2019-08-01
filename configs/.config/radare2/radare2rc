@@ -1,0 +1,11 @@
+e scr.utf8 = true
+e scr.utf8.curvy = true
+e scr.color = 3
+e bin.demangle = true
+e asm.demangle = true
+e asm.relsub = true
+eco smyck
+# e dbg.slow = true
+"$context='drr;so -6; pd ($r-40);sr SP;pxr 64;sr PC'"
+"$ps='sr PC;ds;$context'"
+"$pso='sr PC;dso;$context'"
