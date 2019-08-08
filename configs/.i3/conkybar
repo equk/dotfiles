@@ -8,17 +8,11 @@ TEXT
 [\
 # CPU USAGE
 {"full_text":"CPU","color":"\#C792EA","separator":false,"separator_block_width":6},\
-{"full_text":"${cpu cpu0}","color":"\#FFFFFF","separator":false,"separator_block_width":0},\
-{"full_text":"%","color":"\#EEEEEE","separator":false,"separator_block_width":6},\
-{"full_text":"${cpu cpu1}","color":"\#FFFFFF","separator":false,"separator_block_width":0},\
-{"full_text":"%","color":"\#EEEEEE","separator":false,"separator_block_width":6},\
-{"full_text":"${cpu cpu2}","color":"\#FFFFFF","separator":false,"separator_block_width":0},\
-{"full_text":"%","color":"\#EEEEEE","separator":false,"separator_block_width":6},\
-{"full_text":"${cpu cpu3}","color":"\#FFFFFF","separator":false,"separator_block_width":0},\
+{"full_text":"${cpu}","color":"\#FFFFFF","separator":false,"separator_block_width":0},\
 {"full_text":"%","color":"\#EEEEEE","separator":false,"separator_block_width":6},\
 # CPU TEMP
-{"full_text":"CPU","color":"\#C792EA","separator":false,"separator_block_width":6},\
-{"full_text":"${hwmon 0 temp 2}","color":"\#FFFFFF","separator":false,"separator_block_width":0},\
+{"full_text":"@","color":"\#C792EA","separator":false,"separator_block_width":6},\
+{"full_text":"${hwmon 3 temp 1}","color":"\#FFFFFF","separator":false,"separator_block_width":0},\
 {"full_text":"°C","color":"\#EEEEEE","separator":false,"separator_block_width":6},\
 # GPU TEMP
 {"full_text":"GPU","color":"\#C792EA","separator":false,"separator_block_width":6},\
