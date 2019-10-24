@@ -207,7 +207,7 @@ exec --no-startup-id nitrogen --restore
 # start applications
 ##
 # start kalu archlinux update notifier
-exec --no-startup-id kalu
+#exec --no-startup-id kalu
 # execute audiomixer
 exec pnmixer
 # execute redshift
