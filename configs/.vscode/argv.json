@@ -8,7 +8,7 @@
 {
 	// Use software rendering instead of hardware accelerated rendering.
 	// This can help in cases where you see rendering issues in VS Code.
-	//"disable-hardware-acceleration": true,
+	"disable-hardware-acceleration": true,
 
 	// Enabled by default by VS Code to resolve color issues in the renderer
 	// See https://github.com/Microsoft/vscode/issues/51791 for details
