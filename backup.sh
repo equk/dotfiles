@@ -100,8 +100,10 @@ echo -e "$gplus starting Visual Studio Code"
 echo -e "  $gplus creating extension list for Visual Studio Code"
 [ -d ./lists/ ] || mkdir -p ./lists/
 code --list-extensions >./lists/vscode_extensions.txt
-echo -e "  $gplus copying user Preferences for Visual Studio Code"
+echo -e "  $gplus copying user preferences for Visual Studio Code"
 copy ~/.config/Code/User/settings.json
+echo -e "  $gplus copying commandline arguments for Visual Studio Code"
+copy ~/.vscode/argv.json
 
 echo -e "$gplus copying font configuration files"
 for file in $(find ~/fontconfig -type f); do
