@@ -12,7 +12,7 @@ TEXT
 {"full_text":"%","color":"\#EEEEEE","separator":false,"separator_block_width":6},\
 # CPU TEMP
 {"full_text":"@","color":"\#C792EA","separator":false,"separator_block_width":6},\
-{"full_text":"${hwmon 3 temp 1}","color":"\#FFFFFF","separator":false,"separator_block_width":0},\
+{"full_text":"${hwmon 2 temp 1}","color":"\#FFFFFF","separator":false,"separator_block_width":0},\
 {"full_text":"°C","color":"\#EEEEEE","separator":false,"separator_block_width":6},\
 # GPU TEMP
 {"full_text":"GPU","color":"\#C792EA","separator":false,"separator_block_width":6},\
