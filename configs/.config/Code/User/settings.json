@@ -24,12 +24,11 @@
     },
     "eslint.alwaysShowStatus": true,
     "eslint.validate": [
+        "vue",
         "javascript",
+        "typescript",
         "javascriptreact",
-        {
-            "language": "vue",
-            "autoFix": true
-        }
+        "typescriptreact"
     ],
     // Format on save
     "editor.formatOnSave": true,
