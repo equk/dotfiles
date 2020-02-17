@@ -1,7 +1,6 @@
 ## load fasd - equk
 ## ref: https://github.com/clvv/fasd/
 # add prehook to zsh
-eval "$(fasd --init posix-alias zsh-hook)"
 _fasd_preexec() {
     {
         eval "fasd --proc $(fasd --sanitize $1)"
