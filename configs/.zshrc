@@ -17,3 +17,5 @@ done
 if [[ -r "${HOME}/.user" ]] && [[ -f "${HOME}/.user" ]]; then
     source "${HOME}/.user"
 fi
+# load zsh config
+source $ZSH/config.sh
