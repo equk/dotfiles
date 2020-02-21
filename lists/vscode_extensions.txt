@@ -5,6 +5,7 @@ dbaeumer.vscode-eslint
 foxundermoon.shell-format
 JamesBirtles.svelte-vscode
 JuanBlanco.solidity
+matklad.rust-analyzer
 ms-azuretools.vscode-docker
 ms-python.python
 ms-vscode.cpptools
