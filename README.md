@@ -99,6 +99,50 @@ To install the `jellybeans` vim colorscheme
     cd ~/.vim/colors
     curl -O https://raw.githubusercontent.com/nanotech/jellybeans.vim/master/colors/jellybeans.vim
 
+## programming languages setup
+
+I have a similar setup for `node`, `rust` & `go`.
+
+<details><summary>node notes</summary>
+Node years ago had some really bad practices of installing global packages from npm under root with a lot of packages requiring root access to run.
+
+I setup node in the user `$HOME` path ~2015 ([commit](https://github.com/equk/linux/commit/adb909d9dd31952c692f4361763218ea7fb775fc#diff-d730a561a0599bb6b9e3a8272464df79) `adb909d9dd31952c692f4361763218ea7fb775fc`)
+</details>
+
+### node
+
+`node lts` installed to `$HOME/node`
+
+bin path for global packagaes added to `$PATH`
+
+```
+if [ -d "$HOME/node/bin" ] ; then
+    export PATH="$HOME/node/bin:$PATH"
+fi
+```
+
+### rust
+
+installed using `rustup`
+
+`cargo` bin path is added to `$PATH`
+
+```
+if [ -d "$HOME/.cargo/bin" ] ; then
+    export PATH="$HOME/.cargo/bin:$PATH"
+fi
+```
+
+### go
+
+installed from package `go`
+
+`GOPATH` set to `$HOME/golang` with bin path added to `$PATH`
+```
+export GOPATH=$HOME/golang
+# adding binary path for golang projects
+export PATH=$PATH:$GOPATH/bin
+```
 
 ## backup
 
