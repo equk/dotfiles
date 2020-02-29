@@ -113,7 +113,7 @@ I setup node in the user `$HOME` path ~2015 ([commit](https://github.com/equk/li
 
 `node lts` installed to `$HOME/node`
 
-bin path for global packagaes added to `$PATH`
+bin path for global packages added to `$PATH`
 
 ```
 if [ -d "$HOME/node/bin" ] ; then
@@ -143,6 +143,12 @@ export GOPATH=$HOME/golang
 # adding binary path for golang projects
 export PATH=$PATH:$GOPATH/bin
 ```
+
+### ruby
+
+gems installed to `$HOME/.gem/ruby/$ver/` (`ruby -e 'puts Gem.user_dir'`)
+
+gem bin path added to `$PATH`
 
 ## backup
 
