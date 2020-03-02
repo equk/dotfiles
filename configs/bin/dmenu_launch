@@ -12,9 +12,6 @@ background="#011627"
 highlight="#000000"
 highlight_bg="#8655a8"
 
-# import zshrc (for paths etc)
-source $HOME/.zshrc
-
 ## run command
 
 # Check for root ( quit if root :x )
