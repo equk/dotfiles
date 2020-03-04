@@ -150,6 +150,11 @@ gems installed to `$HOME/.gem/ruby/$ver/` (`ruby -e 'puts Gem.user_dir'`)
 
 gem bin path added to `$PATH`
 
+```
+PATH="$(ruby -e 'puts Gem.user_dir')/bin:$PATH"
+export GEM_HOME=$(ruby -e 'puts Gem.user_dir')
+```
+
 ## backup
 
     backup.sh
