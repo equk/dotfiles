@@ -13,6 +13,7 @@ ms-vscode.Go
 octref.vetur
 PKief.material-icon-theme
 plorefice.devicetree
+Prisma.vscode-graphql
 rust-lang.rust
 sdras.night-owl
 serayuzgur.crates
