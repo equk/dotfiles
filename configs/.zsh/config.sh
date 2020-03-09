@@ -132,7 +132,7 @@ alias paclsnodep='pacman -Qetq | grep'
 # Extract
 function extract () {
     if [ -f $1 ] ; then
-case $1 in
+        case $1 in
             *.tar.bz2) tar xjf $1 ;;
             *.tar.gz) tar xzf $1 ;;
             *.bz2) bunzip2 $1 ;;
@@ -147,18 +147,10 @@ case $1 in
             *.7z) 7z x $1 ;;
             *) echo "'$1' cannot be extracted via extract()" ;;
         esac
-else
-echo "'$1' is not a valid file"
+    else
+        echo "'$1' is not a valid file"
     fi
 }
-
-## RUBY STUFF (user installed gems)
-#
-# Set path
-PATH="$(ruby -e 'puts Gem.user_dir')/bin:$PATH"
-
-# Set GEM_HOME for bundler
-export GEM_HOME=$(ruby -e 'puts Gem.user_dir')
 
 # remove orphaned/un-needed packages
 alias pacclean='sudo pacman -Rs $(pacman -Qqdt)'
@@ -179,34 +171,6 @@ alias mongogui='robo3t'
 
 # systemd log view
 alias service-log='journalctl -b -u '
-
-function title() {
-    local access
-    local cmd
-
-    if [[ $USERNAME != $LOGNAME || -n $SSH_CLIENT ]]; then
-        access="${USERNAME}@${HOST}: "
-    fi
-
-    if [[ $# -eq 0 ]]; then
-        cmd="zsh %30<...<%~"
-    else
-        cmd="${(V)1//\%/\%\%}"
-    fi
-
-    case $TERM in
-        rxvt*)
-            print -Pn "\e]0;${access}${cmd}\e\\"
-            ;;
-        screen*)
-            print -Pn "\ek${cmd}\e\\"
-            print -Pn "\e_${access}\e\\"
-            ;;
-    esac
-}
-
-precmd_functions+='title'
-preexec_functions+='title'
 
 ## smart urls
 autoload -U url-quote-magic
@@ -248,18 +212,24 @@ if [ -d "$HOME/bin" ] ; then
     export PATH="$HOME/bin:$PATH"
 fi
 
+## RUBY STUFF (user installed gems)
+# Set path
+PATH="$(ruby -e 'puts Gem.user_dir')/bin:$PATH"
+# Set GEM_HOME for bundler
+export GEM_HOME=$(ruby -e 'puts Gem.user_dir')
+
 # setup golang paths
 # main binary paths
-# go projects path
-export GOPATH=$HOME/golang
-# adding binary path for golang projects
-export PATH=$PATH:$GOPATH/bin
-
+if [ -d "$HOME/bin" ] ; then
+    # go projects path
+    export GOPATH=$HOME/golang
+    # adding binary path for golang projects
+    export PATH=$PATH:$GOPATH/bin
+fi
 # setup local nodejs bin path
 if [ -d "$HOME/node/bin" ] ; then
     export PATH="$HOME/node/bin:$PATH"
 fi
-
 # setup local rust (cargo) bin path
 if [ -d "$HOME/.cargo/bin" ] ; then
     export PATH="$HOME/.cargo/bin:$PATH"
