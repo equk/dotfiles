@@ -220,7 +220,7 @@ export GEM_HOME=$(ruby -e 'puts Gem.user_dir')
 
 # setup golang paths
 # main binary paths
-if [ -d "$HOME/bin" ] ; then
+if [ -d "$HOME/golang" ] ; then
     # go projects path
     export GOPATH=$HOME/golang
     # adding binary path for golang projects

@@ -139,9 +139,12 @@ installed from package `go`
 
 `GOPATH` set to `$HOME/golang` with bin path added to `$PATH`
 ```
-export GOPATH=$HOME/golang
-# adding binary path for golang projects
-export PATH=$PATH:$GOPATH/bin
+if [ -d "$HOME/golang" ] ; then
+    # go projects path
+    export GOPATH=$HOME/golang
+    # adding binary path for golang projects
+    export PATH=$PATH:$GOPATH/bin
+fi
 ```
 
 ### ruby
