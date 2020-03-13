@@ -107,7 +107,7 @@ alias pscan='proxychains nmap -sTV -PN -n -p21,22,25,80,3306,3389 '
 # start pcap split into 5min chunks (max 50min)
 alias pcap='sudo tcpdump -G 300 -w $HOME/pcaps/%Y-%m-%d_%H:%M.pcap -W 10'
 # http server for testing static content
-alias serve='hs .'
+alias serve='hs . -a localhost'
 # minify style.css using cssutils from python
 alias cssminify='cssparse -m style.css > style.min.css'
 # update grub config
