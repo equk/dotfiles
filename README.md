@@ -1,8 +1,8 @@
 # dotfiles
 
     OS: Arch Linux
-    Kernel: 5.5.7-1-EQUK
-    Packages: 1380
+    Kernel: 5.5.10-1-EQUK
+    Packages: 1374
     Window Manager: i3
     GTK Theme: Adapta-Eta [GTK2/3]
     GTK Font: Noto Sans 10 [GTK2/3]
