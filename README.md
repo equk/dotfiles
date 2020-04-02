@@ -179,6 +179,10 @@ output:
       [+] Copying /home/user/.tmux.conf
       [+] Copying /home/user/.compton.conf
 
+# Notes
+
+Had to downgrade `alacritty` to `0.4.1-2` to fix paste with `tmux`
+
 # Contact
 
 Website: https://equk.co.uk
