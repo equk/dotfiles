@@ -2,11 +2,11 @@
 
     OS: Arch Linux
     Kernel: 5.5.13-2-EQUK
-    Packages: 1379
+    Packages: 1383
     Window Manager: i3
     GTK Theme: Adapta-Eta [GTK2/3]
     GTK Font: Noto Sans 10 [GTK2/3]
-    GTK Icons: Paper [GTK2/3]
+    GTK Icons: Vimix-Black-dark [GTK2/3]
     Shell: zsh
     Terminal: alacritty
     Terminal Font: xos4 Terminus
