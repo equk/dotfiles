@@ -18,5 +18,6 @@ rust-lang.rust
 sdras.night-owl
 serayuzgur.crates
 shinnn.stylelint
+sibiraj-s.vscode-scss-formatter
 sysoev.language-stylus
 xabikos.JavaScriptSnippets
