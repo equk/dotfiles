@@ -3,13 +3,13 @@ christian-kohler.path-intellisense
 cmstead.jsrefactor
 dbaeumer.vscode-eslint
 foxundermoon.shell-format
+golang.Go
 JamesBirtles.svelte-vscode
 JuanBlanco.solidity
 matklad.rust-analyzer
 ms-azuretools.vscode-docker
 ms-python.python
 ms-vscode.cpptools
-ms-vscode.Go
 octref.vetur
 PKief.material-icon-theme
 plorefice.devicetree
