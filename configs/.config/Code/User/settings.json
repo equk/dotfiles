@@ -135,4 +135,6 @@
     },
     // css property completion with semicolon
     "css.completion.completePropertyWithSemicolon": true,
+    // disable inline debug button for package.json scripts
+    "debug.javascript.codelens.npmScripts": "never",
 }
