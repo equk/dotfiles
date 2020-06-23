@@ -165,6 +165,9 @@ alias yaourt='yay'
 # list 30 largest packages installed
 alias pacbig='expac -s -H M "%-30n %m" | sort -rhk 2 | head -n 30'
 
+# list hwmon devices
+alias hwmonls='ls -l /sys/class/hwmon'
+
 # mongodb gui
 alias robomongo='robo3t'
 alias mongogui='robo3t'
