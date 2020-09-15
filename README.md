@@ -7,8 +7,8 @@ More Info: [Automated dotfiles - equk's blog](https://equk.co.uk/2019/07/24/auto
 ![](./screenshots/linux_desktop.png)
 
     OS: Arch Linux
-    Kernel: 5.8.5-1-EQUK
-    Packages: 1309
+    Kernel: 5.8.8-1-EQUK
+    Packages: 1315
     Window Manager: i3
     GTK Theme: Adapta-Eta [GTK2/3]
     GTK Font: Noto Sans 10 [GTK2/3]
@@ -18,6 +18,8 @@ More Info: [Automated dotfiles - equk's blog](https://equk.co.uk/2019/07/24/auto
     Terminal Font: xos4 Terminus
     GPU: AMD ATI Radeon RX Vega 56
     GPU Driver: amdgpu
+    Disk Encryption: AES-256 (512bit aes-xts-plain64)
+    (root fs uses LUKS + dm-crypt)
 
 ## Installation
 
