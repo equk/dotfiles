@@ -67,7 +67,12 @@ To install the `jellybeans` vim colorscheme
 
 ## Notes
 
-Had to downgrade `alacritty` to `0.4.1-2` to fix paste with `tmux`
+Fixed clipboard functionality of `alacritty` using `tmux` & `xsel` to do copy & paste
+
+Disable alacritty copy selection in `alacritty.yml`
+
+    selection:
+      save_to_clipboard: false
 
 # Contact
 
