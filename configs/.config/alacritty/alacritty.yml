@@ -173,7 +173,7 @@ colors:
 #
 bell:
   animation: EaseOutExpo
-  duration: 150
+  duration: 100
 
 # Background opacity
 background_opacity: 0.95
@@ -195,7 +195,7 @@ background_opacity: 0.95
 # - Copy (TODO)
 mouse_bindings:
   - { mouse: Middle, action: Paste }
-  - { mouse: Right, action: Paste }
+##  - { mouse: Right, action: Paste }
 
 mouse:
   # Click settings
@@ -219,7 +219,7 @@ mouse:
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
-  save_to_clipboard: true
+  save_to_clipboard: false
 
 window.dynamic_title: true
 
