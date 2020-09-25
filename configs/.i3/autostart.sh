@@ -5,6 +5,8 @@
 setxkbmap -layout 'us'
 # remap right menu key to function as start key
 xmodmap -e "keycode 135 = Super_R NoSymbol Super_R"
+# set typematic delay and rate
+xset r rate 200 30
 # remove any wine applications or filetype references
 # (not really into opening exe viruses on double click in linux)
 rm -fr ~/.local/share/applications/wine-*
