@@ -124,7 +124,6 @@ for_window [class="^.*"] border normal 2pixel
 for_window [class="Xfce4-terminal"] border 1pixel
 for_window [class="Google-chrome-stable"] border 1pixel
 for_window [class="Xfce4-notifyd"] floating enable, focus mode_toggle
-# for_window [class="Thunar"] floating enable
 for_window [class="mpv"] floating disable, border 1pixel
 for_window [class="Oblogout"] floating enable, border 1pixel
 for_window [class="I3-exit"] floating enable
@@ -133,11 +132,7 @@ for_window [class="firefox"] border 1pixel
 for_window [class="Opera"] border 1pixel
 for_window [class="Vlc"] border 1pixel
 for_window [class="Tk" title="tk_logout"] floating enable, border 1pixel
-# for_window [class="Steam" title="Friends"] floating enable, border none
 for_window [class="Thunar"] floating disable, border 1pixel
-#for_window [class="Spotify"] floating enable, border 1pixel
-# spotify fix only required for first start - once window sizing is set, can disable/comment line out
-#for_window [class="Wine"] floating enable
 for_window [class="Wine"] floating disable, border 1pixel
 for_window [class="openttd"] floating disable, border 1pixel
 for_window [class="Atom"] floating disable, border 1pixel
