@@ -4,6 +4,7 @@ cmstead.jsrefactor
 dbaeumer.vscode-eslint
 foxundermoon.shell-format
 golang.go
+GraphQL.vscode-graphql
 JamesBirtles.svelte-vscode
 JuanBlanco.solidity
 matklad.rust-analyzer
@@ -13,7 +14,6 @@ ms-vscode.cpptools
 octref.vetur
 PKief.material-icon-theme
 plorefice.devicetree
-Prisma.vscode-graphql
 rust-lang.rust
 sdras.night-owl
 serayuzgur.crates
