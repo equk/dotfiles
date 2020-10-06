@@ -5,7 +5,6 @@ dbaeumer.vscode-eslint
 foxundermoon.shell-format
 golang.go
 GraphQL.vscode-graphql
-JamesBirtles.svelte-vscode
 JuanBlanco.solidity
 matklad.rust-analyzer
 ms-azuretools.vscode-docker
@@ -17,7 +16,6 @@ plorefice.devicetree
 rust-lang.rust
 sdras.night-owl
 serayuzgur.crates
-shinnn.stylelint
 sibiraj-s.vscode-scss-formatter
 sysoev.language-stylus
 xabikos.JavaScriptSnippets
