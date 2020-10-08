@@ -1,0 +1,35 @@
+
+###########################
+#        Blocklist        #
+###########################
+
+## Rules for name-based query blocking, one per line
+##
+
+## domains for facebook (including facebook comments)
+
+facebook.com
+facebook.net
+*.facebook.com
+*.facebook.net
+
+fbcdn-profile-a.akamaihd.net
+*.fbcdn.net
+spot.im
+
+## domains for google analytics
+
+## ref: https://developers.google.com/analytics/devguides/collection/analyticsjs
+
+google-analytics.com
+*.google-analytics.com
+
+## ref:  https://developers.google.com/analytics/devguides/collection/gtagjs
+
+googletagmanager.com
+*.googletagmanager.com
+
+## ref: https://developers.google.com/analytics/devguides/collection/amp-analytics
+
+cdn.ampproject.org
+
