@@ -102,6 +102,8 @@ alias ls='ls -hF --color=auto --group-directories-first '
 alias ll='ls -lhF --color=auto --group-directories-first '
 alias df='df -h -T'
 alias duf='du -skh * | sort -n'
+# add color to ip
+alias ip='ip -c'
 # quick nmap scan over socks
 alias pscan='proxychains nmap -sTV -PN -n -p21,22,25,80,3306,3389 '
 # start pcap split into 5min chunks (max 50min)
