@@ -8,10 +8,10 @@ More Info: [Automated dotfiles - equk's blog](https://equk.co.uk/2019/07/24/auto
 
     OS: Arch Linux
     Kernel: 5.10.6
-    Packages: 1263
+    Packages: 1261
     Window Manager: i3
     GTK Theme: Adapta-Eta [GTK2/3]
-    GTK Font: Noto Sans 10 [GTK2/3]
+    GTK Font: Open Sans 10 [GTK2/3]
     GTK Icons: Vimix-Black-dark [GTK2/3]
     Shell: zsh
     Terminal: alacritty
