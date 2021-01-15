@@ -7,7 +7,7 @@ More Info: [Automated dotfiles - equk's blog](https://equk.co.uk/2019/07/24/auto
 ![](./screenshots/linux_desktop.png)
 
     OS: Arch Linux
-    Kernel: 5.10.6
+    Kernel: 5.10.7
     Packages: 1261
     Window Manager: i3
     GTK Theme: Adapta-Eta [GTK2/3]
