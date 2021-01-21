@@ -7,7 +7,7 @@ More Info: [Automated dotfiles - equk's blog](https://equk.co.uk/2019/07/24/auto
 ![](./screenshots/linux_desktop.png)
 
     OS: Arch Linux
-    Kernel: 5.10.8
+    Kernel: 5.10.9
     Packages: 1262
     Window Manager: i3
     GTK Theme: Adapta-Eta [GTK2/3]
@@ -15,7 +15,7 @@ More Info: [Automated dotfiles - equk's blog](https://equk.co.uk/2019/07/24/auto
     GTK Icons: Vimix-Black-dark [GTK2/3]
     Shell: zsh
     Terminal: alacritty
-    Terminal Font: xos4 Terminus
+    Terminal Font: Terminus
     GPU: AMD ATI Radeon RX Vega 56
     GPU Driver: amdgpu
     Disk Encryption: AES-256 (512bit aes-xts-plain64)
