@@ -139,6 +139,8 @@ for_window [class="Atom"] floating disable, border 1pixel
 for_window [class="Subl3"] floating disable, border 1pixel
 for_window [class="VirtualBox"] floating disable, border 1pixel
 for_window [class="Code"] floating disable, border 1pixel
+# vivaldi browser
+for_window [class="Vivaldi-stable"] floating disable, border 1pixel
 # linux eve online launcher (native qt)
 for_window [class="EVE"] floating disable, border 1pixel
 # linux shadowrun hongkong (native unity)
