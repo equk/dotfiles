@@ -2,6 +2,7 @@ bungcip.better-toml
 christian-kohler.path-intellisense
 cmstead.jsrefactor
 dbaeumer.vscode-eslint
+eseom.nunjucks-template
 foxundermoon.shell-format
 golang.go
 GraphQL.vscode-graphql
