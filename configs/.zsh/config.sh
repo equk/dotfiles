@@ -240,6 +240,11 @@ if [ -d "$HOME/.cargo/bin" ] ; then
     export PATH="$HOME/.cargo/bin:$PATH"
 fi
 
+# set node prefix path for nodejs manager `n`
+if [ -d "$HOME/node" ] ; then
+    export N_PREFIX=$HOME/node
+fi
+
 # disables prompt mangling in virtual_env/bin/activate
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
