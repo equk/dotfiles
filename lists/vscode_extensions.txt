@@ -6,6 +6,7 @@ eseom.nunjucks-template
 foxundermoon.shell-format
 golang.go
 GraphQL.vscode-graphql
+johnsoncodehk.volar
 JuanBlanco.solidity
 matklad.rust-analyzer
 ms-azuretools.vscode-docker
