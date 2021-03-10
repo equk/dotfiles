@@ -140,4 +140,8 @@
     // disable tab decorations
     "workbench.editor.decorations.colors": false,
     "workbench.editor.decorations.badges": false,
+    // disable persistent terminal sessions
+    "terminal.integrated.enablePersistentSessions": false,
+    // show welcome page on empty editor startup
+    "workbench.startupEditor": "welcomePage",
 }
