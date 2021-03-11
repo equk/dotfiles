@@ -159,6 +159,13 @@ alias pacclean='sudo pacman -Rs $(pacman -Qqdt)'
 # remove unused packages in cache
 alias paccleanup='sudo pacman -Sc'
 
+## use yay for cleanup (also cleans ~/.cache/yay/)
+# remove unused packages & aur builds in cache
+if command -v yay &> /dev/null
+then
+    alias paccleanup='yay -Sc'
+fi
+
 alias paclsorphans='sudo pacman -Qdt'
 alias pacrmorphans='sudo pacman -Rs $(pacman -Qtdq)'
 # use yay instead of yaourt
