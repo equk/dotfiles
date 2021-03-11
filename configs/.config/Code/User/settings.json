@@ -121,6 +121,11 @@
     // messing up comma-dangle by removing commas
     // conflicting with eslint
     "vetur.format.enable": false,
+    // Volar vurjs
+    // Vetur does not support <script setup> yet
+    // Evan You suggests to use Volar
+    // re: https://github.com/vuejs/vitepress/pull/137#issuecomment-733868635
+    "volar.tsPlugin": true,
     // Reactjs
     "emmet.includeLanguages": {
         "javascript": "javascriptreact"
