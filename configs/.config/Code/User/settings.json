@@ -122,6 +122,20 @@
         "editor.quickSuggestions": false,
         "editor.tabSize": 2
     },
+    // Disable italic comments
+    // (Overrides styles in workbench.colorTheme)
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": [
+                    "comment"
+                ],
+                "settings": {
+                    "fontStyle": ""
+                }
+            }
+        ]
+    },
     // css property completion with semicolon
     "css.completion.completePropertyWithSemicolon": true,
     // disable inline debug button for package.json scripts
@@ -133,4 +147,10 @@
     "terminal.integrated.enablePersistentSessions": false,
     // show welcome page on empty editor startup
     "workbench.startupEditor": "welcomePage",
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
 }
