@@ -1,3 +1,4 @@
+aaron-bond.better-comments
 bungcip.better-toml
 christian-kohler.path-intellisense
 cmstead.jsrefactor
