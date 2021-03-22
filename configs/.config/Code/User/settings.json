@@ -47,7 +47,8 @@
         "editor.selectionHighlightBackground": "#991144",
         "statusBar.background": "#007ACC",
         "statusBar.foreground": "#ffffff",
-        "sideBar.border": "#8655a8"
+        "statusBarItem.errorBackground": "#dd0000",
+        "sideBar.border": "#8655a8",
     },
     // Cursor - 'block', 'line' or 'underline'
     "editor.cursorStyle": "line",
