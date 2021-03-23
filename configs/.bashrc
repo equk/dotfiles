@@ -155,3 +155,5 @@ fi
 
 # set hardware accel for VDPAU to nvidia
 # export VDPAU_DRIVER=nvidia
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
