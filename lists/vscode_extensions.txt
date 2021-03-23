@@ -23,3 +23,4 @@ sibiraj-s.vscode-scss-formatter
 sysoev.language-stylus
 vadimcn.vscode-lldb
 xabikos.JavaScriptSnippets
+XadillaX.viml
