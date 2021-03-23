@@ -18,3 +18,5 @@ if [[ -r "${HOME}/.user" ]] && [[ -f "${HOME}/.user" ]]; then
     source "${HOME}/.user"
 fi
 #
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
