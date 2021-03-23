@@ -93,6 +93,11 @@ for file in $(find ~/.vim/config -type f); do
     copy $file
 done
 
+echo -e "$gplus copying neovim configuration files"
+for file in $(find ~/.config/nvim -type f | grep -v plugged); do
+    copy $file
+done
+
 echo -e "$gplus copying alacritty configuration files"
 copy ~/.config/alacritty/alacritty.yml
 
