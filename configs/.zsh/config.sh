@@ -1,7 +1,7 @@
 ###
 
 # Set Defaults
-export EDITOR="vim"
+export EDITOR="nvim"
 export TERMINAL="alacritty"
 export BROWSER=$(which firefox)
 export HISTCONTROL="ignoredups"
@@ -102,6 +102,8 @@ alias ls='ls -hF --color=auto --group-directories-first '
 alias ll='ls -lhF --color=auto --group-directories-first '
 alias df='df -h -T'
 alias duf='du -skh * | sort -n'
+# use neovim instead of vim
+alias vim='nvim'
 # add color to ip
 alias ip='ip -c'
 # quick nmap scan over socks
