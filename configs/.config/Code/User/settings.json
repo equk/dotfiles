@@ -3,7 +3,7 @@
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     // Font options
-    "editor.fontSize": 14,
+    "editor.fontSize": 15,
     "editor.fontFamily": "Liberation Mono",
     // Display whitespace chars for indent
     "editor.renderWhitespace": "boundary",
