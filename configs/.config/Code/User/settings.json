@@ -106,7 +106,7 @@
     // messing up comma-dangle by removing commas
     // conflicting with eslint
     "vetur.format.enable": false,
-    // Volar vurjs
+    // Volar vuejs
     // Vetur does not support <script setup> yet
     // Evan You suggests to use Volar
     // re: https://github.com/vuejs/vitepress/pull/137#issuecomment-733868635
@@ -114,6 +114,16 @@
     // Reactjs
     "emmet.includeLanguages": {
         "javascript": "javascriptreact"
+    },
+    // Exclude files in folder view
+    // node_modules
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/node_modules": true,
     },
     // Show git changes in gutter
     "scm.diffDecorationsGutterWidth": 2,
