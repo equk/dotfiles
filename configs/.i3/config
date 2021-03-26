@@ -114,11 +114,12 @@ bindsym $mod+Shift+E exec ~/.i3/tk_logout.py
 # i3-gaps
 smart_gaps on
 # gaps
-gaps inner 8
+gaps inner 4
 gaps outer 0
 
 # default border setting
-for_window [class="^.*"] border normal 2pixel
+default_border pixel 3
+for_window [class="^.*"] border normal 3pixel
 # set application specific options
 # use 'xprop' or 'xwininfo' to get window information
 for_window [class="Xfce4-terminal"] border 1pixel
@@ -148,7 +149,7 @@ for_window [title="SRHK"] floating disable, border 1pixel
 # linux dota 2 (windowed borderless fullscreen)
 for_window [class="dota2"] floating enable, border none, move position 0 0
 # alacritty terminal
-for_window [class="Alacritty"] floating disable, border 1pixel
+for_window [class="Alacritty"] floating disable, border pixel 1
 # chromiumos
 for_window [class="qemu-system-x86_64" title="QEMU \(chromiumos-0\)"] floating disable, border 1pixel
 # cloudready chromiumos
@@ -188,7 +189,7 @@ bar {
 
 client.focused          #C792EA #8655a8 #ffffff #eb709b
 client.focused_inactive #565656 #444444 #ffffff #666666
-client.unfocused        #373737 #222222 #888888 #444444
+client.unfocused        #373737 #676767 #888888 #444444
 client.urgent           #ec7ea4 #eb709b #ffffff #eb709b
 
 # Autostart
