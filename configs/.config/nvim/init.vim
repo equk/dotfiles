@@ -44,6 +44,7 @@ Plug 'othree/html5.vim', { 'for': 'html' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 Plug 'elzr/vim-json', { 'for': 'json' }
+Plug 'cespare/vim-toml', { 'for': 'toml' }
 
 call plug#end()
 
@@ -266,11 +267,13 @@ let g:neomake_warning_sign = {'text': '?'}
 " ===
 
 let g:airline#extensions#ale#enabled = 1
-let g:ale_linters = {'go': ['golint', 'gofmt']}
+" let g:ale_linters = {'go': ['golint', 'gofmt']}
+let g:ale_linters = {'rust': ['analyzer'], 'go': ['golint', 'gofmt'], 'javascript': ['eslint'],'CloudFormation' : ['cfn-lint']}
+let g:ale_fixers = {'rust': ['rustfmt'], 'javascript': ['eslint'], 'json': ['jq']}
 let g:ale_lint_delay = 800
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
-let g:ale_fixers = {'javascript': ['standard'], 'json': ['jq']}
-let g:ale_linters = {'javascript': ['standard'],'CloudFormation' : ['cfn-lint']}
+"let g:ale_fixers = {'javascript': ['standard'], 'json': ['jq']}
+"let g:ale_linters = {'javascript': ['standard'],'CloudFormation' : ['cfn-lint']}
 let g:ale_sign_column_alwayus = 1
 let g:ale_fix_on_save = 1
