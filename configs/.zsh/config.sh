@@ -102,6 +102,8 @@ alias ls='ls -hF --color=auto --group-directories-first '
 alias ll='ls -lhF --color=auto --group-directories-first '
 alias df='df -h -T'
 alias duf='du -skh * | sort -n'
+# use ripgrep instead of grep
+alias grep='rg'
 # use neovim instead of vim
 alias vim='nvim'
 # add color to ip
