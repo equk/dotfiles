@@ -1,3 +1,15 @@
+" equilibriumuk neovim config
+" ===========================
+"
+" https://github.com/equk/dotfiles
+
+" Install Plug
+if empty(glob('~/.config/nvim/autoload/plug.vim'))
+  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall | source $MYVIMRC
+endif
+
 call plug#begin('~/.config/nvim/plugged')
 
 function! DoRemote(arg)
@@ -5,16 +17,18 @@ function! DoRemote(arg)
 endfunction
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'Yggdroot/indentLine'
 Plug 'jiangmiao/auto-pairs'
-Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 Plug 'neomake/neomake', { 'for': ['rust', 'haskell', 'typescript'] }
 Plug 'airblade/vim-gitgutter'
 Plug 'w0rp/ale'
+Plug 'nanotech/jellybeans.vim'
+
 
 " FZF / Ctrlp for file navigation
 " ===============================
@@ -58,7 +72,7 @@ set background=dark
 " highlight whitespace
 " ====================
 
-autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+" autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 au InsertLeave * match ExtraWhitespace /\s\+$/
 map <Leader>x :%s/\s\+$//
 
@@ -66,7 +80,13 @@ map <Leader>x :%s/\s\+$//
 " ============
 
 set t_Co=256
+
+if (has('termguicolors'))
+  set termguicolors
+endif
+
 colorscheme jellybeans
+
 " set background to none for transparency
 hi! Normal ctermbg=NONE guibg=NONE
 set colorcolumn=80
@@ -162,9 +182,6 @@ set smartcase
 " Textwidth for folding
 set textwidth=100
 
-" Disable cursor styling in new neovim version
-set guicursor=
-
 " PLUGINS
 " =======
 
@@ -209,12 +226,12 @@ let g:airline_left_sep=""
 let g:airline_left_alt_sep="|"
 let g:airline_right_sep=""
 let g:airline_right_alt_sep="|"
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#fnamemod = ':t'
-let g:airline#extensions#tabline#show_tab_nr = 1
-let g:airline#extensions#tabline#tab_nr_type = 1 " show tab number not number of split panes
-let g:airline#extensions#tabline#show_close_button = 0
-let g:airline#extensions#tabline#show_buffers = 0
+"let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#fnamemod = ':t'
+"let g:airline#extensions#tabline#show_tab_nr = 1
+"let g:airline#extensions#tabline#tab_nr_type = 1 " show tab number not number of split panes
+"let g:airline#extensions#tabline#show_close_button = 0
+"let g:airline#extensions#tabline#show_buffers = 0
 let g:airline#extensions#hunks#enabled = 0
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'powerlineish'
