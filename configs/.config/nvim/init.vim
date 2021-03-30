@@ -90,10 +90,10 @@ colorscheme jellybeans
 " set background to none for transparency
 hi! Normal ctermbg=NONE guibg=NONE
 set colorcolumn=80
-highlight ColorColumn ctermbg=8
+highlight ColorColumn ctermbg=8 guibg=grey
 
 " whitespace
-highlight ExtraWhitespace ctermbg=red guibg=red
+highlight ExtraWhitespace ctermbg=DarkRed guibg=DarkRed
 autocmd Syntax * syn match ExtraWhitespace /\s\+$/ containedin=ALL
 
 " Undefined Marks
@@ -103,7 +103,6 @@ autocmd Syntax * syn match UndefinedMarks /???/ containedin=ALL
 au BufRead,BufNewFile *.conf          set filetype=dosini
 au BufRead,BufNewFile *.bash*         set filetype=sh
 
-set colorcolumn=101
 set cursorline
 
 " KEY MAPPING
@@ -153,12 +152,20 @@ set softtabstop=2
 set expandtab
 set autoindent
 filetype indent off
+
+" Python indent
 au BufNewFile,BufRead *.py
   \ setlocal tabstop=2
   \ shiftwidth=2
   \ softtabstop=2
   \ autoindent
   \ expandtab
+
+" Golang indent
+au BufNewFile,BufRead *.go
+  \ setlocal tabstop=8
+  \ shiftwidth=8
+  \ softtabstop=8
 
 " line numbers
 set number
