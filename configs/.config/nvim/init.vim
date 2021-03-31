@@ -28,7 +28,8 @@ Plug 'neomake/neomake', { 'for': ['rust', 'haskell', 'typescript'] }
 Plug 'airblade/vim-gitgutter'
 Plug 'w0rp/ale'
 Plug 'nanotech/jellybeans.vim'
-
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 " FZF / Ctrlp for file navigation
 " ===============================
@@ -89,7 +90,7 @@ colorscheme jellybeans
 
 " set background to none for transparency
 hi! Normal ctermbg=NONE guibg=NONE
-set colorcolumn=80
+" set colorcolumn=80
 highlight ColorColumn ctermbg=8 guibg=grey
 
 " whitespace
