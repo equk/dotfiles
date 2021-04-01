@@ -31,6 +31,18 @@ to install vscode extensions run
 
     xargs -n 1 -a lists/vscode_extensions.txt code --install-extension
 
+### neovim
+
+neovim config should install plugins automatically using vim-plug
+
+requirements:
+
+- fzf
+- ripgrep
+- rust-analyzer
+
+---
+
 ### vim
 
 install Vundle and plugins
