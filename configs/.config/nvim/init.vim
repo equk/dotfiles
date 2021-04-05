@@ -18,8 +18,9 @@ endfunction
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'Yggdroot/indentLine'
@@ -30,6 +31,8 @@ Plug 'w0rp/ale'
 Plug 'nanotech/jellybeans.vim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+
+Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep'  }
 
 " FZF / Ctrlp for file navigation
 " ===============================
@@ -243,6 +246,21 @@ let g:airline_right_alt_sep="|"
 let g:airline#extensions#hunks#enabled = 0
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'powerlineish'
+
+
+" lightline
+" =========
+
+let g:lightline = {
+      \  'colorscheme': 'challenger_deep',
+      \  'active': {
+      \    'left': [['mode', 'paste'], ['readonly', 'relativepath', 'modified', 'cocstatus', 'gitbranch']],
+      \  },
+      \ 'component_function': {
+      \   'cocstatus': 'coc#status',
+      \   'gitbranch': 'FugitiveHead',
+      \ }
+      \}
 
 " FZF
 " ===
