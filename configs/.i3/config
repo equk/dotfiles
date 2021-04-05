@@ -33,7 +33,7 @@ bindsym $mod+Shift+q kill
 #bindsym $mod+s exec ~/bin/dmenu_launch
 
 # start rofi (app launcher)
-set $rofi rofi -show run -lines 3 -width 40 -columns 3 -bw 0 -font "monospace 10" -matching fuzzy -sort -theme "solarized_alternate"
+set $rofi rofi -show run -lines 3 -width 40 -columns 3 -bw 0 -font "monospace 12" -matching fuzzy -sort -theme "solarized_alternate"
 bindsym Control+space exec $rofi
 
 # change focus
