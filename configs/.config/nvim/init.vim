@@ -202,6 +202,10 @@ set textwidth=100
 let g:deoplete#enable_at_startup=1
 inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<C-i>"
 
+call deoplete#custom#option('sources', {
+	\ 'rust': ['racer'],
+	\})
+
 " NERDTree
 " ========
 
