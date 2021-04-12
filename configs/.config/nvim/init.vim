@@ -28,12 +28,11 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'neomake/neomake', { 'for': ['rust', 'haskell', 'typescript'] }
 Plug 'airblade/vim-gitgutter'
 Plug 'w0rp/ale'
-Plug 'nanotech/jellybeans.vim'
 Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
-Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep'  }
 
 " FZF / Ctrlp for file navigation
 " ===============================
