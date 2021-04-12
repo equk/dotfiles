@@ -29,6 +29,7 @@ Plug 'neomake/neomake', { 'for': ['rust', 'haskell', 'typescript'] }
 Plug 'airblade/vim-gitgutter'
 Plug 'w0rp/ale'
 Plug 'nanotech/jellybeans.vim'
+Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
@@ -83,18 +84,19 @@ map <Leader>x :%s/\s\+$//
 " Color scheme
 " ============
 
-set t_Co=256
-
 if (has('termguicolors'))
   set termguicolors
 endif
 
-colorscheme jellybeans
+" colorscheme jellybeans
+
+colorscheme nightfly
 
 " set background to none for transparency
 hi! Normal ctermbg=NONE guibg=NONE
+hi! NonText ctermbg=NONE guibg=NONE
 " set colorcolumn=80
-highlight ColorColumn ctermbg=8 guibg=grey
+"highlight ColorColumn ctermbg=8 guibg=grey
 
 " whitespace
 highlight ExtraWhitespace ctermbg=DarkRed guibg=DarkRed
@@ -256,9 +258,9 @@ let g:airline_theme = 'powerlineish'
 " =========
 
 let g:lightline = {
-      \  'colorscheme': 'challenger_deep',
+      \  'colorscheme': 'powerline',
       \  'active': {
-      \    'left': [['mode', 'paste'], ['readonly', 'relativepath', 'modified', 'cocstatus', 'gitbranch']],
+      \    'left': [['mode', 'paste'], ['gitbranch', 'readonly', 'relativepath', 'modified']],
       \  },
       \ 'component_function': {
       \   'cocstatus': 'coc#status',
@@ -324,3 +326,4 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 "let g:ale_linters = {'javascript': ['standard'],'CloudFormation' : ['cfn-lint']}
 let g:ale_sign_column_alwayus = 1
 let g:ale_fix_on_save = 1
+
