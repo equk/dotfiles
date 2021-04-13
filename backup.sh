@@ -109,7 +109,7 @@ echo -e "  $gplus copying commandline arguments for Visual Studio Code"
 copy ~/.vscode/argv.json
 
 echo -e "$gplus copying font configuration files"
-for file in $(find ~/fontconfig -type f); do
+for file in $(find ~/.config/fontconfig -type f); do
     copy $file
 done
 
