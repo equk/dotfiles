@@ -63,6 +63,7 @@ background_opacity: 0.98 #0.95
 
 mouse_bindings:
   - { mouse: Middle, action: Paste }
+  - { mouse: Right, action: Paste }
 
 mouse:
   double_click: { threshold: 300 }
@@ -71,7 +72,7 @@ mouse:
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
-  save_to_clipboard: false
+  save_to_clipboard: true
 
 window.dynamic_title: true
 
