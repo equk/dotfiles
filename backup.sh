@@ -96,6 +96,11 @@ done
 echo -e "$gplus copying neovim configuration files"
 copy ~/.config/nvim/init.vim
 
+echo -e "$gplus copying custom code snippets for neovim"
+for file in $(find ~/.config/nvim/my_snippets -type f); do
+    copy $file
+done
+
 echo -e "$gplus copying alacritty configuration files"
 copy ~/.config/alacritty/alacritty.yml
 
