@@ -14,11 +14,11 @@ draw_bold_text_with_bright_colors: true
 
 font:
   normal:
-    family: Liberation Mono
+    family: Terminus
   bold:
-    family: Liberation Mono
+    family: Terminus
   italic:
-    family: Liberation Mono
+    family: Terminus
   size: 12.0
   offset:
     x: 0
