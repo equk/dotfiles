@@ -74,7 +74,6 @@ set background=dark
 " highlight whitespace
 " ====================
 
-" autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 au InsertLeave * match ExtraWhitespace /\s\+$/
 map <Leader>x :%s/\s\+$//
 
@@ -92,8 +91,6 @@ colorscheme nightfly
 " set background to none for transparency
 hi! Normal ctermbg=NONE guibg=NONE
 hi! NonText ctermbg=NONE guibg=NONE
-" set colorcolumn=80
-"highlight ColorColumn ctermbg=8 guibg=grey
 
 " whitespace
 highlight ExtraWhitespace ctermbg=DarkRed guibg=DarkRed
@@ -179,7 +176,6 @@ set title
 " mouse
 set mouse-=a
 
-" utf-8 ftw
 " nvim sets utf8 by default, wrap in if because prevents reloading vimrc
 if !has('nvim')
   set encoding=utf-8
@@ -202,8 +198,14 @@ let g:deoplete#enable_at_startup=1
 inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<C-i>"
 
 call deoplete#custom#option('sources', {
-	\ 'rust': ['racer'],
+	\ 'rust': ['racer', 'ultisnips'],
 	\})
+
+" UltiSnips
+" =========
+
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "my_snippets"]
+
 
 " NERDTree
 " ========
@@ -240,12 +242,6 @@ let g:airline_left_sep=""
 let g:airline_left_alt_sep="|"
 let g:airline_right_sep=""
 let g:airline_right_alt_sep="|"
-"let g:airline#extensions#tabline#enabled = 1
-"let g:airline#extensions#tabline#fnamemod = ':t'
-"let g:airline#extensions#tabline#show_tab_nr = 1
-"let g:airline#extensions#tabline#tab_nr_type = 1 " show tab number not number of split panes
-"let g:airline#extensions#tabline#show_close_button = 0
-"let g:airline#extensions#tabline#show_buffers = 0
 let g:airline#extensions#hunks#enabled = 0
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'powerlineish'
@@ -313,14 +309,11 @@ let g:neomake_warning_sign = {'text': '?'}
 " ===
 
 let g:airline#extensions#ale#enabled = 1
-" let g:ale_linters = {'go': ['golint', 'gofmt']}
 let g:ale_linters = {'rust': ['analyzer'], 'go': ['golint', 'gofmt'], 'javascript': ['eslint'],'CloudFormation' : ['cfn-lint']}
 let g:ale_fixers = {'rust': ['rustfmt'], 'javascript': ['eslint'], 'json': ['jq']}
 let g:ale_lint_delay = 800
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
-"let g:ale_fixers = {'javascript': ['standard'], 'json': ['jq']}
-"let g:ale_linters = {'javascript': ['standard'],'CloudFormation' : ['cfn-lint']}
 let g:ale_sign_column_alwayus = 1
 let g:ale_fix_on_save = 1
 
