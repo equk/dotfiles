@@ -36,12 +36,6 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 " ===============================
 
 if executable('fzf')
-  let s:uname = system("echo -n \"$(uname)\"")
-  if !v:shell_error && s:uname == "Darwin"
-    Plug '/usr/local/opt/fzf'
-  else
-    Plug 'junegunn/fzf', {'dir': '~/.local/src/fzf', 'do': './install --all' }
-  endif
   Plug 'junegunn/fzf.vim'
 else
   Plug 'ctrlpvim/ctrlp.vim'
