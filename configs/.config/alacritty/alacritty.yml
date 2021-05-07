@@ -69,6 +69,8 @@ mouse:
   double_click: { threshold: 300 }
   triple_click: { threshold: 300 }
   faux_scrolling_lines: 1
+  url:
+    launcher: None
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
