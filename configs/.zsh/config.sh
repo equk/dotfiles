@@ -106,6 +106,8 @@ alias duf='du -skh * | sort -n'
 alias grep='rg'
 # use neovim instead of vim
 alias vim='nvim'
+# use neovim with jellybeans for vimdiff
+alias vimdiff='nvim -c "colorscheme jellybeans" -d '
 # add color to ip
 alias ip='ip -c'
 # quick nmap scan over socks
