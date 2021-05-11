@@ -27,6 +27,7 @@ Plug 'neomake/neomake', { 'for': ['rust', 'haskell', 'typescript'] }
 Plug 'airblade/vim-gitgutter'
 Plug 'w0rp/ale'
 Plug 'bluz71/vim-nightfly-guicolors'
+Plug 'nanotech/jellybeans.vim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
