@@ -124,7 +124,8 @@ alias grub-update='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 alias killexe='kill $(pgrep .exe)'
 
 # Treesize view of current directory
-alias treesize='du -h --max-depth=1 | sort -nr'
+## alias treesize='du -h --max-depth=1 | sort -nr'
+alias treesize='ncdu'
 
 # Wget open directory
 alias wgeto='wget -H -r --level=1 -k -p '
