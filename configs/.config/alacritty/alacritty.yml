@@ -69,12 +69,21 @@ mouse:
   double_click: { threshold: 300 }
   triple_click: { threshold: 300 }
   faux_scrolling_lines: 1
-  url:
-    launcher: None
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
   save_to_clipboard: true
+
+
+# break/disable hints (clickable url etc)
+hints:
+  enabled:
+  - regex: ""
+    command: echo
+    post_processing: false
+    mouse:
+      enabled: false
+      mods: Control
 
 window.dynamic_title: true
 
