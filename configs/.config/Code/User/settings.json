@@ -158,10 +158,7 @@
     "terminal.integrated.enablePersistentSessions": false,
     // show welcome page on empty editor startup
     "workbench.startupEditor": "welcomePage",
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
 }
