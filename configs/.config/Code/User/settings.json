@@ -4,7 +4,9 @@
     "telemetry.enableTelemetry": false,
     // Font options
     "editor.fontSize": 15,
-    "editor.fontFamily": "Liberation Mono",
+    "editor.fontWeight": "300",
+    "editor.fontFamily": "JetBrains Mono NL",
+    "editor.fontLigatures": false,
     // Display whitespace chars for indent
     "editor.renderWhitespace": "boundary",
     // Theme options
