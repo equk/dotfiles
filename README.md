@@ -7,8 +7,8 @@ More Info: [Automated dotfiles - equk's blog](https://equk.co.uk/2019/07/24/auto
 ![](./screenshots/linux_desktop.png)
 
     OS: Arch Linux
-    Kernel: 5.13.10
-    Packages: 1289
+    Kernel: 5.13.13
+    Packages: 1290
     Window Manager: i3
     GTK Theme: Adapta-Eta [GTK2/3]
     GTK Font: Open Sans 10 [GTK2/3]
