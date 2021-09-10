@@ -33,13 +33,15 @@ to install vscode extensions run
 
 ### neovim
 
-neovim config should install plugins automatically using vim-plug
+neovim config should install plugins automatically using packer
 
 requirements:
 
-- fzf
 - ripgrep
 - rust-analyzer
+- gopls
+- lua-language-server (sumneko)
+- tsserver
 
 ---
 
