@@ -1,12 +1,14 @@
 aaron-bond.better-comments
 bungcip.better-toml
 christian-kohler.path-intellisense
+cmstead.js-codeformer
 cmstead.jsrefactor
 dbaeumer.vscode-eslint
 eseom.nunjucks-template
 foxundermoon.shell-format
 golang.go
 GraphQL.vscode-graphql
+JohnnyMorganz.stylua
 johnsoncodehk.volar
 JuanBlanco.solidity
 matklad.rust-analyzer
@@ -14,6 +16,7 @@ ms-azuretools.vscode-docker
 ms-python.python
 ms-python.vscode-pylance
 ms-toolsai.jupyter
+ms-toolsai.jupyter-keymap
 ms-vscode.cpptools
 PKief.material-icon-theme
 plorefice.devicetree

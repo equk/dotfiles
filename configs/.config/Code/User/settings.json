@@ -163,4 +163,9 @@
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter.notebook.ipynb"
     },
+    // use stylua
+    "[lua]": {
+        "editor.defaultFormatter": "JohnnyMorganz.stylua"
+    },
+    "stylua.styluaPath": "/usr/bin/stylua",
 }
