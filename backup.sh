@@ -20,7 +20,7 @@ bold="\033[1;37m"
 reset="\033[0m"
 
 # VARIABLES
-base_files=".bashrc .vimrc .zshrc .tmux.conf .compton.conf .Xdefaults .Xresources"
+base_files=".bashrc .zshrc .tmux.conf .compton.conf .Xdefaults .Xresources"
 day=$(date '+%d/%m/%Y')
 
 gplus="[$green+$reset]"
@@ -88,16 +88,8 @@ for file in $(find ~/.zsh/lib -type f); do
     copy $file
 done
 
-echo -e "$gplus copying vim configuration files"
-for file in $(find ~/.vim/config -type f); do
-    copy $file
-done
-
 echo -e "$gplus copying neovim configuration files"
-copy ~/.config/nvim/init.vim
-
-echo -e "$gplus copying custom code snippets for neovim"
-for file in $(find ~/.config/nvim/my_snippets -type f); do
+for file in $(find ~/.config/nvim -type f); do
     copy $file
 done
 
