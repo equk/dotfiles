@@ -43,27 +43,7 @@ requirements:
 - lua-language-server (sumneko)
 - tsserver
 
----
-
-### vim
-
-install Vundle and plugins
-
-    mkdir -p ~/.vim/bundle
-    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-    vim +PluginInstall +qall
-
-more info on plugins can be found in `lists/vim_plugins.md`
-
-### vim colorscheme
-
-To install the `jellybeans` vim colorscheme
-
-    mkdir -p ~/.vim/colors
-    cd ~/.vim/colors
-    curl -O https://raw.githubusercontent.com/nanotech/jellybeans.vim/master/colors/jellybeans.vim
-
----
+--
 
 ## Screenshots
 
