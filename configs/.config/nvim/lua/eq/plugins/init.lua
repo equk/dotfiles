@@ -45,6 +45,8 @@ return require('packer').startup(function(use)
   use 'tpope/vim-commentary'
   use 'tpope/vim-surround'
   use 'lukas-reineke/indent-blankline.nvim'
+  ---- use ale for linter
+  use 'dense-analysis/ale'
   ---- colorschemes
   -- main colorscheme
   use 'bluz71/vim-nightfly-guicolors'
