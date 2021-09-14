@@ -3,7 +3,7 @@
 # Set Defaults
 export EDITOR="nvim"
 export TERMINAL="alacritty"
-export BROWSER=$(which firefox)
+export BROWSER=$(which brave)
 export HISTCONTROL="ignoredups"
 
 # ls colors
@@ -96,12 +96,12 @@ bindkey "^[[B" history-beginning-search-forward
 alias update='yaourt -Syu'
 alias mem='free -mot; sync && echo -n 3 | sudo tee /proc/sys/vm/drop_caches; free -mot'
 alias diff='colordiff'
-alias xorg='sudo vim /etc/X11/xorg.conf'
-alias nano='nano -w'
 alias ls='ls -hF --color=auto --group-directories-first '
 alias ll='ls -lhF --color=auto --group-directories-first '
 alias df='df -h -T'
 alias duf='du -skh * | sort -n'
+# git alias
+alias g='git'
 # use ripgrep instead of grep
 alias grep='rg'
 # use neovim instead of vim
@@ -116,8 +116,6 @@ alias pscan='proxychains nmap -sTV -PN -n -p21,22,25,80,3306,3389 '
 alias pcap='sudo tcpdump -G 300 -w $HOME/pcaps/%Y-%m-%d_%H:%M.pcap -W 10'
 # http server for testing static content
 alias serve='hs . -a localhost'
-# minify style.css using cssutils from python
-alias cssminify='cssparse -m style.css > style.min.css'
 # update grub config
 alias grub-update='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 # kill all running windows executables
@@ -171,12 +169,12 @@ alias paccleanup='sudo pacman -Sc'
 if command -v yay &> /dev/null
 then
     alias paccleanup='yay -Sc'
+    # use yay instead of yaourt
+    alias yaourt='yay'
 fi
 
 alias paclsorphans='sudo pacman -Qdt'
 alias pacrmorphans='sudo pacman -Rs $(pacman -Qtdq)'
-# use yay instead of yaourt
-alias yaourt='yay'
 
 # list 30 largest packages installed
 alias pacbig='expac -s -H M "%-30n %m" | sort -rhk 2 | head -n 30'
