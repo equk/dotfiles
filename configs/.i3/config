@@ -147,6 +147,8 @@ for_window [class="Atom"] floating disable, border 1pixel
 for_window [class="Subl3"] floating disable, border 1pixel
 for_window [class="VirtualBox"] floating disable, border 1pixel
 for_window [class="Code"] floating disable, border 1pixel
+# brave browser
+for_window [class="Brave-browser"] floating disable, border 1pixel
 # vivaldi browser
 for_window [class="Vivaldi-stable"] floating disable, border 1pixel
 # linux eve online launcher (native qt)
@@ -219,4 +221,7 @@ exec pnmixer
 ##exec --no-startup-id redshift-gtk
 # execute dbus notification
 exec --no-startup-id systembus-notify
-
+# start imwheel daemon
+# (sets mouse wheel speed for chromium)
+exec --no-startup-id imwheel -b 45
+#
