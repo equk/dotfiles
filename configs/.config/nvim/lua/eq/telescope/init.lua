@@ -15,9 +15,7 @@ require('telescope').setup {
     selection_strategy = 'reset',
     sorting_strategy = 'descending',
     layout_strategy = 'horizontal',
-    file_sorter = require('telescope.sorters').get_fuzzy_file,
     file_ignore_patterns = {},
-    generic_sorter = require('telescope.sorters').get_generic_fuzzy_sorter,
     winblend = 0,
     layout_config = {
       prompt_position = 'bottom',
@@ -32,4 +30,13 @@ require('telescope').setup {
       ['COLORTERM'] = 'truecolor',
     },
   },
+  extensions = {
+    fzf = {
+      fuzzy = true,
+      override_generic_sorter = true,
+      override_file_sorter = true,
+      case_mode = 'smart_case',
+    },
+  },
 }
+require('telescope').load_extension 'fzf'
