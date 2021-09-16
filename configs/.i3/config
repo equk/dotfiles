@@ -208,7 +208,7 @@ exec --no-startup-id numlockx
 exec --no-startup-id xscreensaver -no-splash
 exec --no-startup-id thunar --daemon
 exec --no-startup-id parcellite
-exec --no-startup-id compton -b
+##exec --no-startup-id compton -b
 # set wallpaper
 exec --no-startup-id nitrogen --restore
 # start applications
