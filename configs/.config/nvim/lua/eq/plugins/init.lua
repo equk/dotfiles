@@ -23,6 +23,8 @@ return require('packer').startup(function(use)
       'nvim-lua/plenary.nvim',
     },
   }
+  -- fzf native
+  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
   ---- lsp
   use 'neovim/nvim-lspconfig'
   ---- completion
