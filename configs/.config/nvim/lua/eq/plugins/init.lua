@@ -11,8 +11,13 @@ return require('packer').startup(function(use)
   -- load plugins
   use 'lewis6991/gitsigns.nvim'
   use 'anott03/nvim-lspinstall'
-  use 'itchyny/lightline.vim'
-  use 'itchyny/vim-gitbranch'
+  use {
+    'hoob3rt/lualine.nvim',
+    requires = {
+      'kyazdani42/nvim-web-devicons',
+      opt = true,
+    },
+  }
   use 'jiangmiao/auto-pairs'
   use 'jremmen/vim-ripgrep'
   ---- telescope
@@ -24,7 +29,7 @@ return require('packer').startup(function(use)
     },
   }
   -- fzf native
-  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+  use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
   ---- lsp
   use 'neovim/nvim-lspconfig'
   ---- completion
