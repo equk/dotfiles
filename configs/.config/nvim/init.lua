@@ -5,6 +5,7 @@
 ----
 require 'eq.options'
 require 'eq.plugins'
+require 'eq.gitsigns'
 require 'eq.lsp'
 require 'eq.completion'
 require 'eq.lightline'
