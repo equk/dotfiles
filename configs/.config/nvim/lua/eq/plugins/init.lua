@@ -9,7 +9,7 @@ return require('packer').startup(function(use)
   -- packer can manage itself
   use 'wbthomason/packer.nvim'
   -- load plugins
-  use 'airblade/vim-gitgutter'
+  use 'lewis6991/gitsigns.nvim'
   use 'anott03/nvim-lspinstall'
   use 'itchyny/lightline.vim'
   use 'itchyny/vim-gitbranch'
@@ -43,7 +43,6 @@ return require('packer').startup(function(use)
   use 'saadparwaiz1/cmp_luasnip'
   ---- treesitter
   use 'nvim-treesitter/nvim-treesitter'
-  ---- disabled treesitter for now
   use 'tpope/vim-commentary'
   use 'tpope/vim-surround'
   use 'lukas-reineke/indent-blankline.nvim'
