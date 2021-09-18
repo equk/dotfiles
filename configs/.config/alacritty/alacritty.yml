@@ -14,11 +14,11 @@ draw_bold_text_with_bright_colors: true
 
 font:
   normal:
-    family: JetBrains Mono NL
+    family: JetBrains Mono Nerd Font
   bold:
-    family: JetBrains Mono NL
+    family: JetBrains Mono Nerd Font
   italic:
-    family: JetBrains Mono NL
+    family: JetBrains Mono Nerd Font
   size: 11.5
   offset:
     x: 0
