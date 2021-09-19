@@ -6,11 +6,20 @@ if not pcall(require, 'packer') then
 end
 -- init plugin manager
 return require('packer').startup(function(use)
+  ---- load plugins
   -- packer can manage itself
   use 'wbthomason/packer.nvim'
-  -- load plugins
+  -- git sidebar status
   use 'lewis6991/gitsigns.nvim'
-  use 'anott03/nvim-lspinstall'
+  -- buffer tabline
+  use {
+    'akinsho/bufferline.nvim',
+    requires = {
+      'kyazdani42/nvim-web-devicons',
+      opt = true,
+    },
+  }
+  -- status line
   use {
     'hoob3rt/lualine.nvim',
     requires = {
@@ -18,8 +27,6 @@ return require('packer').startup(function(use)
       opt = true,
     },
   }
-  use 'jiangmiao/auto-pairs'
-  use 'jremmen/vim-ripgrep'
   ---- telescope
   use {
     'nvim-telescope/telescope.nvim',
@@ -28,8 +35,11 @@ return require('packer').startup(function(use)
       'nvim-lua/plenary.nvim',
     },
   }
-  -- fzf native
-  use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+  -- fzf native (telescope extension)
+  use {
+    'nvim-telescope/telescope-fzf-native.nvim',
+    run = 'make',
+  }
   ---- lsp
   use 'neovim/nvim-lspconfig'
   ---- completion
@@ -48,11 +58,14 @@ return require('packer').startup(function(use)
   use 'saadparwaiz1/cmp_luasnip'
   ---- treesitter
   use 'nvim-treesitter/nvim-treesitter'
+  ---- linter on save
+  use 'dense-analysis/ale'
+  ---- display indentation lines
+  use 'lukas-reineke/indent-blankline.nvim'
+  ---- helpers / misc plugins
+  use 'jiangmiao/auto-pairs'
   use 'tpope/vim-commentary'
   use 'tpope/vim-surround'
-  use 'lukas-reineke/indent-blankline.nvim'
-  ---- use ale for linter
-  use 'dense-analysis/ale'
   ---- colorschemes
   -- main colorscheme
   use 'bluz71/vim-nightfly-guicolors'

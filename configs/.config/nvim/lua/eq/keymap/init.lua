@@ -19,6 +19,10 @@ key_mapper('n', '<leader>gd', ':lua vim.lsp.buf.definition()<CR>')
 key_mapper('n', '<c-]>', ':lua vim.lsp.buf.definition()<CR>')
 key_mapper('n', '<leader>rn', ':lua vim.lsp.buf.rename()<CR>')
 
+-- general
+key_mapper('n', '<leader>q', ':q<CR>')
+key_mapper('n', '<leader>w', ':w<CR>')
+
 -- move lines
 key_mapper('n', '<A-up>', ':m .-2<CR>')
 key_mapper('n', '<A-down>', ':m .+1<CR>')
