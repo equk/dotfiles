@@ -223,5 +223,5 @@ exec pnmixer
 exec --no-startup-id systembus-notify
 # start imwheel daemon
 # (sets mouse wheel speed for chromium)
-exec --no-startup-id imwheel -b 45
+exec --no-startup-id imwheel -b 45 -f
 #
