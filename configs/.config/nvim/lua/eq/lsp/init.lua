@@ -30,6 +30,10 @@ lspconfig.tsserver.setup {
   capabilities = capabilities,
   flags = { debounce_text_changes = 400 },
 }
+-- [lsp] vuejs
+lspconfig.volar.setup {
+  capabilities = capabilities,
+}
 -- [lsp] gopls
 lspconfig.gopls.setup {
   capabilities = capabilities,
