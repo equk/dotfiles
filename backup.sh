@@ -89,7 +89,8 @@ for file in $(find ~/.zsh/lib -type f); do
 done
 
 echo -e "$gplus copying neovim configuration files"
-for file in $(find ~/.config/nvim -type f); do
+copy ~/.config/nvim/init.lua
+for file in $(find ~/.config/nvim/lua -type f); do
     copy $file
 done
 
