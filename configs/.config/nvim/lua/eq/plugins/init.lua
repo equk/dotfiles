@@ -66,6 +66,7 @@ return require('packer').startup(function(use)
   use 'jiangmiao/auto-pairs'
   use 'tpope/vim-commentary'
   use 'tpope/vim-surround'
+  use 'tpope/vim-fugitive'
   ---- colorschemes
   -- main colorscheme
   use 'bluz71/vim-nightfly-guicolors'
