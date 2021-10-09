@@ -29,3 +29,5 @@ key_mapper('n', '<A-down>', ':m .+1<CR>')
 key_mapper('n', '<A-k>', ':m .-2<CR>')
 key_mapper('n', '<A-j>', ':m .+1<CR>')
 
+-- netrw
+key_mapper('n', '<C-n>', ':Explore .<CR>')
