@@ -93,7 +93,7 @@ bindkey "^[[A" history-beginning-search-backward
 bindkey "^[[B" history-beginning-search-forward
 
 # Set Aliases
-alias update='yaourt -Syu'
+alias update='paru -Syu'
 alias mem='free -mot; sync && echo -n 3 | sudo tee /proc/sys/vm/drop_caches; free -mot'
 alias diff='colordiff'
 alias ls='ls -hF --color=auto --group-directories-first '
@@ -164,16 +164,17 @@ alias pacclean='sudo pacman -Rs $(pacman -Qqdt)'
 # remove unused packages in cache
 alias paccleanup='sudo pacman -Sc'
 
-## use yay for cleanup (also cleans ~/.cache/yay/)
+## use paru for cleanup (also cleans ~/.cache/paru/)
 # remove unused packages & aur builds in cache
-if command -v yay &> /dev/null
+if command -v paru &> /dev/null
 then
-    alias paccleanup='yay -Sc'
-    # use yay instead of yaourt
-    alias yaourt='yay'
+    alias paccleanup='paru -Sc'
+    # use paru instead of yay
+    alias yay='paru'
+    alias p='paru'
 fi
 
-alias paclsorphans='sudo pacman -Qdt'
+alias paclsorphans='pacman -Qdt'
 alias pacrmorphans='sudo pacman -Rs $(pacman -Qtdq)'
 
 # list 30 largest packages installed
