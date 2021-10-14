@@ -34,6 +34,10 @@ lspconfig.tsserver.setup {
 lspconfig.volar.setup {
   capabilities = capabilities,
 }
+-- [lsp] tailwindcss
+lspconfig.tailwindcss.setup {
+  capabilities = capabilities,
+}
 -- [lsp] gopls
 lspconfig.gopls.setup {
   capabilities = capabilities,
