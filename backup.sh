@@ -125,6 +125,9 @@ copy ~/.config/mpv/mpv.conf
 echo -e "$gplus copying radare2 configuration files"
 copy ~/.config/radare2/radare2rc
 
+echo -e "$gplus copying imwheel configuration files"
+copy ~/.imwheelrc
+
 # FINISHED
 echo -e ""
 echo -e "$green+++$reset finished copying equk configuration files"
