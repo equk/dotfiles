@@ -277,3 +277,7 @@ alias chrome='notify-send "No Chrome Here" "Use Brave Instead" -i brave-desktop'
 # display error message for firefox
 alias firefox='notify-send "No Firefox Here" "Use Brave Instead" -i brave-desktop'
 
+# restart dnscrypt-proxy
+# show service log
+alias dnsre='sudo systemctl restart dnscrypt-proxy.service && sleep 1 && journalctl -b -u dnscrypt-proxy.service'
+
