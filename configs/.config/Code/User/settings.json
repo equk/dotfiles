@@ -1,7 +1,6 @@
 {
     // Disable telemetry
-    "telemetry.enableCrashReporter": false,
-    "telemetry.enableTelemetry": false,
+    "telemetry.telemetryLevel": "off",
     // Font options
     "editor.fontSize": 15,
     "editor.fontWeight": "300",
@@ -31,6 +30,10 @@
     },
     "[scss]": {
         "editor.formatOnSave": false
+    },
+    "[rust]": {
+        "editor.formatOnSave": true,
+        "editor.tabSize": 4
     },
     // Format Whitespace
     "files.trimTrailingWhitespace": true,
@@ -86,7 +89,7 @@
         }
     },
     // Rust
-    "rust.unstable_features": false,
+    "rust-analyzer.checkOnSave.command": "clippy",
     // Toggle menubar with Alt
     "window.menuBarVisibility": "toggle",
     // Enable json Settings Editor
@@ -101,13 +104,6 @@
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
-    // Vetur vuejs
-    // disabled Vetur formatting as problematic
-    // wraping text in the middle of elements,
-    // causing space-before-function-paren errors,
-    // messing up comma-dangle by removing commas
-    // conflicting with eslint
-    "vetur.format.enable": false,
     // Volar vuejs
     // Vetur does not support <script setup> yet
     // Evan You suggests to use Volar
@@ -126,6 +122,16 @@
         "**/CVS": true,
         "**/.DS_Store": true,
         "**/node_modules": true,
+        "/public/**": true
+    },
+    // Exclude from watched files
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/*/**": true,
+        "**/.hg/store/**": true,
+        "/target/**": true,
+        "/public/**": true
     },
     // Show git changes in gutter
     "scm.diffDecorationsGutterWidth": 2,
