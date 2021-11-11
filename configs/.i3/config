@@ -112,7 +112,8 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 #bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 #bindsym $mod+Shift+e exec oblogout
-bindsym $mod+Shift+E exec ~/.i3/tk_logout.py
+#bindsym $mod+Shift+E exec ~/.i3/tk_logout.py
+bindsym $mod+Shift+e exec logout_rs
 
 #enable alt+tab
 #bindsym $Alt+Tab focus right
@@ -169,6 +170,8 @@ for_window [class="qemu-system-x86_64" title="QEMU \(pheonixos-0\)"] floating di
 for_window [class="qemu-system-x86_64" title="QEMU \(windows10-0\)"] floating disable, border 1pixel
 # peek (desktop recording)
 for_window [class="Peek"] floating enable
+# rust logout app
+for_window [class="FLTK" title="logout_rs"] floating enable, border 1pixel, move position center
 # set all dialog windows to floating
 for_window [window_type="dialog"] floating enable
 
