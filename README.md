@@ -7,8 +7,8 @@ More Info: [Automated dotfiles - equk's blog](https://equk.co.uk/2019/07/24/auto
 ![](./screenshots/linux_desktop.png)
 
     OS: Arch Linux
-    Kernel: 5.14.15
-    Packages: 1315
+    Kernel: 5.15.2
+    Packages: 1322
     Window Manager: i3
     Shell: zsh
     Terminal: alacritty
@@ -40,7 +40,7 @@ requirements:
 - lua-language-server (sumneko)
 - tsserver
 
---
+---
 
 ## Screenshots
 
