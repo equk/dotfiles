@@ -205,26 +205,25 @@ client.unfocused        #373737 #676767 #888888 #444444
 client.urgent           #ec7ea4 #eb709b #ffffff #eb709b
 
 # Autostart
+# (sets keyboard layout, remaps & typematic rate)
 exec --no-startup-id ~/.i3/autostart.sh
-exec --no-startup-id numlockx
-# start daemons
-exec --no-startup-id xscreensaver -no-splash
-exec --no-startup-id thunar --daemon
-exec --no-startup-id parcellite
-##exec --no-startup-id picom -b
+# Daemons
+# (use "exec exec" to avoid keeping a shell process)
+exec exec numlockx
+exec exec xscreensaver -no-splash
+exec exec thunar --daemon
+exec exec parcellite
 # set wallpaper
-exec --no-startup-id nitrogen --restore
-# start applications
-##
-# start kalu archlinux update notifier
-#exec --no-startup-id kalu
-# execute audiomixer
-exec pnmixer
-# execute redshift
-##exec --no-startup-id redshift-gtk
-# execute dbus notification
-exec --no-startup-id systembus-notify
+exec exec nitrogen --restore
+# notifications
+exec exec systembus-notify
+# redshift
+exec exec redshift-gtk
+# start jackd using cadence
+exec exec cadence-session-start --system-start
+# start volume mixer
+exec exec pnmixer
 # start imwheel daemon
 # (sets mouse wheel speed for apps)
-exec --no-startup-id imwheel -b 45
+exec exec imwheel -b 45
 #
