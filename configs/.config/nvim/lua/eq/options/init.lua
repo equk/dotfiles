@@ -41,3 +41,4 @@ wo.signcolumn = 'yes'
 wo.wrap = true
 -- set colorscheme
 vim.g.colors_name = 'nightfly'
+vim.cmd 'colorscheme nightfly'
