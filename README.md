@@ -7,7 +7,7 @@ More Info: [Automated dotfiles - equk's blog](https://equk.co.uk/2019/07/24/auto
 ![](./screenshots/linux_desktop.png)
 
     OS: Arch Linux
-    Kernel: 5.16.12
+    Kernel: 5.16.13
     Packages: 1357
     Window Manager: i3
     Shell: zsh
