@@ -154,10 +154,10 @@ for_window [class="Brave-browser"] floating disable, border 1pixel
 for_window [class="Vivaldi-stable"] floating disable, border 1pixel
 # linux eve online launcher (native qt)
 for_window [class="EVE"] floating disable, border 1pixel
-# linux shadowrun hongkong (native unity)
-for_window [title="SRHK"] floating disable, border 1pixel
 # linux dota 2 (windowed borderless fullscreen)
-for_window [class="dota2"] floating enable, border none, move position 0 0
+## for_window [class="dota2"] floating enable, border none, move position 0 0
+# steam
+for_window [class="Steam"] floating enable, border 1pixel
 # alacritty terminal
 for_window [class="Alacritty"] floating disable, border pixel 1
 # chromiumos
@@ -218,13 +218,16 @@ exec exec nitrogen --restore
 # notifications
 exec exec systembus-notify
 # redshift
-exec exec redshift-gtk
+##exec exec redshift-gtk
 # start jackd using cadence
 ##exec exec cadence-session-start --system-start
 # (disabled/removed cadence as not needed with pipewire)
 # start volume mixer
 exec exec pnmixer
+# start easyeffects (Graphic EQ for pulsewire)
+exec exec easyeffects --gapplication-service
 # start imwheel daemon
 # (sets mouse wheel speed for apps)
 exec exec imwheel -b 45
 #
+
