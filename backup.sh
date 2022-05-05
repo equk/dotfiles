@@ -112,9 +112,7 @@ for file in $(find ~/.config/fontconfig -type f); do
 done
 
 echo -e "$gplus copying i3wm configuration files"
-for file in $(find ~/.i3 -type f); do
-    copy $file
-done
+copy ~/.i3/config
 
 echo -e "$gplus copying neofetch configuration files"
 copy ~/.config/neofetch/config.conf
