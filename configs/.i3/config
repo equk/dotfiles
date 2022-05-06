@@ -229,5 +229,7 @@ exec exec easyeffects --gapplication-service
 # start imwheel daemon
 # (sets mouse wheel speed for apps)
 exec exec imwheel -b 45
+# set volume to 40%
+exec exec pactl set-sink-volume 0 40%
 #
 
