@@ -11,6 +11,8 @@
     // Theme options
     "workbench.colorTheme": "Night Owl",
     "workbench.activityBar.visible": false,
+    // Use Alt to show menu bar
+    "window.menuBarVisibility": "toggle",
     // ESLint
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
