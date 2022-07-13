@@ -172,8 +172,9 @@
     "terminal.integrated.enablePersistentSessions": false,
     // show welcome page on empty editor startup
     "workbench.startupEditor": "welcomePage",
+    // jupyter notebook association
     "workbench.editorAssociations": {
-        "*.ipynb": "jupyter.notebook.ipynb"
+        "*.ipynb": "jupyter-notebook"
     },
     // use stylua
     "[lua]": {
