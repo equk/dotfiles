@@ -92,8 +92,6 @@
     },
     // Rust
     "rust-analyzer.checkOnSave.command": "clippy",
-    // Toggle menubar with Alt
-    "window.menuBarVisibility": "toggle",
     // Enable json Settings Editor
     "workbench.settings.editor": "json",
     // Use Native Linux Titlebar
@@ -137,10 +135,16 @@
     },
     // Show git changes in gutter
     "scm.diffDecorationsGutterWidth": 2,
+    // show three way diff view
+    "git.mergeEditor": true,
     // markdown options
     "[markdown]": {
         "editor.wordWrap": "on",
-        "editor.quickSuggestions": false,
+        "editor.quickSuggestions": {
+            "comments": "off",
+            "strings": "off",
+            "other": "off"
+        },
         "editor.tabSize": 2
     },
     // Disable italic comments
