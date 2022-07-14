@@ -76,8 +76,4 @@ return require('packer').startup(function(use)
   use 'bluz71/vim-nightfly-guicolors'
   -- vimdiff colorscheme
   use 'nanotech/jellybeans.vim'
-  ---- language support
-  -- solidity ethereum
-  -- (lsp seems lacking atm)
-  use 'ChristianChiarulli/vim-solidity'
 end)
