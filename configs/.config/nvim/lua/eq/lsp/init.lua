@@ -42,6 +42,10 @@ lspconfig.tailwindcss.setup {
 lspconfig.gopls.setup {
   capabilities = capabilities,
 }
+-- [lsp] solang
+lspconfig.solang.setup {
+  capabilities = capabilities,
+}
 -- [lsp] sumneko lua
 lspconfig.sumneko_lua.setup {
   cmd = {
