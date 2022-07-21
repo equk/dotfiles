@@ -187,14 +187,14 @@ bar {
         font -*-terminus-medium-r-*-*-12-*-*-*-*-*-iso10646-*
         colors {
             # <bar>
-            background #222222
+            background #011627
             separator  #C792EA
             statusline #999999
 
             # <workclass>       <border> <bg> <text>
             focused_workspace   #C792EA #8655a8 #ffffff
-            active_workspace    #565656 #444444 #ffffff
-            inactive_workspace  #373737 #222222 #888888
+            active_workspace    #36475b #243548 #ffffff
+            inactive_workspace  #373737 #011627 #888888
             urgent_workspace    #ec7ea4 #eb709b #ffffff
         }
 }
