@@ -7,8 +7,8 @@ More Info: [Automated dotfiles - equk's blog](https://equk.co.uk/2019/07/24/auto
 ![](./screenshots/linux_desktop.png)
 
     OS: Arch Linux
-    Kernel: 5.19.1
-    Packages: 1458
+    Kernel: 5.19.2
+    Packages: 1460
     Window Manager: i3
     Shell: zsh
     Terminal: alacritty
