@@ -8,6 +8,7 @@ eseom.nunjucks-template
 foxundermoon.shell-format
 golang.go
 GraphQL.vscode-graphql
+GraphQL.vscode-graphql-syntax
 JohnnyMorganz.stylua
 JuanBlanco.solidity
 ms-azuretools.vscode-docker
@@ -24,6 +25,7 @@ rust-lang.rust-analyzer
 sdras.night-owl
 serayuzgur.crates
 sibiraj-s.vscode-scss-formatter
+svelte.svelte-vscode
 sysoev.language-stylus
 vadimcn.vscode-lldb
 Vue.volar
