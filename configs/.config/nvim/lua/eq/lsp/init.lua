@@ -9,10 +9,6 @@ lspconfig.rust_analyzer.setup {
   capabilities = capabilities,
   settings = {
     ['rust-analyzer'] = {
-      assist = {
-        importMergeBehavior = 'last',
-        importPrefix = 'by_self',
-      },
       cargo = {
         loadOutDirsFromCheck = true,
       },
@@ -38,6 +34,11 @@ lspconfig.volar.setup {
 lspconfig.tailwindcss.setup {
   capabilities = capabilities,
 }
+-- [lsp] svelte
+lspconfig.svelte.setup {
+  capabilities = capabilities,
+}
+
 -- [lsp] gopls
 lspconfig.gopls.setup {
   capabilities = capabilities,
