@@ -181,4 +181,7 @@
         "editor.defaultFormatter": "JohnnyMorganz.stylua"
     },
     "stylua.styluaPath": "/usr/bin/stylua",
+    // svelte plugin options
+    "svelte.enable-ts-plugin": true,
+    "svelte.plugin.svelte.note-new-transformation": false,
 }
