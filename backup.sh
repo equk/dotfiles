@@ -20,7 +20,7 @@ bold="\033[1;37m"
 reset="\033[0m"
 
 # VARIABLES
-base_files=".bashrc .zshrc .tmux.conf .compton.conf .Xdefaults .Xresources"
+base_files=".bashrc .zshrc .tmux.conf .Xdefaults .Xresources"
 day=$(date '+%d/%m/%Y')
 
 gplus="[$green+$reset]"
@@ -96,6 +96,9 @@ done
 
 echo -e "$gplus copying alacritty configuration files"
 copy ~/.config/alacritty/alacritty.yml
+
+echo -e "$gplus copying picom configuration files"
+copy ~/.config/picom/picom.conf
 
 echo -e "$gplus starting Visual Studio Code"
 echo -e "  $gplus creating extension list for Visual Studio Code"
