@@ -213,6 +213,7 @@ exec exec numlockx
 exec exec xscreensaver -no-splash
 exec exec thunar --daemon
 exec exec parcellite
+exec exec picom -b
 # set wallpaper
 exec exec nitrogen --restore
 # notifications
