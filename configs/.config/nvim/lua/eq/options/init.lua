@@ -37,6 +37,8 @@ o.expandtab = true
 wo.cursorline = true
 -- display line numbers
 wo.number = true
+-- display numbers relative to cursor
+wo.relativenumber = true
 wo.signcolumn = 'yes'
 wo.wrap = true
 -- set colorscheme
