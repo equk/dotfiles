@@ -114,7 +114,6 @@
         "javascript": "javascriptreact"
     },
     // Exclude files in folder view
-    // node_modules
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
@@ -123,6 +122,17 @@
         "**/.DS_Store": true,
         "**/node_modules": true,
         "/public/**": true
+    },
+    // Exclude files from search
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/*.code-search": true,
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
     },
     // Exclude from watched files
     "files.watcherExclude": {
