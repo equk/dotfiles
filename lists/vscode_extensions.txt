@@ -30,6 +30,7 @@ serayuzgur.crates
 sibiraj-s.vscode-scss-formatter
 svelte.svelte-vscode
 sysoev.language-stylus
+usernamehw.errorlens
 vadimcn.vscode-lldb
 Vue.volar
 xabikos.JavaScriptSnippets
