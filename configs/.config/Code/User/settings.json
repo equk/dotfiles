@@ -194,4 +194,7 @@
     // svelte plugin options
     "svelte.enable-ts-plugin": true,
     "svelte.plugin.svelte.note-new-transformation": false,
+    "[css]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
+    },
 }
