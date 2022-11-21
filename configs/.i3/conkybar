@@ -9,6 +9,13 @@ conky.config = {
 conky.text = [[
 
 [\
+# EST TIME (HH-MM)
+{"full_text":"EST","color":"\#C792EA","separator":false,"separator_block_width":6},\
+{"full_text":"${tztime America/New_York %R}","color":"\#EEEEEE","separator":false},\
+# PST TIME (HH-MM)
+{"full_text":"PST","color":"\#C792EA","separator":false,"separator_block_width":6},\
+{"full_text":"${tztime America/Los_Angeles %R}","color":"\#EEEEEE","separator":false},\
+{"full_text":"|","color":"\#C792EA","separator":false,"separator_block_width":6},\
 # CPU USAGE
 {"full_text":"CPU","color":"\#C792EA","separator":false,"separator_block_width":6},\
 {"full_text":"${cpu}","color":"\#FFFFFF","separator":false,"separator_block_width":0},\
