@@ -213,13 +213,13 @@ exec exec numlockx
 exec exec xscreensaver -no-splash
 exec exec thunar --daemon
 exec exec parcellite
-exec exec picom -b
+#exec exec picom -b
 # set wallpaper
 exec exec nitrogen --restore
 # notifications
 exec exec systembus-notify
 # redshift
-exec exec redshift-gtk
+##exec exec redshift-gtk
 # start jackd using cadence
 ##exec exec cadence-session-start --system-start
 # (disabled/removed cadence as not needed with pipewire)
