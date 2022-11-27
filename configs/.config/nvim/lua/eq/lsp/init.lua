@@ -1,6 +1,6 @@
 ---- lsp config
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 --- load lspconfig
 local lspconfig = require 'lspconfig'
 ---- lsp sources
@@ -28,10 +28,6 @@ lspconfig.tsserver.setup {
 }
 -- [lsp] vuejs
 lspconfig.volar.setup {
-  capabilities = capabilities,
-}
--- [lsp] tailwindcss
-lspconfig.tailwindcss.setup {
   capabilities = capabilities,
 }
 -- [lsp] svelte
