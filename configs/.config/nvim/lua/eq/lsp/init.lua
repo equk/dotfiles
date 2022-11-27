@@ -43,6 +43,11 @@ lspconfig.gopls.setup {
 lspconfig.solang.setup {
   capabilities = capabilities,
 }
+-- [lsp] elixir
+lspconfig.elixirls.setup {
+  cmd = { 'elixir-ls' },
+  capabilities = capabilities,
+}
 -- [lsp] sumneko lua
 lspconfig.sumneko_lua.setup {
   cmd = {
