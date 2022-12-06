@@ -73,7 +73,7 @@ return require('packer').startup(function(use)
   use 'tpope/vim-fugitive'
   ---- colorschemes
   -- main colorscheme
-  use 'bluz71/vim-nightfly-guicolors'
+  use { 'catppuccin/nvim', as = 'catppuccin' }
   -- vimdiff colorscheme
   use 'nanotech/jellybeans.vim'
 end)
