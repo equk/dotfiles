@@ -1,5 +1,6 @@
 aaron-bond.better-comments
 bungcip.better-toml
+Catppuccin.catppuccin-vsc
 christian-kohler.path-intellisense
 cmstead.js-codeformer
 cmstead.jsrefactor
