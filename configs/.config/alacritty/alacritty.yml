@@ -32,7 +32,7 @@ debug.render_timer: false
 # Colors (equilibriumuk)
 colors:
   primary:
-    background: '0x011627'
+    background: '0x1e1e2e'
     foreground: '0xf8f8f2'
   normal:
     black:   '0x000000'
