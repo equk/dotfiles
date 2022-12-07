@@ -9,8 +9,11 @@
     // Display whitespace chars for indent
     "editor.renderWhitespace": "boundary",
     // Theme options
-    "workbench.colorTheme": "Night Owl",
+    "workbench.colorTheme": "Catppuccin Mocha",
     "workbench.activityBar.visible": false,
+    "catppuccin.italicComments": false,
+    "catppuccin.boldKeywords": false,
+    "catppuccin.workbenchMode": "flat",
     // Use Alt to show menu bar
     "window.menuBarVisibility": "toggle",
     // ESLint
@@ -50,11 +53,11 @@
     "editor.wordWrap": "off",
     // Color overrides
     "workbench.colorCustomizations": {
-        "editor.selectionBackground": "#0066aa",
-        "editor.selectionHighlightBackground": "#991144",
-        "statusBar.background": "#007ACC",
-        "statusBar.foreground": "#ffffff",
-        "statusBarItem.errorBackground": "#dd0000",
+        // "editor.selectionBackground": "#0066aa",
+        // "editor.selectionHighlightBackground": "#991144",
+        // "statusBar.background": "#007ACC",
+        // "statusBar.foreground": "#ffffff",
+        // "statusBarItem.errorBackground": "#dd0000",
         "sideBar.border": "#8655a8",
     },
     // Cursor - 'block', 'line' or 'underline'
@@ -97,7 +100,7 @@
     // Use Native Linux Titlebar
     "window.titleBarStyle": "native",
     // Ignore Extension Recommendations
-    "extensions.ignoreRecommendations": false,
+    "extensions.ignoreRecommendations": true,
     // Use Material Icon Theme
     "workbench.iconTheme": "material-icon-theme",
     // Set default formatter for json
@@ -194,6 +197,7 @@
     // svelte plugin options
     "svelte.enable-ts-plugin": true,
     "svelte.plugin.svelte.note-new-transformation": false,
+    // css format
     "[css]": {
         "editor.defaultFormatter": "vscode.css-language-features"
     },
