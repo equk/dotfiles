@@ -225,35 +225,45 @@ function virtualenv_prompt_info(){
   fi
 }
 
-# add users home bin to path
-if [ -d "$HOME/bin" ] ; then
-    export PATH="$HOME/bin:$PATH"
-fi
+###
+## PATHS
+###
+
+# check path is directory
+# add to $PATH if not already added
+function uniqpath {
+  if [ -d "$1" ] ; then
+    case ":$PATH:" in
+      *":$1:"*) :;;
+      *) export PATH="$1:$PATH";;
+    esac
+  fi
+}
+
+# HOME BIN PATH
+uniqpath "$HOME/bin"
 
 ## RUBY STUFF (user installed gems)
-# Set path
-PATH="$(ruby -e 'puts Gem.user_dir')/bin:$PATH"
-# Set GEM_HOME for bundler
+# GEM_HOME for bundler
 export GEM_HOME=$(ruby -e 'puts Gem.user_dir')
+# RUBY BIN PATH
+uniqpath "$GEM_HOME/bin"
 
-# setup golang paths
-# main binary paths
+# GOLANG PATHS
 if [ -d "$HOME/golang" ] ; then
     # go projects path
     export GOPATH=$HOME/golang
     # adding binary path for golang projects
-    export PATH=$PATH:$GOPATH/bin
-fi
-# setup local nodejs bin path
-if [ -d "$HOME/node/bin" ] ; then
-    export PATH="$HOME/node/bin:$PATH"
-fi
-# setup local rust (cargo) bin path
-if [ -d "$HOME/.cargo/bin" ] ; then
-    export PATH="$HOME/.cargo/bin:$PATH"
+    uniqpath $GOPATH/bin
 fi
 
-# set node prefix path for nodejs manager `n`
+# NODEJS PATH
+uniqpath $HOME/node/bin
+
+# RUST CARGO PATH
+uniqpath $HOME/.cargo/bin
+
+# N_PREFIX for nodejs manager `n`
 if [ -d "$HOME/node" ] ; then
     export N_PREFIX=$HOME/node
 fi
