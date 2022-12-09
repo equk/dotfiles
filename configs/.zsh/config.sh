@@ -1,4 +1,8 @@
-###
+#*****************************************************************
+## ZSH CONFIG
+#*****************************************************************
+# equk.co.uk - https://github.com/equk/dotfiles
+#*****************************************************************
 
 # Set Defaults
 export EDITOR="nvim"
@@ -7,9 +11,11 @@ export BROWSER=$(which brave)
 export HISTCONTROL="ignoredups"
 
 # ls colors
-autoload colors; colors;
+autoload colors
+colors
 export LSCOLORS="Gxfxcxdxbxegedabagacad"
 
+# Set Options
 setopt auto_name_dirs
 setopt auto_pushd
 setopt pushd_ignore_dups
@@ -19,6 +25,7 @@ setopt multios
 setopt cdablevarS
 setopt prompt_subst
 
+# PS1
 PS1="%n@%m:%~%# "
 SHORT_HOST=${HOST/.*/}
 ZSH_COMPDUMP="${ZDOTDIR:-${HOME}}/.zcompdump-${SHORT_HOST}-${ZSH_VERSION}"
@@ -53,7 +60,7 @@ export LESS_TERMCAP_so=$'\e[1;44;33m'
 export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;32m'
 
-# autocorrection
+# Autocorrection
 setopt correct_all
 alias man='nocorrect man'
 alias mv='nocorrect mv'
@@ -65,9 +72,9 @@ alias ebuild='nocorrect ebuild'
 alias hpodder='nocorrect hpodder'
 alias sudo='nocorrect sudo'
 
-## Command history configuration
+# Command History
 if [ -z $HISTFILE ]; then
-    HISTFILE=$HOME/.zsh_history
+  HISTFILE=$HOME/.zsh_history
 fi
 HISTSIZE=10000
 SAVEHIST=10000
@@ -81,6 +88,22 @@ setopt hist_verify
 setopt inc_append_history
 setopt share_history # share command history data
 
+## smart urls
+autoload -U url-quote-magic
+zle -N self-insert url-quote-magic
+
+## file rename magick
+bindkey "^[m" copy-prev-shell-word
+
+## jobs
+setopt long_list_jobs
+
+## pager
+export PAGER="less"
+export LESS="-R"
+
+export LC_CTYPE=$LANG
+
 # Key bindings
 bindkey "\e[1~" beginning-of-line
 bindkey "\e[7~" beginning-of-line
@@ -92,15 +115,39 @@ bindkey "\e[6~" end-of-history
 bindkey "^[[A" history-beginning-search-backward
 bindkey "^[[B" history-beginning-search-forward
 
-# Set Aliases
-alias update='paru -Syu'
+# Extract
+function extract() {
+  if [ -f $1 ]; then
+    case $1 in
+    *.tar.bz2) tar xjf $1 ;;
+    *.tar.gz) tar xzf $1 ;;
+    *.bz2) bunzip2 $1 ;;
+    *.rar) unrar x $1 ;;
+    *.gz) gunzip $1 ;;
+    *.tar) tar xf $1 ;;
+    *.tbz2) tar xjf $1 ;;
+    *.tgz) tar xzf $1 ;;
+    *.tar.xz) tar xJf $1 ;;
+    *.zip) unzip $1 ;;
+    *.Z) uncompress $1 ;;
+    *.7z) 7z x $1 ;;
+    *) echo "'$1' cannot be extracted via extract()" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
+}
+
+###
+## ALIASES
+###
+
 alias mem='free -mot; sync && echo -n 3 | sudo tee /proc/sys/vm/drop_caches; free -mot'
 alias diff='colordiff'
 alias ls='ls -hF --color=auto --group-directories-first '
 alias ll='ls -lhF --color=auto --group-directories-first '
 alias df='df -h -T'
 alias duf='du -skh * | sort -n'
-# git alias
 alias g='git'
 # use ripgrep instead of grep
 alias grep='rg'
@@ -120,91 +167,52 @@ alias serve='hs . -a localhost'
 alias grub-update='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 # kill all running windows executables
 alias killexe='kill $(pgrep .exe)'
-
 # Treesize view of current directory
 ## alias treesize='du -h --max-depth=1 | sort -nr'
 alias treesize='ncdu'
-
 # Wget open directory
 alias wgeto='wget -H -r --level=1 -k -p '
+# list hwmon devices
+alias hwmonls='ls -l /sys/class/hwmon'
+# systemd log view
+alias service-log='journalctl -b -u '
+# dnscrypt-proxy config
+alias dnscrypt-edit='sudo vim /etc/dnscrypt-proxy/dnscrypt-proxy.toml'
+alias dnscrypt-resolvers='sudo vim /var/cache/dnscrypt-proxy/public-resolvers.md'
+# display error message for chrome
+alias chrome='notify-send "No Chrome Here" "Use Brave Instead" -i brave-desktop'
+# display error message for firefox
+alias firefox='notify-send "No Firefox Here" "Use Brave Instead" -i brave-desktop'
 
-# get http request headers with httpie
-alias header='http --headers '
-alias headers='http --headers '
+## ARCH PACKAGE MANAGEMENT
 
+# start system update
+alias update='paru -Syu'
+# update aur packages
+alias updaur='paru -Sua'
 # list explicitly installed packages which are not dependencies
 # can use to cleanup packages - eg: python, ruby
 alias paclsnodep='pacman -Qetq | grep'
-
-# Extract
-function extract () {
-    if [ -f $1 ] ; then
-        case $1 in
-            *.tar.bz2) tar xjf $1 ;;
-            *.tar.gz) tar xzf $1 ;;
-            *.bz2) bunzip2 $1 ;;
-            *.rar) unrar x $1 ;;
-            *.gz) gunzip $1 ;;
-            *.tar) tar xf $1 ;;
-            *.tbz2) tar xjf $1 ;;
-            *.tgz) tar xzf $1 ;;
-            *.tar.xz) tar xJf $1 ;;
-            *.zip) unzip $1 ;;
-            *.Z) uncompress $1 ;;
-            *.7z) 7z x $1 ;;
-            *) echo "'$1' cannot be extracted via extract()" ;;
-        esac
-    else
-        echo "'$1' is not a valid file"
-    fi
-}
-
 # remove orphaned/un-needed packages
 alias pacclean='sudo pacman -Rs $(pacman -Qqdt)'
 # remove unused packages in cache
 alias paccleanup='sudo pacman -Sc'
-
 ## use paru for cleanup (also cleans ~/.cache/paru/)
 # remove unused packages & aur builds in cache
-if command -v paru &> /dev/null
-then
-    alias paccleanup='paru -Sc'
-    # use paru instead of yay
-    alias yay='paru'
-    alias p='paru'
+if command -v paru &>/dev/null; then
+  alias paccleanup='paru -Sc'
+  # use paru instead of yay
+  alias yay='paru'
+  alias p='paru'
 fi
-
 alias paclsorphans='pacman -Qdt'
 alias pacrmorphans='sudo pacman -Rs $(pacman -Qtdq)'
-
 # list 30 largest packages installed
 alias pacbig='expac -s -H M "%-30n %m" | sort -rhk 2 | head -n 30'
 
-# list hwmon devices
-alias hwmonls='ls -l /sys/class/hwmon'
-
-# mongodb gui
-alias robomongo='robo3t'
-alias mongogui='robo3t'
-
-# systemd log view
-alias service-log='journalctl -b -u '
-
-## smart urls
-autoload -U url-quote-magic
-zle -N self-insert url-quote-magic
-
-## file rename magick
-bindkey "^[m" copy-prev-shell-word
-
-## jobs
-setopt long_list_jobs
-
-## pager
-export PAGER="less"
-export LESS="-R"
-
-export LC_CTYPE=$LANG
+###
+## THEME
+###
 
 ## custom theme - equk
 function prompt_char {
@@ -219,9 +227,9 @@ ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[yellow]%}✗%{$fg[blue]%})%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}✔%{$fg[blue]%})%{$reset_color%}"
 
 ## virtualenv support for theme
-function virtualenv_prompt_info(){
+function virtualenv_prompt_info() {
   if [[ -n $VIRTUAL_ENV ]]; then
-    printf "%s[%s] " "%{${fg[yellow]}%}" ${${VIRTUAL_ENV}:t}
+    printf "%s[%s]" "%{${fg[yellow]}%}" ${VIRTUAL_ENV:t}
   fi
 }
 
@@ -229,13 +237,13 @@ function virtualenv_prompt_info(){
 ## PATHS
 ###
 
-# check path is directory
+# check path exists as directory
 # add to $PATH if not already added
 function uniqpath {
-  if [ -d "$1" ] ; then
+  if [ -d "$1" ]; then
     case ":$PATH:" in
-      *":$1:"*) :;;
-      *) export PATH="$1:$PATH";;
+    *":$1:"*) : ;;
+    *) export PATH="$1:$PATH" ;;
     esac
   fi
 }
@@ -250,11 +258,11 @@ export GEM_HOME=$(ruby -e 'puts Gem.user_dir')
 uniqpath "$GEM_HOME/bin"
 
 # GOLANG PATHS
-if [ -d "$HOME/golang" ] ; then
-    # go projects path
-    export GOPATH=$HOME/golang
-    # adding binary path for golang projects
-    uniqpath $GOPATH/bin
+if [ -d "$HOME/golang" ]; then
+  # go projects path
+  export GOPATH=$HOME/golang
+  # adding binary path for golang projects
+  uniqpath $GOPATH/bin
 fi
 
 # NODEJS PATH
@@ -264,8 +272,8 @@ uniqpath $HOME/node/bin
 uniqpath $HOME/.cargo/bin
 
 # N_PREFIX for nodejs manager `n`
-if [ -d "$HOME/node" ] ; then
-    export N_PREFIX=$HOME/node
+if [ -d "$HOME/node" ]; then
+  export N_PREFIX=$HOME/node
 fi
 
 # disables prompt mangling in virtual_env/bin/activate
@@ -274,20 +282,3 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 # set wine to always run 64bit
 export WINEPREFIX=$HOME/win64/
 export WINEARCH=win64
-
-# alias for golang dnscrypt-proxy
-alias dnscrypt-edit='sudo vim /etc/dnscrypt-proxy/dnscrypt-proxy.toml'
-alias dnscrypt-resolvers='sudo vim /var/cache/dnscrypt-proxy/public-resolvers.md'
-
-# set QEMU to use ALSA for audio
-export QEMU_AUDIO_DRV=alsa
-
-# display error message for chrome
-alias chrome='notify-send "No Chrome Here" "Use Brave Instead" -i brave-desktop'
-# display error message for firefox
-alias firefox='notify-send "No Firefox Here" "Use Brave Instead" -i brave-desktop'
-
-# restart dnscrypt-proxy
-# show service log
-alias dnsre='sudo systemctl restart dnscrypt-proxy.service && sleep 1 && journalctl -b -u dnscrypt-proxy.service'
-
