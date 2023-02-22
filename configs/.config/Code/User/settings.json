@@ -201,4 +201,5 @@
     "[css]": {
         "editor.defaultFormatter": "vscode.css-language-features"
     },
+    "css.lint.unknownAtRules": "ignore",
 }
