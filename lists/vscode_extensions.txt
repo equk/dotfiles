@@ -1,4 +1,6 @@
 aaron-bond.better-comments
+astro-build.astro-vscode
+bradlc.vscode-tailwindcss
 bungcip.better-toml
 Catppuccin.catppuccin-vsc
 christian-kohler.path-intellisense
