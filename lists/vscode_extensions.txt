@@ -7,10 +7,8 @@ christian-kohler.path-intellisense
 cmstead.js-codeformer
 cmstead.jsrefactor
 dbaeumer.vscode-eslint
-eseom.nunjucks-template
 foxundermoon.shell-format
 golang.go
-GraphQL.vscode-graphql
 GraphQL.vscode-graphql-syntax
 JohnnyMorganz.stylua
 JuanBlanco.solidity
@@ -26,10 +24,8 @@ ms-toolsai.vscode-jupyter-slideshow
 ms-vscode.cpptools
 PKief.material-icon-theme
 plorefice.devicetree
-rust-lang.rust
 rust-lang.rust-analyzer
 sdras.night-owl
-serayuzgur.crates
 sibiraj-s.vscode-scss-formatter
 svelte.svelte-vscode
 sysoev.language-stylus
