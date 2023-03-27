@@ -7,7 +7,7 @@
 # Set Defaults
 export EDITOR="nvim"
 export TERMINAL="alacritty"
-export BROWSER=$(which brave)
+export BROWSER=$(which firefox)
 export HISTCONTROL="ignoredups"
 
 # ls colors
@@ -180,9 +180,7 @@ alias service-log='journalctl -b -u '
 alias dnscrypt-edit='sudo vim /etc/dnscrypt-proxy/dnscrypt-proxy.toml'
 alias dnscrypt-resolvers='sudo vim /var/cache/dnscrypt-proxy/public-resolvers.md'
 # display error message for chrome
-alias chrome='notify-send "No Chrome Here" "Use Brave Instead" -i brave-desktop'
-# display error message for firefox
-##alias firefox='notify-send "No Firefox Here" "Use Brave Instead" -i brave-desktop'
+alias chrome='notify-send "No Chrome Here" "Use Firefox Instead" -i firefox'
 
 ## ARCH PACKAGE MANAGEMENT
 
