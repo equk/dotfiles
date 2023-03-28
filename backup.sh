@@ -129,6 +129,9 @@ copy ~/.config/radare2/radare2rc
 echo -e "$gplus copying imwheel configuration files"
 copy ~/.imwheelrc
 
+echo -e "$gplus copying firefox desktop entry"
+copy ~/.local/share/applications/firefox.desktop
+
 # FINISHED
 echo -e ""
 echo -e "$green+++$reset finished copying equk configuration files"
