@@ -52,6 +52,10 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
+# resize window width
+bindsym $mod+minus resize shrink width 10 px or 10 ppt
+bindsym $mod+plus resize grow width 10 px or 10 ppt
+
 # split in horizontal orientation
 bindsym $mod+h split h
 
