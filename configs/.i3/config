@@ -6,10 +6,18 @@
 #
 # configuration for 2 x Dell P2414H 1080p monitors
 
+##
+# Modifier Keys
+##
+
 set $mod Mod4
 
 set $Alt Mod1
 set $Win Mod4
+
+##
+# Key Binds
+##
 
 # lockscreen
 bindsym $mod+l exec xscreensaver-command -lock
@@ -20,8 +28,6 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 floating_modifier $mod
 
 # start a terminal
-#bindsym $mod+Return exec i3-sensible-terminal
-#bindsym $mod+Return exec xfce4-terminal
 bindsym $mod+Return exec alacritty
 
 # kill focused window
@@ -29,11 +35,6 @@ bindsym $mod+Shift+q kill
 
 # mouse focus
 focus_follows_mouse yes
-
-# start dmenu (a program launcher)
-#bindsym $mod+d exec ~/bin/dmenu_launch
-#bindsym Control+space exec ~/bin/dmenu_launch
-#bindsym $mod+s exec ~/bin/dmenu_launch
 
 # start rofi (app launcher)
 set $rofi rofi -show run -lines 3 -width 40 -columns 3 -bw 0 -font "monospace 12" -matching fuzzy -sort -theme "solarized_alternate"
@@ -110,14 +111,11 @@ bindsym $mod+Shift+c reload
 # restart i3
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-#bindsym $mod+Shift+e exec oblogout
-#bindsym $mod+Shift+E exec ~/.i3/tk_logout.py
 bindsym $mod+Shift+e exec logout_rs
 
-#enable alt+tab
-#bindsym $Alt+Tab focus right
-#bindsym $Alt+Shift+Tab focus left
+##
+# Window Styling
+##
 
 # i3-gaps
 smart_gaps on
@@ -128,75 +126,62 @@ gaps outer 0
 # default border setting
 default_border pixel 3
 for_window [class="^.*"] border normal 3pixel
+
 # set application specific options
 # use 'xprop' or 'xwininfo' to get window information
-for_window [class="Xfce4-terminal"] border 1pixel
+for_window [class="Alacritty"] floating disable, border pixel 1
+for_window [class="Atom"] floating disable, border 1pixel
+for_window [class="Brave-browser"] floating disable, border 1pixel
+for_window [class="Chromium"] border 1pixel
+for_window [class="Code"] floating disable, border 1pixel
+for_window [class="firefox"] border 1pixel
+for_window [class="FLTK" title="logout_rs"] floating enable, border 1pixel, move position center
 for_window [class="Google-chrome-stable"] border 1pixel
-for_window [class="Xfce4-notifyd"] floating enable, focus mode_toggle
+for_window [class="I3-exit"] floating enable
 for_window [class="mpv"] floating disable, border 1pixel
 for_window [class="Oblogout"] floating enable, border 1pixel
-for_window [class="I3-exit"] floating enable
-for_window [class="Chromium"] border 1pixel
-for_window [class="firefox"] border 1pixel
-for_window [class="Opera"] border 1pixel
-for_window [class="Vlc"] border 1pixel
-for_window [class="Tk" title="tk_logout"] floating enable, border 1pixel
-for_window [class="Thunar"] floating disable, border 1pixel
-for_window [class="Wine"] floating disable, border 1pixel
 for_window [class="openttd"] floating disable, border 1pixel
-for_window [class="Atom"] floating disable, border 1pixel
-for_window [class="Subl3"] floating disable, border 1pixel
-for_window [class="VirtualBox"] floating disable, border 1pixel
-for_window [class="Code"] floating disable, border 1pixel
-# brave browser
-for_window [class="Brave-browser"] floating disable, border 1pixel
-# vivaldi browser
-for_window [class="Vivaldi-stable"] floating disable, border 1pixel
-# linux eve online launcher (native qt)
-for_window [class="EVE"] floating disable, border 1pixel
-# linux dota 2 (windowed borderless fullscreen)
-## for_window [class="dota2"] floating enable, border none, move position 0 0
-# steam
-for_window [class="Steam"] floating enable, border 1pixel
-# alacritty terminal
-for_window [class="Alacritty"] floating disable, border pixel 1
-# chromiumos
-for_window [class="qemu-system-x86_64" title="QEMU \(chromiumos-0\)"] floating disable, border 1pixel
-# cloudready chromiumos
-for_window [class="qemu-system-x86_64" title="QEMU \(cloudready-0\)"] floating disable, border 1pixel
-# pheonixos
-for_window [class="qemu-system-x86_64" title="QEMU \(pheonixos-0\)"] floating disable, border 1pixel
-# windows 10
-for_window [class="qemu-system-x86_64" title="QEMU \(windows10-0\)"] floating disable, border 1pixel
-# peek (desktop recording)
+for_window [class="Opera"] border 1pixel
 for_window [class="Peek"] floating enable
-# rust logout app
-for_window [class="FLTK" title="logout_rs"] floating enable, border 1pixel, move position center
+for_window [class="qemu-system-x86_64" title="QEMU \(windows10-0\)"] floating disable, border 1pixel
+for_window [class="Subl3"] floating disable, border 1pixel
+for_window [class="Thunar"] floating disable, border 1pixel
+for_window [class="Tk" title="tk_logout"] floating enable, border 1pixel
+for_window [class="VirtualBox"] floating disable, border 1pixel
+for_window [class="Vivaldi-stable"] floating disable, border 1pixel
+for_window [class="Vlc"] border 1pixel
+for_window [class="Wine"] floating disable, border 1pixel
+for_window [class="Xfce4-notifyd"] floating enable, focus mode_toggle
+for_window [class="Xfce4-terminal"] border 1pixel
+
 # set all dialog windows to floating
 for_window [window_type="dialog"] floating enable
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-        status_command ~/.i3/i3-conky
-        i3bar_command   i3bar
-        mode dock
-        position top
-        workspace_buttons yes
-        tray_output DisplayPort-1
-        font -*-terminus-medium-r-*-*-12-*-*-*-*-*-iso10646-*
-        colors {
-            # <bar>
-            background #011627
-            separator  #C792EA
-            statusline #999999
+##
+# Status Bar
+##
 
-            # <workclass>       <border> <bg> <text>
-            focused_workspace   #C792EA #8655a8 #ffffff
-            active_workspace    #36475b #243548 #ffffff
-            inactive_workspace  #373737 #011627 #888888
-            urgent_workspace    #ec7ea4 #eb709b #ffffff
-        }
+# Start i3bar to display a workspace bar
+bar {
+    status_command ~/.i3/i3-conky
+    i3bar_command   i3bar
+    mode dock
+    position top
+    workspace_buttons yes
+    tray_output DisplayPort-1
+    font -*-terminus-medium-r-*-*-12-*-*-*-*-*-iso10646-*
+    colors {
+        # <bar>
+        background #011627
+        separator  #C792EA
+        statusline #999999
+
+        # <workclass>       <border> <bg> <text>
+        focused_workspace   #C792EA #8655a8 #ffffff
+        active_workspace    #36475b #243548 #ffffff
+        inactive_workspace  #373737 #011627 #888888
+        urgent_workspace    #ec7ea4 #eb709b #ffffff
+    }
 }
 
 client.focused          #C792EA #8655a8 #ffffff #eb709b
@@ -204,9 +189,13 @@ client.focused_inactive #565656 #444444 #ffffff #666666
 client.unfocused        #373737 #676767 #888888 #444444
 client.urgent           #ec7ea4 #eb709b #ffffff #eb709b
 
+##
 # Autostart
-# (sets keyboard layout, remaps & typematic rate)
+##
+
+# (set keymapping with script)
 exec --no-startup-id ~/.i3/autostart.sh
+
 # Daemons
 # (use "exec exec" to avoid keeping a shell process)
 exec exec numlockx
@@ -219,17 +208,11 @@ exec exec nitrogen --restore
 # notifications
 exec exec systembus-notify
 # redshift
-##exec exec redshift-gtk
-# start jackd using cadence
-##exec exec cadence-session-start --system-start
-# (disabled/removed cadence as not needed with pipewire)
+#exec exec redshift-gtk
 # start volume mixer
 exec exec pnmixer
-# start easyeffects (Graphic EQ for pulsewire)
+# start easyeffects (Graphic EQ for pipewire)
 exec exec easyeffects --gapplication-service
-# start imwheel daemon
-# (sets mouse wheel speed for apps)
-exec exec imwheel -b 45
 # set volume to 40%
 exec exec pactl set-sink-volume 0 40%
 #
