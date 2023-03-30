@@ -40,6 +40,12 @@ requirements:
 - lua-language-server (sumneko)
 - tsserver
 
+### firefox
+
+firefox profiles are managed using [ffox_profile_tools](https://github.com/equk/ffox_profile_tools)
+
+> firefox profiles with security & privacy settings already preset
+
 ---
 
 ## Screenshots
