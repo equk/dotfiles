@@ -132,6 +132,9 @@ copy ~/.imwheelrc
 echo -e "$gplus copying firefox desktop entry"
 copy ~/.local/share/applications/firefox.desktop
 
+echo -e "$gplus copying newsboat config"
+copy ~/.newsboat/config
+
 # FINISHED
 echo -e ""
 echo -e "$green+++$reset finished copying equk configuration files"
