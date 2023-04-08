@@ -19,7 +19,9 @@ local beautiful = require 'beautiful'
 -- Notification library
 local naughty = require 'naughty'
 local menubar = require 'menubar'
-local hotkeys_popup = require 'awful.hotkeys_popup'
+-- local hotkeys_popup = require 'awful.hotkeys_popup'
+-- Extra Widget library
+local vicious = require 'vicious'
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 require 'awful.hotkeys_popup.keys'
@@ -70,16 +72,12 @@ beautiful.gap_single_client = false
 -- Fix window snapping
 awful.mouse.snap.edge_enabled = false
 
--- This is used later as the default terminal and editor to run.
-terminal = 'alacritty'
-editor = os.getenv 'EDITOR' or 'vim'
-editor_cmd = terminal .. ' -e ' .. editor
-
 -- define default apps (global variable so other components can access it)
-apps = {
+local apps = {
   terminal = 'alacritty',
   launcher = 'rofi -show run -lines 3 -width 40 -columns 3 -bw 0 -font "monospace 12" -matching fuzzy -sort -theme "solarized_alternate"',
-  lock = 'i3lock',
+  lock = 'xscreensaver-command -lock',
+  logout = 'logout_rs',
   screenshot = "scrot -e 'mv $f ~/Pictures/ 2>/dev/null'",
   filebrowser = 'thunar',
 }
@@ -99,7 +97,7 @@ local run_on_start_up = {
 }
 
 -- Default modkey.
-modkey = 'Mod4'
+local modkey = 'Mod4'
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
@@ -131,18 +129,28 @@ for _, app in ipairs(run_on_start_up) do
   awful.spawn.with_shell(string.format("echo 'pgrep -u $USER -x %s > /dev/null || (%s)' | bash -", findme, app), false)
 end
 
-mylauncher = awful.widget.launcher { image = beautiful.awesome_icon, menu = mymainmenu }
-
 -- Menubar configuration
-menubar.utils.terminal = terminal -- Set the terminal for applications that require it
+menubar.utils.terminal = apps.terminal -- Set the terminal for applications that require it
 -- }}}
 
--- Keyboard map indicator and switcher
-mykeyboardlayout = awful.widget.keyboardlayout()
-
 -- {{{ Wibar
+
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock()
+local mytextclock = wibox.widget.textclock()
+
+-- Create a widget for Intel CPU temperature
+local coretemp = wibox.widget.textbox()
+vicious.register(
+  coretemp,
+  vicious.widgets.hwmontemp,
+  ' <span foreground="#8655a8">CPU</span> $1°C ',
+  5,
+  { 'coretemp', 2 }
+)
+
+-- Create a widget for AMD GPU temperature
+local amdtemp = wibox.widget.textbox()
+vicious.register(amdtemp, vicious.widgets.hwmontemp, ' <span foreground="#8655a8">GPU</span> $1°C', 5, { 'amdgpu' })
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -187,23 +195,23 @@ local tasklist_buttons = gears.table.join(
   end)
 )
 
-local function set_wallpaper(s)
-  -- Wallpaper
-  if beautiful.wallpaper then
-    local wallpaper = beautiful.wallpaper
-    -- If wallpaper is a function, call it with the screen
-    if type(wallpaper) == 'function' then
-      wallpaper = wallpaper(s)
-    end
-    gears.wallpaper.maximized(wallpaper, s, true)
-  end
-end
+-- local function set_wallpaper(s)
+--   -- Wallpaper
+--   if beautiful.wallpaper then
+--     local wallpaper = beautiful.wallpaper
+--     -- If wallpaper is a function, call it with the screen
+--     if type(wallpaper) == 'function' then
+--       wallpaper = wallpaper(s)
+--     end
+--     gears.wallpaper.maximized(wallpaper, s, true)
+--   end
+-- end
 
 -- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
-screen.connect_signal('property::geometry', set_wallpaper)
+-- screen.connect_signal('property::geometry', set_wallpaper)
 awful.screen.connect_for_each_screen(function(s)
   -- Wallpaper
-  set_wallpaper(s)
+  -- set_wallpaper(s)
 
   -- Each screen has its own tag table.
   awful.tag({ '1', '2', '3', '4', '5', '6', '7', '8', '9' }, s, awful.layout.layouts[1])
@@ -252,16 +260,16 @@ awful.screen.connect_for_each_screen(function(s)
     layout = wibox.layout.align.horizontal,
     { -- Left widgets
       layout = wibox.layout.fixed.horizontal,
-      mylauncher,
       s.mytaglist,
       s.mypromptbox,
     },
     s.mytasklist, -- Middle widget
     { -- Right widgets
       layout = wibox.layout.fixed.horizontal,
-      mykeyboardlayout,
-      s.systray,
+      amdtemp,
+      coretemp,
       mytextclock,
+      s.systray,
       s.mylayoutbox,
     },
   }
@@ -273,7 +281,7 @@ root.buttons(gears.table.join(awful.button({}, 4, awful.tag.viewnext), awful.but
 -- }}}
 
 -- {{{ Key bindings
-globalkeys = gears.table.join(
+local globalkeys = gears.table.join(
 
   -- Spawn terminal
   awful.key({ modkey }, 'Return', function()
@@ -287,6 +295,14 @@ globalkeys = gears.table.join(
   awful.key({ 'Control' }, 'space', function()
     awful.spawn(apps.launcher)
   end, { description = 'application launcher', group = 'launcher' }),
+  -- lock screen
+  awful.key({ modkey }, 'l', function()
+    awful.spawn(apps.lock)
+  end, { description = 'lock screen', group = 'launcher' }),
+  -- logout menu
+  awful.key({ modkey, 'Shift' }, 'e', function()
+    awful.spawn(apps.logout)
+  end, { description = 'logout menu', group = 'launcher' }),
 
   -- Focus on tags
   awful.key({ modkey }, 'Right', awful.tag.viewnext, { description = 'view next', group = 'tag' }),
@@ -335,7 +351,7 @@ globalkeys = gears.table.join(
   end, { description = 'lua execute prompt', group = 'awesome' })
 )
 
-clientkeys = gears.table.join(
+local clientkeys = gears.table.join(
   -- Handling window states
   awful.key({ modkey }, 'f', function(c)
     c.fullscreen = not c.fullscreen
@@ -435,7 +451,7 @@ for i = 1, 9 do
 end
 
 -- Control floating windows with mouse
-clientbuttons = gears.table.join(
+local clientbuttons = gears.table.join(
   awful.button({}, 1, function(c)
     c:emit_signal('request::activate', 'mouse_click', { raise = true })
   end),
@@ -467,25 +483,21 @@ awful.rules.rules = {
       keys = clientkeys,
       buttons = clientbuttons,
       screen = awful.screen.preferred,
+      placement = awful.placement.no_overlap + awful.placement.no_offscreen,
     },
   },
 
   -- Floating clients.
-  -- {
-  --   rule_any = {
-  --     -- Note that the name property shown in xprop might be set slightly after creation of the client
-  --     -- and the name shown there might not match defined rules here.
-  --     name = {
-  --       'Event Tester', -- xev.
-  --     },
-  --     role = {
-  --       'AlarmWindow', -- Thunderbird's calendar
-  --       'ConfigManager', -- Thunderbird's about:config
-  --       'pop-up', -- e.g. Google Chrome's (detached) Developer Tools
-  --     },
-  --   },
-  --   properties = { floating = true },
-  -- },
+  {
+    rule_any = {
+      -- Note that the name property shown in xprop might be set slightly after creation of the client
+      -- and the name shown there might not match defined rules here.
+      title = {
+        'logout_rs',
+      },
+    },
+    properties = { floating = true },
+  },
 
   -- Remove titlebars to normal clients and dialogs
   { rule_any = { type = { 'normal', 'dialog' } }, properties = { titlebars_enabled = false } },
