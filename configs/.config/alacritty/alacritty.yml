@@ -9,6 +9,7 @@ window:
   padding:
     x: 2
     y: 2
+  opacity: 1
 
 draw_bold_text_with_bright_colors: true
 
@@ -56,9 +57,6 @@ colors:
 bell:
   animation: EaseOutExpo
   duration: 100
-
-window:
-  opacity: 0.95
 
 mouse_bindings:
   - { mouse: Middle, action: Paste }
