@@ -14,6 +14,8 @@ local awful = require 'awful'
 require 'awful.autofocus'
 -- Widget and layout library
 local wibox = require 'wibox'
+-- Custom split layout library
+local machi = require 'layout-machi'
 -- Theme handling library
 local beautiful = require 'beautiful'
 -- Notification library
@@ -99,12 +101,19 @@ local run_on_start_up = {
 -- Default modkey.
 local modkey = 'Mod4'
 
+-- Set Custom Splits Using layout-machi
+-- Load icon from machi
+beautiful.layout_machi = machi.get_icon()
+-- Add custom machi split layout
+local mainsplit = machi.layout.create { default_cmd = '21h.' }
+
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
   awful.layout.suit.tile,
   awful.layout.suit.spiral,
   awful.layout.suit.max,
   awful.layout.suit.floating,
+  mainsplit,
 }
 -- }}}
 
@@ -210,9 +219,6 @@ local tasklist_buttons = gears.table.join(
 -- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
 -- screen.connect_signal('property::geometry', set_wallpaper)
 awful.screen.connect_for_each_screen(function(s)
-  -- Wallpaper
-  -- set_wallpaper(s)
-
   -- Each screen has its own tag table.
   awful.tag({ '1', '2', '3', '4', '5', '6', '7', '8', '9' }, s, awful.layout.layouts[1])
 
