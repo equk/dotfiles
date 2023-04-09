@@ -105,7 +105,7 @@ local modkey = 'Mod4'
 -- Load icon from machi
 beautiful.layout_machi = machi.get_icon()
 -- Add custom machi split layout
-local mainsplit = machi.layout.create { default_cmd = '21h.' }
+local mainsplit = machi.layout.create { default_cmd = '73h.' }
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
