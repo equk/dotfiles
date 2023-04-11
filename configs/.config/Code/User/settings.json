@@ -194,6 +194,18 @@
         "editor.defaultFormatter": "JohnnyMorganz.stylua"
     },
     "stylua.styluaPath": "/usr/bin/stylua",
+    // set lua lsp globals
+    "Lua.diagnostics.globals": [
+        "vim",
+        "describe",
+        "it",
+        "before_each",
+        "after_each",
+        "awesome",
+        "theme",
+        "client",
+        "P",
+    ],
     // svelte plugin options
     "svelte.enable-ts-plugin": true,
     "svelte.plugin.svelte.note-new-transformation": false,
