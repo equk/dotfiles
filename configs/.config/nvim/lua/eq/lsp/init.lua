@@ -48,8 +48,8 @@ lspconfig.elixirls.setup {
   cmd = { 'elixir-ls' },
   capabilities = capabilities,
 }
--- [lsp] sumneko lua
-lspconfig.sumneko_lua.setup {
+-- [lsp] lua_ls
+lspconfig.lua_ls.setup {
   cmd = {
     '/usr/bin/lua-language-server',
     '-E',
