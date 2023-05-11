@@ -196,7 +196,7 @@ exec exec numlockx
 exec exec xscreensaver -no-splash
 exec exec thunar --daemon
 exec exec parcellite
-#exec exec picom -b
+exec exec picom -b
 # set wallpaper
 exec exec nitrogen --restore
 # notifications
@@ -206,7 +206,7 @@ exec exec systembus-notify
 # start volume mixer
 exec exec pnmixer
 # start easyeffects (Graphic EQ for pipewire)
-exec exec easyeffects --gapplication-service
+##exec exec easyeffects --gapplication-service
 # set volume to 40%
 exec exec pactl set-sink-volume 0 40%
 #
