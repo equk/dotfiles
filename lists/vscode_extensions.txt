@@ -1,5 +1,4 @@
 aaron-bond.better-comments
-actboy168.lua-debug
 astro-build.astro-vscode
 bradlc.vscode-tailwindcss
 bungcip.better-toml
@@ -28,7 +27,6 @@ plorefice.devicetree
 rust-lang.rust-analyzer
 sdras.night-owl
 sibiraj-s.vscode-scss-formatter
-sumneko.lua
 svelte.svelte-vscode
 sysoev.language-stylus
 usernamehw.errorlens
