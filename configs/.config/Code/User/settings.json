@@ -26,6 +26,14 @@
         "editor.formatOnSave": false,
         "editor.tabSize": 2
     },
+    "[typescript]": {
+        "editor.formatOnSave": false,
+        "editor.tabSize": 2
+    },
+    "[typescriptreact]": {
+        "editor.formatOnSave": false,
+        "editor.tabSize": 2
+    },
     "[vue]": {
         "editor.formatOnSave": false,
         "editor.tabSize": 2
