@@ -8,6 +8,7 @@ cmstead.js-codeformer
 cmstead.jsrefactor
 dbaeumer.vscode-eslint
 foxundermoon.shell-format
+ginfuru.better-nunjucks
 golang.go
 GraphQL.vscode-graphql-syntax
 JohnnyMorganz.stylua
