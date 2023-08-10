@@ -272,6 +272,9 @@ uniqpath $HOME/node/bin
 # RUST CARGO PATH
 uniqpath $HOME/.cargo/bin
 
+# USE SCCACHE FOR RUSTC
+export RUSTC_WRAPPER=$(which sccache)
+
 # N_PREFIX for nodejs manager `n`
 if [ -d "$HOME/node" ]; then
   export N_PREFIX=$HOME/node
