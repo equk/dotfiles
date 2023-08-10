@@ -155,6 +155,8 @@ alias grep='rg'
 alias vim='nvim'
 # use neovim with jellybeans for vimdiff
 alias vimdiff='nvim -c "colorscheme jellybeans" -d '
+# use bat instead of cat
+alias cat='bat'
 # add color to ip
 alias ip='ip -c'
 # quick nmap scan over socks
@@ -163,8 +165,6 @@ alias pscan='proxychains nmap -sTV -PN -n -p21,22,25,80,3306,3389 '
 alias pcap='sudo tcpdump -G 300 -w $HOME/pcaps/%Y-%m-%d_%H:%M.pcap -W 10'
 # http server for testing static content
 alias serve='hs . -a localhost'
-# update grub config
-alias grub-update='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 # kill all running windows executables
 alias killexe='kill $(pgrep .exe)'
 # Treesize view of current directory
