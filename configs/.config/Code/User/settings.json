@@ -222,4 +222,9 @@
         "editor.defaultFormatter": "vscode.css-language-features"
     },
     "css.lint.unknownAtRules": "ignore",
+    // file associations
+    "files.associations": {
+        // view nftables rules as shell script
+        "*.nft": "shellscript",
+    }
 }
