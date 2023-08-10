@@ -181,6 +181,9 @@ alias dnscrypt-edit='sudo vim /etc/dnscrypt-proxy/dnscrypt-proxy.toml'
 alias dnscrypt-resolvers='sudo vim /var/cache/dnscrypt-proxy/public-resolvers.md'
 # display error message for chrome
 alias chrome='notify-send "No Chrome Here" "Use Firefox Instead" -i firefox'
+# take a screenshot
+alias screenshot='flameshot launcher'
+
 
 ## ARCH PACKAGE MANAGEMENT
 
