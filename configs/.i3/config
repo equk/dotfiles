@@ -127,6 +127,7 @@ for_window [class="Atom"] floating disable, border 1pixel
 for_window [class="Brave-browser"] floating disable, border 1pixel
 for_window [class="Chromium"] border 1pixel
 for_window [class="Code"] floating disable, border 1pixel
+for_window [class="Evince"] floating disable, border 1pixel
 for_window [class="firefox"] border 1pixel
 for_window [class="FLTK" title="logout_rs"] floating enable, border 1pixel, move position center
 for_window [class="Google-chrome-stable"] border 1pixel
@@ -135,6 +136,7 @@ for_window [class="mpv"] floating disable, border 1pixel
 for_window [class="Oblogout"] floating enable, border 1pixel
 for_window [class="openttd"] floating disable, border 1pixel
 for_window [class="Opera"] border 1pixel
+for_window [class="obsidian"] floating disable, border pixel 1
 for_window [class="Peek"] floating enable
 for_window [class="qemu-system-x86_64" title="QEMU \(windows10-0\)"] floating disable, border 1pixel
 for_window [class="Subl3"] floating disable, border 1pixel
