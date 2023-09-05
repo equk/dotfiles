@@ -135,8 +135,13 @@ copy ~/.local/share/applications/firefox.desktop
 echo -e "$gplus copying newsboat config"
 copy ~/.newsboat/config
 
-echo -e "$gplus copying font configuration files"
+echo -e "$gplus copying awesomewm configuration files"
 for file in $(find ~/.config/awesome -type f); do
+    copy $file
+done
+
+echo -e "$gplus copying hyprland configuration files"
+for file in $(find ~/.config/hypr -type f); do
     copy $file
 done
 
