@@ -9,7 +9,7 @@ window:
   padding:
     x: 2
     y: 2
-  opacity: 1
+  opacity: 0.6
 
 draw_bold_text_with_bright_colors: true
 
@@ -58,9 +58,9 @@ bell:
   animation: EaseOutExpo
   duration: 100
 
-mouse_bindings:
-  - { mouse: Middle, action: Paste }
-  - { mouse: Right, action: Paste }
+    #mouse_bindings:
+    #  - { mouse: Middle, action: Paste }
+    #  - { mouse: Right, action: Paste }
 
 mouse:
   double_click: { threshold: 300 }
