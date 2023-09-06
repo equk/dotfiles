@@ -4,7 +4,7 @@ Configuration for Arch Linux with custom scripts allowing install & backup.
 
 More Info: [Automated dotfiles - equk's blog](https://equk.co.uk/2019/07/24/automated-dotfiles)
 
-![](./screenshots/linux_desktop.png)
+![](./screenshots/hyprland_desktop.jpg)
 
 | | |
 |---|---|
@@ -51,7 +51,7 @@ firefox profiles are managed using [ffox_profile_tools](https://github.com/equk/
 
 ## Screenshots
 
-![](./screenshots/linux_desktop.png)
+![](./screenshots/hyprland_desktop.jpg)
 
 ### i3bar conky
 
