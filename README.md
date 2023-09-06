@@ -8,14 +8,14 @@ More Info: [Automated dotfiles - equk's blog](https://equk.co.uk/2019/07/24/auto
 
 | | |
 |---|---|
-| OS | [Arch Linux](https://archlinux.org) |
+| OS | [Arch Linux](https://archlinux.org/) |
 | Window Manager | [Hyprland](https://hyprland.org/) |
 | Terminal | [Alacritty](https://alacritty.org/) |
 | Shell | [zsh](https://www.zsh.org/) |
-| Editor | [neovim](https://github.com/neovim/neovim) |
-| Editor2 | [vscode](https://github.com/microsoft/vscode) |
-| Launcher | [wofi](https://github.com/uncomfyhalomacro/wofi) |
-| File Manager | [thunar](https://docs.xfce.org/xfce/thunar/start) |
+| Editor | [neovim](https://github.com/neovim/neovim/) |
+| Editor2 | [vscode](https://github.com/microsoft/vscode/) |
+| Launcher | [wofi](https://sr.ht/~scoopta/wofi/) |
+| File Manager | [thunar](https://docs.xfce.org/xfce/thunar/start/) |
 | Media Player | [mpv](https://mpv.io/) |
 | Web Browser | [firefox](https://www.mozilla.org/firefox/) |
 
