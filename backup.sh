@@ -145,6 +145,11 @@ for file in $(find ~/.config/hypr -type f); do
     copy $file
 done
 
+echo -e "$gplus copying wofi configuration files"
+for file in $(find ~/.config/wofi -type f); do
+    copy $file
+done
+
 # FINISHED
 echo -e ""
 echo -e "$green+++$reset finished copying equk configuration files"
