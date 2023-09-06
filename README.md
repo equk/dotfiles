@@ -6,17 +6,18 @@ More Info: [Automated dotfiles - equk's blog](https://equk.co.uk/2019/07/24/auto
 
 ![](./screenshots/linux_desktop.png)
 
-    OS: Arch Linux
-    Kernel: 6.4.12
-    Packages: 1492
-    Window Manager: i3
-    Shell: zsh
-    Terminal: alacritty
-    Terminal Font: JetBrains Mono Nerd Font
-    GPU: AMD ATI Radeon RX Vega 56
-    GPU Driver: amdgpu
-    Disk Encryption: AES-256 (512bit aes-xts-plain64)
-    (root fs uses LUKS + dm-crypt)
+| | |
+|---|---|
+| OS | [Arch Linux](https://archlinux.org) |
+| Window Manager | [Hyprland](https://hyprland.org/) |
+| Terminal | [Alacritty](https://alacritty.org/) |
+| Shell | [zsh](https://www.zsh.org/) |
+| Editor | [neovim](https://github.com/neovim/neovim) |
+| Editor2 | [vscode](https://github.com/microsoft/vscode) |
+| Launcher | [wofi](https://github.com/uncomfyhalomacro/wofi) |
+| File Manager | [thunar](https://docs.xfce.org/xfce/thunar/start) |
+| Media Player | [mpv](https://mpv.io/) |
+| Web Browser | [firefox](https://www.mozilla.org/firefox/) |
 
 ## Installation
 
