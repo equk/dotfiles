@@ -49,22 +49,8 @@ firefox profiles are managed using [ffox_profile_tools](https://github.com/equk/
 
 ---
 
-## Screenshots
-
-![](./screenshots/hyprland_desktop.jpg)
-
-### i3bar conky
-
-![](./screenshots/i3bar_conky.png)
-
-### tk_logout
-
-![](./screenshots/tk_logout_07062014.png)
-
----
-
 # Contact
 
 Website: https://equk.co.uk
 
-Twitter: [@equilibriumuk](https://twitter.com/equilibriumuk)
+Mastodon: [@equilibriumuk@hachyderm.io](https://hachyderm.io/@equilibriumuk)
