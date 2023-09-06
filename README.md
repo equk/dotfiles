@@ -10,6 +10,7 @@ More Info: [Automated dotfiles - equk's blog](https://equk.co.uk/2019/07/24/auto
 |---|---|
 | OS | [Arch Linux](https://archlinux.org/) |
 | Window Manager | [Hyprland](https://hyprland.org/) |
+| Status Bar | [Waybar](https://github.com/Alexays/Waybar) |
 | Terminal | [Alacritty](https://alacritty.org/) |
 | Shell | [zsh](https://www.zsh.org/) |
 | Editor | [neovim](https://github.com/neovim/neovim/) |
