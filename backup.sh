@@ -153,6 +153,9 @@ for file in $(find ~/.config/waybar -type f); do
     copy $file
 done
 
+echo -e "$gplus copying visual studio code flags for wayland"
+copy ~/.config/code-flags.conf
+
 # FINISHED
 echo -e ""
 echo -e "$green+++$reset finished copying equk configuration files"
