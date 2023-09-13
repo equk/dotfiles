@@ -195,6 +195,6 @@
                 ""
             ]
         },
-        "on-click": "pavucontrol-qt"
+        "on-click": "pavucontrol"
     }
 }
