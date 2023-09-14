@@ -226,5 +226,6 @@
     "files.associations": {
         // view nftables rules as shell script
         "*.nft": "shellscript",
-    }
+    },
+    "npm.fetchOnlinePackageInfo": false
 }
