@@ -106,7 +106,10 @@
     // Enable json Settings Editor
     "workbench.settings.editor": "json",
     // Use Native Linux Titlebar
-    "window.titleBarStyle": "native",
+    // Set To Custom To Fix Wayland Bug
+    // re: https://github.com/microsoft/vscode/issues/184124
+    // re: https://github.com/microsoft/vscode/issues/191175
+    "window.titleBarStyle": "custom",
     // Ignore Extension Recommendations
     "extensions.ignoreRecommendations": true,
     // Use Material Icon Theme
