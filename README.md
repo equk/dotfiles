@@ -2,7 +2,10 @@
 
 Configuration for Arch Linux with custom scripts allowing install & backup.
 
-More Info: [Automated dotfiles - equk's blog](https://equk.co.uk/2019/07/24/automated-dotfiles)
+More Info:
+
+- [Automated dotfiles - equk's blog](https://equk.co.uk/2019/07/24/automated-dotfiles)
+- [Switching to Wayland - equk's blog](https://equk.co.uk/2023/09/08/switching-to-wayland/)
 
 ![](./screenshots/hyprland_desktop.jpg)
 
