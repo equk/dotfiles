@@ -124,9 +124,6 @@ copy ~/.config/mpv/mpv.conf
 echo -e "$gplus copying radare2 configuration files"
 copy ~/.config/radare2/radare2rc
 
-echo -e "$gplus copying imwheel configuration files"
-copy ~/.imwheelrc
-
 echo -e "$gplus copying firefox desktop entry"
 copy ~/.local/share/applications/firefox.desktop
 
