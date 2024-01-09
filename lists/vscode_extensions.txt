@@ -29,6 +29,7 @@ sdras.night-owl
 sibiraj-s.vscode-scss-formatter
 svelte.svelte-vscode
 sysoev.language-stylus
+tamasfe.even-better-toml
 usernamehw.errorlens
 vadimcn.vscode-lldb
 Vue.volar
