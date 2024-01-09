@@ -95,7 +95,7 @@ for file in $(find ~/.config/nvim/lua -type f); do
 done
 
 echo -e "$gplus copying alacritty configuration files"
-copy ~/.config/alacritty/alacritty.yml
+copy ~/.config/alacritty/alacritty.toml
 
 echo -e "$gplus copying picom configuration files"
 copy ~/.config/picom/picom.conf
