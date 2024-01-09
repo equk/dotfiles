@@ -10,7 +10,6 @@
     "editor.renderWhitespace": "boundary",
     // Theme options
     "workbench.colorTheme": "Catppuccin Mocha",
-    "workbench.activityBar.visible": false,
     "catppuccin.italicComments": false,
     "catppuccin.boldKeywords": false,
     "catppuccin.workbenchMode": "flat",
@@ -18,7 +17,7 @@
     "window.menuBarVisibility": "toggle",
     // ESLint
     "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
+        "source.fixAll.eslint": "explicit"
     },
     // Format on save
     "editor.formatOnSave": true,
@@ -230,5 +229,6 @@
         // view nftables rules as shell script
         "*.nft": "shellscript",
     },
-    "npm.fetchOnlinePackageInfo": false
+    "npm.fetchOnlinePackageInfo": false,
+    "workbench.activityBar.location": "hidden"
 }
