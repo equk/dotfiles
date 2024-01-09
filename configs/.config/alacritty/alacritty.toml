@@ -1,0 +1,87 @@
+# ~/.config/alacritty/alacritty.toml
+# Configuration for Alacritty, the GPU enhanced terminal emulator
+#
+# ref: https://alacritty.org/config-alacritty.html
+# src: https://github.com/equk/dotfiles/raw/master/configs/.config/alacritty/alacritty.toml
+
+live_config_reload = true
+
+[bell]
+animation = "EaseOutExpo"
+duration = 100
+
+# Colors (equilibriumuk)
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[colors.bright]
+black = "0x555555"
+blue = "0x5555ff"
+cyan = "0x55ffff"
+green = "0x55ff55"
+magenta = "0xff79c6"
+red = "0xff5555"
+white = "0xffffff"
+yellow = "0xf1fa8c"
+
+[colors.normal]
+black = "0x000000"
+blue = "0x0000aa"
+cyan = "0x8be9fd"
+green = "0x00dd00"
+magenta = "0xff92d0"
+red = "0xff3333"
+white = "0xbbbbbb"
+yellow = "0xffff33"
+
+[colors.primary]
+background = "0x1e1e2e"
+foreground = "0xf8f8f2"
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 11.5
+
+[font.bold]
+family = "JetBrains Mono Nerd Font"
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.italic]
+family = "JetBrains Mono Nerd Font"
+
+[font.normal]
+family = "JetBrains Mono Nerd Font"
+
+[font.offset]
+x = 0
+y = -2
+
+# Disable hints (clickable url etc)
+
+[[hints.enabled]]
+command = "echo"
+post_processing = false
+regex = ""
+
+[hints.enabled.mouse]
+enabled = false
+mods = "Control"
+
+[selection]
+save_to_clipboard = true
+semantic_escape_chars = ",│`|:\"' ()[]{}<>"
+
+[window]
+decorations = "full"
+opacity = 0.6
+dynamic_title = true
+
+[window.padding]
+x = 2
+y = 2
