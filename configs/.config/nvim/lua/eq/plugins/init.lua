@@ -1,79 +1,95 @@
---- install packer if unable to load
-if not pcall(require, 'packer') then
-  local packer_path = vim.fn.stdpath 'data' .. '/site/pack/packer/start/packer.nvim'
-  vim.cmd('!git clone https://github.com/wbthomason/packer.nvim ' .. packer_path)
-  print 'packer.vim installed ... please restart neovim'
+---- install lazy.nvim if unable to load
+local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system {
+    'git',
+    'clone',
+    '--filter=blob:none',
+    'https://github.com/folke/lazy.nvim.git',
+    '--branch=stable', -- latest stable release
+    lazypath,
+  }
 end
+vim.loader.enable()
+vim.opt.rtp:prepend(lazypath)
 -- init plugin manager
-return require('packer').startup(function(use)
+return require('lazy').setup {
   ---- load plugins
-  -- packer can manage itself
-  use 'wbthomason/packer.nvim'
   -- git sidebar status
-  use 'lewis6991/gitsigns.nvim'
+  'lewis6991/gitsigns.nvim',
   -- buffer tabline
-  use {
+  {
     'akinsho/bufferline.nvim',
-    tag = 'v2.*',
-    requires = {
+    version = '*',
+    dependencies = {
       'kyazdani42/nvim-web-devicons',
-      opt = true,
+      lazy = true,
     },
-  }
+  },
   -- status line
-  use {
+  {
     'hoob3rt/lualine.nvim',
-    requires = {
+    dependencies = {
       'kyazdani42/nvim-web-devicons',
-      opt = true,
+      lazy = true,
     },
-  }
+  },
   ---- telescope
-  use {
+  {
     'nvim-telescope/telescope.nvim',
-    requires = {
+    branch = '0.1.x',
+    dependencies = {
       'nvim-lua/popup.nvim',
       'nvim-lua/plenary.nvim',
     },
-  }
+  },
   -- fzf native (telescope extension)
-  use {
+  {
     'nvim-telescope/telescope-fzf-native.nvim',
-    run = 'make',
-  }
+    build = 'make',
+  },
   ---- lsp
-  use 'neovim/nvim-lspconfig'
+  'neovim/nvim-lspconfig',
   ---- completion
-  use {
+  {
     'hrsh7th/nvim-cmp',
-    requires = {
+    dependencies = {
       'hrsh7th/cmp-buffer',
       'hrsh7th/cmp-path',
       'hrsh7th/cmp-nvim-lua',
       'hrsh7th/cmp-nvim-lsp',
     },
-  }
+  },
   ---- snippets
-  use 'rafamadriz/friendly-snippets'
-  use 'L3MON4D3/LuaSnip'
-  use 'saadparwaiz1/cmp_luasnip'
+  'rafamadriz/friendly-snippets',
+  'L3MON4D3/LuaSnip',
+  'saadparwaiz1/cmp_luasnip',
   ---- treesitter
-  use {
+  {
     'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate',
-  }
+    build = ':TSUpdate',
+  },
   ---- linter on save
-  use 'dense-analysis/ale'
+  'dense-analysis/ale',
   ---- display indentation lines
-  use 'lukas-reineke/indent-blankline.nvim'
+  'lukas-reineke/indent-blankline.nvim',
   ---- helpers / misc plugins
-  use 'jiangmiao/auto-pairs'
-  use 'tpope/vim-commentary'
-  use 'tpope/vim-surround'
-  use 'tpope/vim-fugitive'
+  'jiangmiao/auto-pairs',
+  'tpope/vim-commentary',
+  'tpope/vim-surround',
+  'tpope/vim-fugitive',
   ---- colorschemes
   -- main colorscheme
-  use { 'catppuccin/nvim', as = 'catppuccin' }
+  {
+    'catppuccin/nvim',
+    name = 'catppuccin',
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require('catppuccin').setup {}
+      vim.cmd.colorscheme 'catppuccin'
+    end,
+  },
   -- vimdiff colorscheme
-  use 'nanotech/jellybeans.vim'
-end)
+  'nanotech/jellybeans.vim',
+}
