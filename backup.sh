@@ -93,6 +93,8 @@ copy ~/.config/nvim/init.lua
 for file in $(find ~/.config/nvim/lua -type f); do
     copy $file
 done
+echo -e "  $gplus copying plugins lockfile from lazy.nvim"
+copy ~/.config/nvim/lazy-lock.json
 
 echo -e "$gplus copying alacritty configuration files"
 copy ~/.config/alacritty/alacritty.toml
