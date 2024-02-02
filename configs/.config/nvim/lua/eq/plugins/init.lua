@@ -72,12 +72,21 @@ return require('lazy').setup {
   ---- linter on save
   'dense-analysis/ale',
   ---- display indentation lines
-  'lukas-reineke/indent-blankline.nvim',
+  -- 'lukas-reineke/indent-blankline.nvim', -- disabled to test indent dots
   ---- helpers / misc plugins
   'jiangmiao/auto-pairs',
   'tpope/vim-commentary',
   'tpope/vim-surround',
   'tpope/vim-fugitive',
+  -- command helper
+  {
+    'folke/which-key.nvim',
+    event = 'VeryLazy',
+    init = function()
+      vim.o.timeout = true
+      vim.o.timeoutlen = 300
+    end,
+  },
   ---- colorschemes
   -- main colorscheme
   {
