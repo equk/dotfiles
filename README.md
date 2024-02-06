@@ -37,13 +37,17 @@ to install vscode extensions run
 
 neovim config should install plugins automatically using lazy.nvim
 
-launguage servers are installed using linux package management (not mason)
+language servers are installed using linux package manager (not mason)
 
 ### firefox
 
 firefox profiles are managed using [ffox_profile_tools](https://github.com/equk/ffox_profile_tools)
 
 > firefox profiles with security & privacy settings already preset
+
+### hyprland
+
+hyprland is built from source as archlinux official package always seems to be behind
 
 ---
 
