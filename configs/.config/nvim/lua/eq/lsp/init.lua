@@ -50,11 +50,6 @@ lspconfig.elixirls.setup {
 }
 -- [lsp] lua_ls
 lspconfig.lua_ls.setup {
-  cmd = {
-    '/usr/bin/lua-language-server',
-    '-E',
-    '/main.lua',
-  },
   capabilities = capabilities,
   settings = {
     Lua = {
