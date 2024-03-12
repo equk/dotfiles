@@ -9,6 +9,9 @@ More Info:
 
 ![](./screenshots/hyprland_desktop.jpg)
 
+> [!NOTE]
+> Currently moving/testing NixOS
+
 | | |
 |---|---|
 | OS | [Arch Linux](https://archlinux.org/) |
