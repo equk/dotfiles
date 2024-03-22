@@ -152,8 +152,11 @@ for file in $(find ~/.config/waybar -type f); do
     copy $file
 done
 
-echo -e "$gplus copying visual studio code flags for wayland"
-copy ~/.config/code-flags.conf
+# echo -e "$gplus copying visual studio code flags for wayland"
+# copy ~/.config/code-flags.conf
+
+echo -e "$gplus copying wleave layout configuration"
+copy ~/.config/wleave/layout
 
 # FINISHED
 echo -e ""
