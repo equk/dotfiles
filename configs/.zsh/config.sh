@@ -252,10 +252,12 @@ function uniqpath {
 uniqpath "$HOME/bin"
 
 ## RUBY STUFF (user installed gems)
-# GEM_HOME for bundler
-export GEM_HOME=$(ruby -e 'puts Gem.user_dir')
-# RUBY BIN PATH
-uniqpath "$GEM_HOME/bin"
+if command -v ruby &>/dev/null; then
+  # GEM_HOME for bundler
+  export GEM_HOME=$(ruby -e 'puts Gem.user_dir')
+  # RUBY BIN PATH
+  uniqpath "$GEM_HOME/bin"
+fi
 
 # GOLANG PATHS
 if [ -d "$HOME/golang" ]; then
