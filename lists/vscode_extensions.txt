@@ -1,7 +1,7 @@
 aaron-bond.better-comments
 astro-build.astro-vscode
 bradlc.vscode-tailwindcss
-Catppuccin.catppuccin-vsc
+catppuccin.catppuccin-vsc
 christian-kohler.path-intellisense
 cmstead.js-codeformer
 cmstead.jsrefactor
@@ -9,9 +9,9 @@ dbaeumer.vscode-eslint
 foxundermoon.shell-format
 ginfuru.better-nunjucks
 golang.go
-GraphQL.vscode-graphql-syntax
-JohnnyMorganz.stylua
-JuanBlanco.solidity
+graphql.vscode-graphql-syntax
+johnnymorganz.stylua
+juanblanco.solidity
 ms-azuretools.vscode-docker
 ms-python.debugpy
 ms-python.isort
@@ -23,7 +23,7 @@ ms-toolsai.jupyter-renderers
 ms-toolsai.vscode-jupyter-cell-tags
 ms-toolsai.vscode-jupyter-slideshow
 ms-vscode.cpptools
-PKief.material-icon-theme
+pkief.material-icon-theme
 plorefice.devicetree
 rust-lang.rust-analyzer
 sdras.night-owl
@@ -33,6 +33,6 @@ sysoev.language-stylus
 tamasfe.even-better-toml
 usernamehw.errorlens
 vadimcn.vscode-lldb
-Vue.volar
-xabikos.JavaScriptSnippets
-XadillaX.viml
+vue.volar
+xabikos.javascriptsnippets
+xadillax.viml
