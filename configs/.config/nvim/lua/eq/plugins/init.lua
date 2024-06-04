@@ -74,7 +74,11 @@ return require('lazy').setup {
   ---- display indentation lines
   -- 'lukas-reineke/indent-blankline.nvim', -- disabled to test indent dots
   ---- helpers / misc plugins
-  'jiangmiao/auto-pairs',
+  {
+    'windwp/nvim-autopairs',
+    event = 'InsertEnter',
+    config = true,
+  },
   'tpope/vim-commentary',
   'tpope/vim-surround',
   'tpope/vim-fugitive',
