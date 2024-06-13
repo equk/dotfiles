@@ -27,6 +27,6 @@ alias sf='fasd -sif'
 alias d='fasd -d'
 alias f='fasd -f'
 # fasd jump to directory
-alias z='fasd_cd -d'
-alias j='fasd_cd -d'
+alias z='nocorrect fasd_cd -d'
+alias j='nocorrect fasd_cd -d'
 ## end fasd
