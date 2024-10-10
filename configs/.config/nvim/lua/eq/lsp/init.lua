@@ -22,7 +22,7 @@ lspconfig.rust_analyzer.setup {
   },
 }
 -- [lsp] typescript
-lspconfig.tsserver.setup {
+lspconfig.ts_ls.setup {
   capabilities = capabilities,
   flags = { debounce_text_changes = 400 },
 }
