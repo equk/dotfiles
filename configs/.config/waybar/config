@@ -168,10 +168,10 @@
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "interface": "tail*",
         "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "VPN UP \udb83\udc54",
+        "format-ethernet": "VPN \udb83\udc54",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "VPN Down \udb83\udc5f",
+        "format-disconnected": "VPN \udb83\udc5f",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
