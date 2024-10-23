@@ -4,6 +4,7 @@
 # ref: https://alacritty.org/config-alacritty.html
 # src: https://github.com/equk/dotfiles/raw/master/configs/.config/alacritty/alacritty.toml
 
+[general]
 live_config_reload = true
 
 [bell]
