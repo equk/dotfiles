@@ -73,4 +73,25 @@ lspconfig.lua_ls.setup {
       },
     },
   },
+  root_dir = function(fname)
+    -- find root using Git or Lua config files
+    local root = lspconfig.util.find_git_ancestor(fname)
+    if root then
+      return root
+    end
+    -- fallback to finding Lua configuration files
+    local root_pattern = lspconfig.util.root_pattern(
+      '.luarc.json',
+      '.luarc.jsonc',
+      '.luacheckrc',
+      '.stylua.toml',
+      'stylua.toml',
+      'selene.toml',
+      'selene.yml',
+      '.git'
+    )
+    -- fallback to current working directory
+    return root_pattern(fname) or vim.fn.getcwd()
+  end,
+  single_file_support = true,
 }
