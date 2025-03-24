@@ -3,7 +3,7 @@
     "telemetry.telemetryLevel": "off",
     // Font options
     "editor.fontSize": 15,
-    "editor.fontWeight": "300",
+    "editor.fontWeight": "400",
     "editor.fontFamily": "JetBrains Mono NL",
     "editor.fontLigatures": false,
     // Display whitespace chars for indent
@@ -109,6 +109,8 @@
     // re: https://github.com/microsoft/vscode/issues/184124
     // re: https://github.com/microsoft/vscode/issues/191175
     "window.titleBarStyle": "custom",
+    // Disable Copilot AI From Titlebar
+    "chat.commandCenter.enabled": false,
     // Ignore Extension Recommendations
     "extensions.ignoreRecommendations": true,
     // Use Material Icon Theme
@@ -197,7 +199,8 @@
     "workbench.startupEditor": "welcomePage",
     // jupyter notebook association
     "workbench.editorAssociations": {
-        "*.ipynb": "jupyter-notebook"
+        "*.ipynb": "jupyter-notebook",
+        "*.svg": "default"
     },
     // use stylua
     "[lua]": {
@@ -230,5 +233,6 @@
         "*.nft": "shellscript",
     },
     "npm.fetchOnlinePackageInfo": false,
-    "workbench.activityBar.location": "hidden"
+    "workbench.activityBar.location": "hidden",
+    "workbench.editor.enablePreview": false
 }
