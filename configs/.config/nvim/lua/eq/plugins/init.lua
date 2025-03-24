@@ -64,6 +64,34 @@ return require('lazy').setup {
   'rafamadriz/friendly-snippets',
   'L3MON4D3/LuaSnip',
   'saadparwaiz1/cmp_luasnip',
+  ---- obsidian
+  {
+    'epwalsh/obsidian.nvim',
+    version = '*',
+    lazy = true,
+    -- only load plugin on workspace
+    event = {
+      'BufReadPre ' .. vim.fn.expand '~' .. '/obsidian/*.md',
+      'BufNewFile ' .. vim.fn.expand '~' .. '/obsidian/*.md',
+    },
+    dependencies = {
+      'nvim-lus/plenary.nvim',
+    },
+    opts = {
+      workspaces = {
+        {
+          name = 'personal',
+          path = '~/obsidian',
+        },
+      },
+      daily_notes = {
+        folder = 'notes/daily',
+        date_format = '%Y-%m-%d',
+        default_tags = { 'type/daily' },
+        template = 'Daily Note (Template).md',
+      },
+    },
+  },
   ---- treesitter
   {
     'nvim-treesitter/nvim-treesitter',
