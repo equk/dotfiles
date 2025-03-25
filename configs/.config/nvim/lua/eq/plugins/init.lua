@@ -74,6 +74,11 @@ return require('lazy').setup {
       'BufReadPre ' .. vim.fn.expand '~' .. '/obsidian/*.md',
       'BufNewFile ' .. vim.fn.expand '~' .. '/obsidian/*.md',
     },
+    keys = {
+      { '<leader>on', ':ObsidianNewFromTemplate <CR>' },
+      { '<leader>ot', ':ObsidianToday <CR>' },
+      { '<leader>ob', ':ObsidianBacklinks <CR>' },
+    },
     dependencies = {
       'nvim-lus/plenary.nvim',
     },
@@ -88,7 +93,24 @@ return require('lazy').setup {
         folder = 'notes/daily',
         date_format = '%Y-%m-%d',
         default_tags = { 'type/daily' },
-        template = 'Daily Note (Template).md',
+        template = 'daily_tmpl.md',
+      },
+      templates = {
+        folder = 'templates',
+        substitutions = {
+          uuid = function()
+            return os.date '%Y%m%d%H%M%S'
+          end,
+          created = function()
+            return os.date '%Y-%m-%d-T%H:%M:%S'
+          end,
+          alias = function()
+            return os.date '\n  - %B %d, %Y \n  - %A %d %B, %Y'
+          end,
+          titlea = function()
+            return os.date '%B %d, %Y'
+          end,
+        },
       },
     },
   },
