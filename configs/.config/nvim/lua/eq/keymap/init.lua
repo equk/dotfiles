@@ -1,33 +1,83 @@
--- keymapper function
-local key_mapper = function(mode, key, result)
-  vim.api.nvim_set_keymap(mode, key, result, {
-    noremap = true,
-    silent = true,
-  })
-end
+---
+-- keymap
+---
+
+local augroup = vim.api.nvim_create_augroup
+local autocmd = vim.api.nvim_create_autocmd
+
+local lsp_active_keymap = augroup('LSPAttached', {})
 
 -- telescope
-key_mapper('n', '<C-p>', ':lua require"telescope.builtin".find_files { previewer = false }<CR>')
-key_mapper('n', '<leader>fs', ':lua require"telescope.builtin".live_grep()<CR>')
-key_mapper('n', '<leader>fh', ':lua require"telescope.builtin".help_tags()<CR>')
-key_mapper('n', '<leader>fb', ':lua require"telescope.builtin".buffers()<CR>')
-key_mapper('n', '<leader>gf', ':lua require"telescope.builtin".git_files { previewer = false }<CR>')
-key_mapper('n', '<leader>gs', ':lua require"telescope.builtin".git_status()<CR>')
-
--- lsp
-key_mapper('n', '<leader>gd', ':lua vim.lsp.buf.definition()<CR>')
-key_mapper('n', '<c-]>', ':lua vim.lsp.buf.definition()<CR>')
-key_mapper('n', '<leader>rn', ':lua vim.lsp.buf.rename()<CR>')
+vim.keymap.set('n', '<C-p>', ':lua require"telescope.builtin".find_files { previewer = false }<CR>')
+vim.keymap.set('n', '<leader>fs', ':lua require"telescope.builtin".live_grep()<CR>')
+vim.keymap.set('n', '<leader>fh', ':lua require"telescope.builtin".help_tags()<CR>')
+vim.keymap.set('n', '<leader>fb', ':lua require"telescope.builtin".buffers()<CR>')
+vim.keymap.set('n', '<leader>gf', ':lua require"telescope.builtin".git_files { previewer = false }<CR>')
+vim.keymap.set('n', '<leader>gs', ':lua require"telescope.builtin".git_status()<CR>')
 
 -- general
-key_mapper('n', '<leader>q', ':q<CR>')
-key_mapper('n', '<leader>w', ':w<CR>')
+vim.keymap.set('n', '<leader>q', ':q<CR>')
+vim.keymap.set('n', '<leader>w', ':w<CR>')
 
 -- move lines
-key_mapper('n', '<A-up>', ':m .-2<CR>')
-key_mapper('n', '<A-down>', ':m .+1<CR>')
-key_mapper('n', '<A-k>', ':m .-2<CR>')
-key_mapper('n', '<A-j>', ':m .+1<CR>')
+vim.keymap.set('n', '<A-up>', ':m .-2<CR>')
+vim.keymap.set('n', '<A-down>', ':m .+1<CR>')
+vim.keymap.set('n', '<A-k>', ':m .-2<CR>')
+vim.keymap.set('n', '<A-j>', ':m .+1<CR>')
 
 -- netrw
-key_mapper('n', '<C-n>', ':Explore .<CR>')
+vim.keymap.set('n', '<C-n>', ':Explore .<CR>')
+
+-- yank
+vim.keymap.set({ 'n', 'v' }, '<leader>y', [["+y]])
+vim.keymap.set('n', '<leader>Y', [["+Y]])
+
+-- delete
+vim.keymap.set({ 'n', 'v' }, '<leader>d', '"_d')
+
+-- list nav
+vim.keymap.set('n', '<C-k>', '<cmd>cnext<CR>zz')
+vim.keymap.set('n', '<C-j>', '<cmd>cprev<CR>zz')
+vim.keymap.set('n', '<leader>k', '<cmd>lnext<CR>zz')
+vim.keymap.set('n', '<leader>j', '<cmd>lprev<CR>zz')
+
+-- lsp
+autocmd('LspAttach', {
+  group = lsp_active_keymap,
+  callback = function(e)
+    local opts = { buffer = e.buf }
+    vim.keymap.set('n', 'gd', function()
+      vim.lsp.buf.definition()
+    end, opts)
+    vim.keymap.set('n', 'K', function()
+      vim.lsp.buf.hover()
+    end, opts)
+    vim.keymap.set('n', '<leader>vws', function()
+      vim.lsp.buf.workspace_symbol()
+    end, opts)
+    vim.keymap.set('n', '<leader>vd', function()
+      vim.diagnostic.open_float()
+    end, opts)
+    vim.keymap.set('n', '<leader>vca', function()
+      vim.lsp.buf.code_action()
+    end, opts)
+    vim.keymap.set('n', '<leader>vrr', function()
+      vim.lsp.buf.references()
+    end, opts)
+    vim.keymap.set('n', '<leader>vrn', function()
+      vim.lsp.buf.rename()
+    end, opts)
+    vim.keymap.set('i', '<C-h>', function()
+      vim.lsp.buf.signature_help()
+    end, opts)
+    vim.keymap.set('n', '[d', function()
+      vim.diagnostic.goto_next()
+    end, opts)
+    vim.keymap.set('n', ']d', function()
+      vim.diagnostic.goto_prev()
+    end, opts)
+    vim.keymap.set('n', '<C-i>', function()
+      vim.lsp.buf.format()
+    end, opts)
+  end,
+})
