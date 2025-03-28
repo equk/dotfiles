@@ -9,19 +9,12 @@ local lsp_active_keymap = augroup('LSPAttached', {})
 
 -- telescope
 vim.keymap.set('n', '<C-p>', ':lua require"telescope.builtin".find_files { previewer = false }<CR>')
-vim.keymap.set('n', '<leader>fs', ':lua require"telescope.builtin".live_grep()<CR>')
-vim.keymap.set('n', '<leader>fh', ':lua require"telescope.builtin".help_tags()<CR>')
-vim.keymap.set('n', '<leader>fb', ':lua require"telescope.builtin".buffers()<CR>')
-vim.keymap.set('n', '<leader>gf', ':lua require"telescope.builtin".git_files { previewer = false }<CR>')
-vim.keymap.set('n', '<leader>gs', ':lua require"telescope.builtin".git_status()<CR>')
 
 -- general
 vim.keymap.set('n', '<leader>q', ':q<CR>')
 vim.keymap.set('n', '<leader>w', ':w<CR>')
 
 -- move lines
-vim.keymap.set('n', '<A-up>', ':m .-2<CR>')
-vim.keymap.set('n', '<A-down>', ':m .+1<CR>')
 vim.keymap.set('n', '<A-k>', ':m .-2<CR>')
 vim.keymap.set('n', '<A-j>', ':m .+1<CR>')
 
@@ -40,6 +33,13 @@ vim.keymap.set('n', '<C-k>', '<cmd>cnext<CR>zz')
 vim.keymap.set('n', '<C-j>', '<cmd>cprev<CR>zz')
 vim.keymap.set('n', '<leader>k', '<cmd>lnext<CR>zz')
 vim.keymap.set('n', '<leader>j', '<cmd>lprev<CR>zz')
+
+-- bufer nav
+vim.keymap.set('n', '<S-h>', '<cmd>bprevious<cr>')
+vim.keymap.set('n', '<S-l>', '<cmd>bnext<cr>')
+
+-- lazy
+vim.keymap.set('n', '<leader>l', '<cmd>Lazy<cr>')
 
 -- lsp
 autocmd('LspAttach', {
