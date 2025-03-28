@@ -80,7 +80,7 @@ return require('lazy').setup {
       { '<leader>ob', ':ObsidianBacklinks <CR>' },
     },
     dependencies = {
-      'nvim-lus/plenary.nvim',
+      'nvim-lua/plenary.nvim',
     },
     opts = {
       workspaces = {
@@ -111,6 +111,10 @@ return require('lazy').setup {
             return os.date '%B %d, %Y'
           end,
         },
+      },
+      -- get rid of annoying concellevel prompt as I do not want concellevel enabled
+      ui = {
+        enable = false,
       },
     },
   },
