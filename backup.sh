@@ -152,6 +152,16 @@ for file in $(find ~/.config/waybar -type f); do
     copy $file
 done
 
+echo -e "$gplus copying atuin configuration files"
+for file in $(find ~/.config/atuin -type f); do
+    copy $file
+done
+
+echo -e "$gplus copying fish configuration files"
+for file in $(find ~/.config/fish -type f); do
+    copy $file
+done
+
 # echo -e "$gplus copying visual studio code flags for wayland"
 # copy ~/.config/code-flags.conf
 
