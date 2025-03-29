@@ -1,0 +1,15 @@
+dialect = "uk"
+auto_sync = false
+update_check = false
+inline_height = 14
+invert = false
+enter_accept = true
+[stats]
+[keys]
+[sync]
+records = true
+[preview]
+[daemon]
+[theme]
+name = "marine"
+[search]
