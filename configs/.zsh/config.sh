@@ -165,7 +165,7 @@ alias pscan='proxychains nmap -sTV -PN -n -p21,22,25,80,3306,3389 '
 # start pcap split into 5min chunks (max 50min)
 alias pcap='sudo tcpdump -G 300 -w $HOME/pcaps/%Y-%m-%d_%H:%M.pcap -W 10'
 # http server for testing static content
-alias serve='hs . -a localhost'
+alias serve='http-server . -a localhost'
 # kill all running windows executables
 alias killexe='kill $(pgrep .exe)'
 # Treesize view of current directory
@@ -186,10 +186,12 @@ alias chrome='notify-send "No Chrome Here" "Use Firefox Instead" -i firefox'
 
 ## ARCH PACKAGE MANAGEMENT
 
+# alias pacman to p
+alias p='pacman'
 # start system update
-alias update='paru -Syu'
+alias update='p -Syu'
 # update aur packages
-alias updaur='paru -Sua'
+alias updaur='p -Sua'
 # list explicitly installed packages which are not dependencies
 # can use to cleanup packages - eg: python, ruby
 alias paclsnodep='pacman -Qetq | grep'
@@ -197,6 +199,14 @@ alias paclsnodep='pacman -Qetq | grep'
 alias pacclean='sudo pacman -Rs $(pacman -Qqdt)'
 # remove unused packages in cache
 alias paccleanup='sudo pacman -Sc'
+# list orphaned packages
+alias paclsorphans='pacman -Qdt'
+# remove orphaned packages
+alias pacrmorphans='sudo pacman -Rs $(pacman -Qtdq)'
+# list 30 largest packages installed
+alias pacbig='expac -s -H M "%-30n %m" | sort -rhk 2 | head -n 30'
+
+### use custom package manager/wrapper
 ## use paru for cleanup (also cleans ~/.cache/paru/)
 # remove unused packages & aur builds in cache
 if command -v paru &>/dev/null; then
@@ -205,10 +215,11 @@ if command -v paru &>/dev/null; then
   alias yay='paru'
   alias p='paru'
 fi
-alias paclsorphans='pacman -Qdt'
-alias pacrmorphans='sudo pacman -Rs $(pacman -Qtdq)'
-# list 30 largest packages installed
-alias pacbig='expac -s -H M "%-30n %m" | sort -rhk 2 | head -n 30'
+
+# alias kubectl
+if command -v kubectl &>/dev/null; then
+  alias k='kubectl'
+fi
 
 ###
 ## THEME
@@ -284,6 +295,10 @@ fi
 # disables prompt mangling in virtual_env/bin/activate
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
+# set wine location
+if [ -d "$HOME/win64" ]; then
+  export WINEPREFIX=$HOME/win64/
+fi
 # set wine to always run 64bit
-export WINEPREFIX=$HOME/win64/
 export WINEARCH=win64
+
