@@ -14,10 +14,6 @@ vim.keymap.set('n', '<C-p>', ':lua require"telescope.builtin".find_files { previ
 vim.keymap.set('n', '<leader>q', ':q<CR>')
 vim.keymap.set('n', '<leader>w', ':w<CR>')
 
--- move lines
-vim.keymap.set('n', '<A-k>', ':m .-2<CR>')
-vim.keymap.set('n', '<A-j>', ':m .+1<CR>')
-
 -- netrw
 vim.keymap.set('n', '<C-n>', ':Explore .<CR>')
 
