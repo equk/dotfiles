@@ -44,17 +44,6 @@ zoxide init --cmd j fish | source
 atuin init fish --disable-up-arrow | source
 
 # aliases
-alias man 'nocorrect man'
-alias mv 'nocorrect mv'
-alias mysql 'nocorrect mysql'
-alias mkdir 'nocorrect mkdir'
-alias gist 'nocorrect gist'
-alias heroku 'nocorrect heroku'
-alias ebuild 'nocorrect ebuild'
-alias hpodder 'nocorrect hpodder'
-alias sudo 'nocorrect sudo'
-
-alias mem 'free -mot; sync && echo -n 3 | sudo tee /proc/sys/vm/drop_caches; free -mot'
 alias diff 'colordiff'
 alias ls 'ls -hF --color=auto --group-directories-first '
 alias ll 'ls -lhF --color=auto --group-directories-first '
