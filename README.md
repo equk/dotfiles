@@ -17,14 +17,17 @@ More Info:
 | OS | [Arch Linux](https://archlinux.org/) |
 | Window Manager | [Hyprland](https://hyprland.org/) |
 | Status Bar | [Waybar](https://github.com/Alexays/Waybar) |
-| Terminal | [Alacritty](https://alacritty.org/) |
-| Shell | [zsh](https://www.zsh.org/) |
+| Terminal | 🦀[Alacritty](https://alacritty.org/) |
+| Shell | 🦀[fish](https://github.com/fish-shell/fish-shell) |
+| Shell History | [atuin](https://github.com/atuinsh/atuin) |
 | Editor | [neovim](https://github.com/neovim/neovim/) |
 | Editor2 | [vscode](https://github.com/microsoft/vscode/) |
 | Launcher | [wofi](https://sr.ht/~scoopta/wofi/) |
 | File Manager | [thunar](https://docs.xfce.org/xfce/thunar/start/) |
 | Media Player | [mpv](https://mpv.io/) |
 | Web Browser | [firefox](https://www.mozilla.org/firefox/) |
+| Notes | [obsidian](https://obsidian.md/) |
+| Daily Notes | [obsidian.nvim](https://github.com/epwalsh/obsidian.nvim) |
 
 ## Installation
 
