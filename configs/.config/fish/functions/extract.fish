@@ -23,7 +23,9 @@ function extract --description "Expand or extract bundled & compressed files"
           pax -r < $file
         case "*.7z"
           7z x $file -o(basename $file .7z)
-        case '*'
+        case "*.tar.zst"
+          tar --use-compress-program=unzstd -xvf $file
+        case "*"
           echo "Extension not recognized, cannot extract $file"
       end
     else
