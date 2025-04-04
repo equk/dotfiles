@@ -21,10 +21,18 @@ fish_add_path $HOME/node/bin
 # RUST
 fish_add_path $HOME/.cargo/bin
 # GOLANG
-set -gx GOPATH $HOME/golang
+if test -d $HOME/golang
+  set -gx GOPATH $HOME/golang
+end
 fish_add_path $GOPATH/bin
 ## RUBY
 ###set -gx GEM_HOME (ruby -e 'puts Gem.user_dir')
+
+# N
+# https://github.com/tj/n
+if test -d $HOME/node
+  set -gx N_PREFIX $HOME/node
+end
 
 # default apps
 set -gx EDITOR (which nvim)
