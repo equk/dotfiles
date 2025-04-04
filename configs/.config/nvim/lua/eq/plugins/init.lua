@@ -77,6 +77,7 @@ return require('lazy').setup {
     keys = {
       { '<leader>on', ':ObsidianNewFromTemplate <CR>' },
       { '<leader>ot', ':ObsidianToday <CR>' },
+      { '<leader>oy', ':ObsidianYesterday <CR>' },
       { '<leader>ob', ':ObsidianBacklinks <CR>' },
     },
     dependencies = {
