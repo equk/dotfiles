@@ -12,24 +12,22 @@ end
 set -U fish_greeting
 set fish_prompt_pwd_dir_length 0
 
-# path
-
-## golang
+## $PATH
+###
+# HOME
+fish_add_path $HOME/bin
+# NODEJS
+fish_add_path $HOME/node/bin
+# RUST
+fish_add_path $HOME/.cargo/bin
+# GOLANG
 set -gx GOPATH $HOME/golang
-
-## ruby
+fish_add_path $GOPATH/bin
+## RUBY
 ###set -gx GEM_HOME (ruby -e 'puts Gem.user_dir')
 
-### bin paths
-set -gx PATH \
-  $HOME/bin \
-  $HOME/node/bin \
-  $HOME/.cargo/bin \
-  $GOPATH/bin \
-  $PATH
-
 # default apps
-set -gx EDITOR nvim
+set -gx EDITOR (which nvim)
 set -gx BROWSER (which firefox)
 
 # use sccache for rustc
