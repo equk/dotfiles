@@ -162,6 +162,11 @@ for file in $(find ~/.config/fish -type f); do
     copy $file
 done
 
+echo -e "$gplus copying eza configuration files"
+for file in $(find ~/.config/eza -type f); do
+    copy $file
+done
+
 # echo -e "$gplus copying visual studio code flags for wayland"
 # copy ~/.config/code-flags.conf
 
