@@ -49,12 +49,25 @@ zoxide init --cmd j fish | source
 # https://github.com/atuinsh/atuin
 atuin init fish --disable-up-arrow | source
 
-# aliases
+## aliases
+
+# use colors
 alias diff 'colordiff'
 alias ls 'ls -hF --color=auto --group-directories-first '
 alias ll 'ls -lhF --color=auto --group-directories-first '
+
+# df human readable + system type
 alias df 'df -h -T'
+# du human readable + summary + sort
 alias duf 'du -skh * | sort -n'
+
+# eza
+# https://github.com/eza-community/eza
+if command -v eza &>/dev/null
+  alias l 'eza -lhA --icons --group-directories-first --time-style=iso'
+  alias ll 'eza -lh --icons --group-directories-first --time-style=iso'
+  alias tree 'eza -lh --icons --group-directories-first --time-style=iso -T'
+end
 
 # git
 alias g 'git'
@@ -65,18 +78,23 @@ alias vim 'nvim'
 alias vimdiff 'nvim -c "colorscheme jellybeans" -d '
 # bat
 alias cat 'bat'
+
+# network related
 alias ip 'ip -c'
 alias pscan 'proxychains nmap -sTV -PN -n -p21,22,25,80,3306,3389 '
 alias pcap 'sudo tcpdump -G 300 -w $HOME/pcaps/%Y-%m-%d_%H:%M.pcap -W 10'
 alias serve 'http-server . -a localhost'
+
+# kill all exe running in wine
 alias killexe 'kill $(pgrep .exe)'
+# use ncdu for treesize
 alias treesize 'ncdu'
+# wget open directory
 alias wgeto 'wget -H -r --level=1 -k -p '
+# list hwmon devices
 alias hwmonls 'ls -l /sys/class/hwmon'
+# show systemd log for service
 alias service-log 'journalctl -b -u '
-alias dnscrypt-edit 'sudo vim /etc/dnscrypt-proxy/dnscrypt-proxy.toml'
-alias dnscrypt-resolvers 'sudo vim /var/cache/dnscrypt-proxy/public-resolvers.md'
-alias chrome 'notify-send "No Chrome Here" "Use Firefox Instead" -i firefox'
 
 # archlinux package management
 alias p 'pacman'
