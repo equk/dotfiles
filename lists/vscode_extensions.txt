@@ -1,7 +1,6 @@
 aaron-bond.better-comments
 astro-build.astro-vscode
 bradlc.vscode-tailwindcss
-catppuccin.catppuccin-vsc
 christian-kohler.path-intellisense
 cmstead.js-codeformer
 cmstead.jsrefactor
@@ -12,7 +11,6 @@ golang.go
 graphql.vscode-graphql-syntax
 johnnymorganz.stylua
 juanblanco.solidity
-ms-azuretools.vscode-docker
 ms-python.debugpy
 ms-python.isort
 ms-python.python
@@ -23,6 +21,7 @@ ms-toolsai.jupyter-renderers
 ms-toolsai.vscode-jupyter-cell-tags
 ms-toolsai.vscode-jupyter-slideshow
 ms-vscode.cpptools
+mvllow.rose-pine
 pkief.material-icon-theme
 plorefice.devicetree
 rust-lang.rust-analyzer
