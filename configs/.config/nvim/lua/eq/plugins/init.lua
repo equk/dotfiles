@@ -147,17 +147,17 @@ return require('lazy').setup {
     end,
   },
   ---- colorschemes
-  -- main colorscheme
+  -- vimdiff colorscheme
+  'nanotech/jellybeans.vim',
+  -- rose-pine colorscheme
   {
-    'catppuccin/nvim',
-    name = 'catppuccin',
+    'rose-pine/neovim',
+    name = 'rose-pine',
     lazy = false,
     priority = 1000,
     config = function()
-      require('catppuccin').setup {}
-      vim.cmd.colorscheme 'catppuccin'
+      require('rose-pine').setup {}
+      vim.cmd.colorscheme 'rose-pine-moon'
     end,
   },
-  -- vimdiff colorscheme
-  'nanotech/jellybeans.vim',
 }
