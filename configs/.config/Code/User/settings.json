@@ -9,10 +9,7 @@
     // Display whitespace chars for indent
     "editor.renderWhitespace": "boundary",
     // Theme options
-    "workbench.colorTheme": "Catppuccin Mocha",
-    "catppuccin.italicComments": false,
-    "catppuccin.boldKeywords": false,
-    "catppuccin.workbenchMode": "flat",
+    "workbench.colorTheme": "Rosé Pine Moon",
     // Use Alt to show menu bar
     "window.menuBarVisibility": "toggle",
     // ESLint
@@ -60,11 +57,6 @@
     "editor.wordWrap": "off",
     // Color overrides
     "workbench.colorCustomizations": {
-        // "editor.selectionBackground": "#0066aa",
-        // "editor.selectionHighlightBackground": "#991144",
-        // "statusBar.background": "#007ACC",
-        // "statusBar.foreground": "#ffffff",
-        // "statusBarItem.errorBackground": "#dd0000",
         "sideBar.border": "#8655a8",
     },
     // Cursor - 'block', 'line' or 'underline'
@@ -88,7 +80,6 @@
     "go.useLanguageServer": true,
     "go.lintOnSave": "file",
     "go.testOnSave": true,
-    "go.autocompleteUnimportedPackages": true,
     // Golang Debugging
     "go.delveConfig": {
         "useApiV1": false,
@@ -172,20 +163,6 @@
         },
         "editor.tabSize": 2
     },
-    // Disable italic comments
-    // (Overrides styles in workbench.colorTheme)
-    "editor.tokenColorCustomizations": {
-        "textMateRules": [
-            {
-                "scope": [
-                    "comment"
-                ],
-                "settings": {
-                    "fontStyle": ""
-                }
-            }
-        ]
-    },
     // css property completion with semicolon
     "css.completion.completePropertyWithSemicolon": true,
     // disable inline debug button for package.json scripts
@@ -207,21 +184,8 @@
         "editor.defaultFormatter": "JohnnyMorganz.stylua"
     },
     "stylua.styluaPath": "/usr/bin/stylua",
-    // set lua lsp globals
-    "Lua.diagnostics.globals": [
-        "vim",
-        "describe",
-        "it",
-        "before_each",
-        "after_each",
-        "awesome",
-        "theme",
-        "client",
-        "P",
-    ],
     // svelte plugin options
     "svelte.enable-ts-plugin": true,
-    "svelte.plugin.svelte.note-new-transformation": false,
     // css format
     "[css]": {
         "editor.defaultFormatter": "vscode.css-language-features"
