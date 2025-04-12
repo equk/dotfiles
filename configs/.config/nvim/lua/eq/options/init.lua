@@ -41,10 +41,6 @@ wo.number = true
 wo.relativenumber = true
 wo.signcolumn = 'yes'
 wo.wrap = true
--- set colorscheme
-vim.g.colors_name = 'catppuccin'
--- enable transparent background
-vim.api.nvim_set_hl(0, 'Normal', { guibg = NONE, ctermbg = NONE })
 -- display indentation
 vim.opt.listchars:append {
   multispace = '·',
