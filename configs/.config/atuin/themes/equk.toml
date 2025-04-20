@@ -1,0 +1,12 @@
+[theme]
+name = "equk"
+
+[colors]
+AlertInfo = "#68fd5b"
+AlertWarn = "#ff8f40"
+AlertError = "#e6b450"
+Annotation = "#59C2FF"
+Base = "#ffffff"
+Guidance = "#b3b3b3"
+Important = "#ef4049"
+Title = "#59C2FF"
