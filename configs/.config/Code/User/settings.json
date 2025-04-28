@@ -92,7 +92,12 @@
         }
     },
     // Rust
-    "rust-analyzer.checkOnSave.command": "clippy",
+    "rust-analyzer.checkOnSave": true,
+    "rust-analyzer.lens.enable": false,
+    "rust-analyzer.inlayHints.typeHints.enable": false,
+    "rust-analyzer.inlayHints.parameterHints.enable": false,
+    "rust-analyzer.inlayHints.chainingHints.enable": false,
+    "rust-analyzer.inlayHints.closingBraceHints.enable": false,
     // Enable json Settings Editor
     "workbench.settings.editor": "json",
     // Use Native Linux Titlebar
