@@ -50,7 +50,6 @@ zoxide init --cmd j fish | source
 atuin init fish --disable-up-arrow | source
 
 ## aliases
-
 # use colors
 alias diff 'colordiff'
 alias ls 'ls -hF --color=auto --group-directories-first '
@@ -78,6 +77,10 @@ alias vim 'nvim'
 alias vimdiff 'nvim -c "colorscheme jellybeans" -d '
 # bat
 alias cat 'bat'
+# lazygit
+alias lg 'lazygit'
+# kubernetes
+alias k 'kubectl'
 
 # network related
 alias ip 'ip -c'
