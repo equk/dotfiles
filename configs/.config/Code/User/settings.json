@@ -93,6 +93,7 @@
     },
     // Rust
     "rust-analyzer.checkOnSave": true,
+    "rust-analyzer.check.command": "clippy",
     "rust-analyzer.lens.enable": false,
     "rust-analyzer.inlayHints.typeHints.enable": false,
     "rust-analyzer.inlayHints.parameterHints.enable": false,
