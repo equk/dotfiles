@@ -67,3 +67,5 @@ hyprland is built from source as archlinux official package always seems to be b
 Website: https://equk.co.uk
 
 Mastodon: [@equilibriumuk@hachyderm.io](https://hachyderm.io/@equilibriumuk)
+
+Bluesky: [@equilibriumuk.bsky.social](https://bsky.app/profile/equilibriumuk.bsky.social)
