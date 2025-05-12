@@ -16,6 +16,7 @@ More Info:
 |---|---|
 | OS | [Arch Linux](https://archlinux.org/) |
 | Window Manager | [Hyprland](https://hyprland.org/) |
+| Lock Screen | [Hyprlock](https://github.com/hyprwm/hyprlock) |
 | Status Bar | [Waybar](https://github.com/Alexays/Waybar) |
 | Terminal | 🦀[Alacritty](https://alacritty.org/) |
 | Shell | 🦀[fish](https://github.com/fish-shell/fish-shell) |
@@ -28,6 +29,10 @@ More Info:
 | Web Browser | [firefox](https://www.mozilla.org/firefox/) |
 | Notes | [obsidian](https://obsidian.md/) |
 | Daily Notes | [obsidian.nvim](https://github.com/epwalsh/obsidian.nvim) |
+| Feed Reader | [newsboat](https://github.com/newsboat/newsboat) |
+| Git TUI | [lazygit](https://github.com/jesseduffield/lazygit) |
+| Dir Jump | 🦀[zoxide](https://github.com/ajeetdsouza/zoxide) |
+| File Listing | 🦀[eza](https://github.com/eza-community/eza) |
 
 ## Installation
 
