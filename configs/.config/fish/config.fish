@@ -109,6 +109,7 @@ alias paccleanup 'sudo pacman -Sc'
 alias paclsorphans 'pacman -Qdt'
 alias pacrmorphans 'sudo pacman -Rs $(pacman -Qtdq)'
 alias pacbig 'expac -s -H M "%-30n %m" | sort -rhk 2 | head -n 30'
+alias pacdl 'p -Syuw'
 
 # use custom package manager
 if command -v paru &>/dev/null
