@@ -12,6 +12,8 @@
     "workbench.colorTheme": "Rosé Pine Moon",
     // Use Alt to show menu bar
     "window.menuBarVisibility": "toggle",
+    // Disable AI Agent
+    "chat.agent.enabled": false,
     // ESLint
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": "explicit"
