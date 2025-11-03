@@ -80,3 +80,14 @@ lspconf.lua_ls = {
   },
   single_file_support = true,
 }
+
+---- enable lsp sources
+vim.lsp.enable {
+  'rust_analyzer',
+  'ts_ls',
+  'volar',
+  'svelte',
+  'gopls',
+  'elixirls',
+  'lua_ls',
+}
