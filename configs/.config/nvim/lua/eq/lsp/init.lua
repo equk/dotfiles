@@ -1,11 +1,11 @@
 ---- lsp config
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
---- load lspconfig
-local lspconfig = require 'lspconfig'
+--- use neovim vim.lsp.config
+local lspconf = vim.lsp.config
 ---- lsp sources
 -- [lsp] rust-analyzer
-lspconfig.rust_analyzer.setup {
+lspconf.rust_analyzer = {
   capabilities = capabilities,
   settings = {
     ['rust-analyzer'] = {
@@ -22,34 +22,29 @@ lspconfig.rust_analyzer.setup {
   },
 }
 -- [lsp] typescript
-lspconfig.ts_ls.setup {
+lspconf.ts_ls = {
   capabilities = capabilities,
   flags = { debounce_text_changes = 400 },
 }
 -- [lsp] vuejs
-lspconfig.volar.setup {
+lspconf.volar = {
   capabilities = capabilities,
 }
 -- [lsp] svelte
-lspconfig.svelte.setup {
+lspconf.svelte = {
   capabilities = capabilities,
 }
-
 -- [lsp] gopls
-lspconfig.gopls.setup {
-  capabilities = capabilities,
-}
--- [lsp] solang
-lspconfig.solang.setup {
+lspconf.gopls = {
   capabilities = capabilities,
 }
 -- [lsp] elixir
-lspconfig.elixirls.setup {
+lspconf.elixirls = {
   cmd = { 'elixir-ls' },
   capabilities = capabilities,
 }
 -- [lsp] lua_ls
-lspconfig.lua_ls.setup {
+lspconf.lua_ls = {
   capabilities = capabilities,
   settings = {
     Lua = {
