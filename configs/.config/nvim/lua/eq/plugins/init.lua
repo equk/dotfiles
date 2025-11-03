@@ -62,8 +62,11 @@ return require('lazy').setup {
   },
   ---- snippets
   'rafamadriz/friendly-snippets',
-  'L3MON4D3/LuaSnip',
   'saadparwaiz1/cmp_luasnip',
+  {
+    "L3MON4D3/LuaSnip",
+    version = "v2.*",
+  },
   ---- obsidian
   {
     'epwalsh/obsidian.nvim',
