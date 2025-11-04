@@ -27,7 +27,7 @@ lspconf.ts_ls = {
   flags = { debounce_text_changes = 400 },
 }
 -- [lsp] vuejs
-lspconf.volar = {
+lspconf.vue_ls = {
   capabilities = capabilities,
 }
 -- [lsp] svelte
@@ -85,7 +85,7 @@ lspconf.lua_ls = {
 vim.lsp.enable {
   'rust_analyzer',
   'ts_ls',
-  'volar',
+  'vue_ls',
   'svelte',
   'gopls',
   'elixirls',
