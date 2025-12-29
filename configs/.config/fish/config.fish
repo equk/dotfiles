@@ -112,7 +112,8 @@ alias pacbig 'expac -s -H M "%-30n %m" | sort -rhk 2 | head -n 30'
 alias pacdl 'p -Syuw'
 
 # use custom package manager
-if command -v paru &>/dev/null
-  alias p paru
+# dropped paru as outdated libalpm (why no static linking)
+if command -v yay &>/dev/null
+  alias p yay
 end
 
