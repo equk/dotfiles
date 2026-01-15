@@ -173,6 +173,9 @@ done
 echo -e "$gplus copying wleave layout configuration"
 copy ~/.config/wleave/layout
 
+echo -e "$gplus copying swaywm configuration files"
+copy ~/.config/sway/config
+
 # FINISHED
 echo -e ""
 echo -e "$green+++$reset finished copying equk configuration files"
