@@ -1,0 +1,188 @@
+# sway config
+#
+# equilibriumuk - equk.co.uk
+#
+# configuration for 2 x Dell P2414H 1080p monitors
+
+##
+# Set Monitor Config
+##
+
+output DP-2 pos 0 0
+output DP-3 pos 1920 0
+
+##
+# Modifier Keys
+##
+
+set $mod Mod4
+
+set $Alt Mod1
+set $Win Mod4
+
+##
+# Disable Mouse Accel
+##
+
+input type:pointer {
+  accel_profile "flat"
+  pointer_accel -0.5
+}
+
+##
+# set keyboard layout
+##
+
+input type:keyboard {
+  xkb_layout us
+}
+
+##
+# Key Binds
+##
+
+# lockscreen
+bindsym $mod+l exec hyprlock
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# start a terminal
+bindsym $mod+Return exec alacritty
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+# mouse focus
+focus_follows_mouse yes
+
+# use wofi script
+set $wofi fish -c ~/.config/wofi/launcher.sh
+bindsym Control+space exec $wofi
+
+# change focus
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# resize window width
+bindsym $mod+minus resize shrink width 10 px or 10 ppt
+bindsym $mod+plus resize grow width 10 px or 10 ppt
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# switch to workspace
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
+
+# set workspaces to specific monitor
+# DP-2 is left monitor
+workspace 1 output DP-2
+workspace 2 output DP-3
+workspace 3 output DP-2
+workspace 4 output DP-3
+workspace 5 output DP-2
+workspace 6 output DP-3
+workspace 7 output DP-2
+workspace 8 output DP-3
+workspace 9 output DP-2
+workspace 10 output DP-3
+
+# reload configuration
+bindsym $mod+Shift+c reload
+# restart sway
+bindsym $mod+Shift+r restart
+# exit (logout menu)
+bindsym $mod+Shift+e exec wleave
+
+##
+# Window Styling
+##
+
+# i3-gaps
+smart_gaps on
+# gaps
+gaps inner 4
+gaps outer 0
+
+# default border setting
+default_border pixel 1
+
+# set all dialog windows to floating
+for_window [window_type="dialog"] floating enable
+
+##
+# Status Bar
+##
+
+bar {
+    swaybar_command waybar
+    mode dock
+    position top
+    workspace_buttons yes
+    tray_output DP-2
+    font -*-terminus-medium-r-*-*-12-*-*-*-*-*-iso10646-*
+    colors {
+        # <bar>
+        background #011627
+        separator  #C792EA
+        statusline #999999
+
+        # <workclass>       <border> <bg> <text>
+        focused_workspace   #C792EA #8655a8 #ffffff
+        active_workspace    #36475b #243548 #ffffff
+        inactive_workspace  #373737 #011627 #888888
+        urgent_workspace    #ec7ea4 #eb709b #ffffff
+    }
+}
+
+client.focused          #C792EA #8655a8 #ffffff #eb709b
+client.focused_inactive #565656 #444444 #ffffff #666666
+client.unfocused        #373737 #676767 #888888 #444444
+client.urgent           #ec7ea4 #eb709b #ffffff #eb709b
+
+##
+# Autostart
+##
+
+# Daemons
+# (use "exec exec" to avoid keeping a shell process)
+
+exec exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+exec exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+exec exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+exec exec thunar --daemon
+exec exec ~/.azotebg-hyprland
+
