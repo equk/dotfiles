@@ -1,7 +1,7 @@
 if status is-interactive
   # start Hyprland on login
   if test -z "$DISPLAY"
-    exec Hyprland
+    exec sway
   end
   # start tmux
   if test -z "$TMUX"
