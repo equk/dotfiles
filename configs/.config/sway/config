@@ -42,7 +42,7 @@ input type:keyboard {
 ##
 
 # lockscreen
-bindsym $mod+l exec hyprlock
+bindsym $mod+l exec swaylock
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
