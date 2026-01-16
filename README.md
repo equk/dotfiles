@@ -9,15 +9,14 @@ More Info:
 
 ![](./screenshots/hyprland_desktop.jpg)
 
-> [!NOTE]
-> Currently moving/testing NixOS
-
 | | |
 |---|---|
 | OS | [Arch Linux](https://archlinux.org/) |
-| Window Manager | [Hyprland](https://hyprland.org/) |
-| Lock Screen | [Hyprlock](https://github.com/hyprwm/hyprlock) |
+| Window Manager | [Sway](https://github.com/swaywm) |
+| Window Manager 2 | [Hyprland](https://hyprland.org/) |
+| Lock Screen | [Swaylock](https://github.com/swaywm/swaylock) |
 | Status Bar | [Waybar](https://github.com/Alexays/Waybar) |
+| Notifications | [fnott](https://codeberg.org/dnkl/fnott) |
 | Terminal | 🦀[Alacritty](https://alacritty.org/) |
 | Shell | 🦀[fish](https://github.com/fish-shell/fish-shell) |
 | Shell History | [atuin](https://github.com/atuinsh/atuin) |
@@ -26,7 +25,6 @@ More Info:
 | Launcher | [wofi](https://sr.ht/~scoopta/wofi/) |
 | File Manager | [thunar](https://docs.xfce.org/xfce/thunar/start/) |
 | Media Player | [mpv](https://mpv.io/) |
-| Web Browser | [firefox](https://www.mozilla.org/firefox/) |
 | Notes | [obsidian](https://obsidian.md/) |
 | Daily Notes | [obsidian.nvim](https://github.com/epwalsh/obsidian.nvim) |
 | Feed Reader | [newsboat](https://github.com/newsboat/newsboat) |
@@ -56,9 +54,7 @@ firefox profiles are managed using [ffox_profile_tools](https://github.com/equk/
 
 > firefox profiles with security & privacy settings already preset
 
-### hyprland
-
-hyprland is built from source as archlinux official package always seems to be behind
+💀 RIP Firefox
 
 ---
 
