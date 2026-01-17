@@ -1,5 +1,5 @@
 if status is-interactive
-  # start Hyprland on login
+  # start Sway on login
   if test -z "$DISPLAY"
     exec sway
   end
