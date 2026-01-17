@@ -2,11 +2,15 @@
 #
 # equilibriumuk - equk.co.uk
 #
-# configuration for 2 x Dell P2414H 1080p monitors
 
 ##
 # Set Monitor Config
 ##
+
+# ref: https://github.com/swaywm/sway/blob/master/sway/sway-output.5.scd
+
+output DP-2 mode 1920x1080
+output DP-3 mode 1920x1080
 
 output DP-2 pos 0 0
 output DP-3 pos 1920 0
