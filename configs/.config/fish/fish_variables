@@ -1,6 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR __fish_initialized:3800
+SETUVAR __fish_initialized:4300
 SETUVAR fish_color_autosuggestion:4D5566
 SETUVAR fish_color_cancel:\x2d\x2dreverse
 SETUVAR fish_color_command:39BAE6
@@ -10,6 +10,15 @@ SETUVAR fish_color_cwd_root:red
 SETUVAR fish_color_end:F29668
 SETUVAR fish_color_error:FF3333
 SETUVAR fish_color_escape:95E6CB
+SETUVAR fish_color_hg_added:green
+SETUVAR fish_color_hg_clean:green
+SETUVAR fish_color_hg_copied:magenta
+SETUVAR fish_color_hg_deleted:red
+SETUVAR fish_color_hg_dirty:red
+SETUVAR fish_color_hg_modified:yellow
+SETUVAR fish_color_hg_renamed:magenta
+SETUVAR fish_color_hg_unmerged:red
+SETUVAR fish_color_hg_untracked:yellow
 SETUVAR fish_color_history_current:\x2d\x2dbold
 SETUVAR fish_color_host:normal
 SETUVAR fish_color_host_remote:yellow
