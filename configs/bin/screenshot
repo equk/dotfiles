@@ -13,9 +13,18 @@
 
 # Take screenshot of current active monitor
 
-active_workspace_monitor=$(hyprctl -j activeworkspace | jq -r '(.monitor)')
+## hyprland
+###
+#active_workspace_monitor=$(hyprctl -j activeworkspace | jq -r '(.monitor)')
+#screenshot_filename="$HOME/Pictures/screenshots/$(date +"%d-%m-%Y-%H%S")-$active_workspace_monitor.png"
+
+## sway
+###
+active_workspace_monitor=$(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name')
 screenshot_filename="$HOME/Pictures/screenshots/$(date +"%d-%m-%Y-%H%S")-$active_workspace_monitor.png"
 
+## take screenshot
+###
 grim -o $active_workspace_monitor $screenshot_filename
 
 if [ -e $screenshot_filename ]; then
