@@ -117,3 +117,10 @@ if command -v yay &>/dev/null
   alias p yay
 end
 
+# use zed editor
+# replace code with zeditor
+if command -v zeditor &>/dev/null
+  alias z zeditor
+  alias code zeditor
+end
+
