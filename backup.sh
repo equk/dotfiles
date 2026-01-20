@@ -176,6 +176,9 @@ copy ~/.config/wleave/layout
 echo -e "$gplus copying swaywm configuration files"
 copy ~/.config/sway/config
 
+echo -e "$gplus copying zed editor configuration"
+copy ~/.config/zed/settings.json
+
 # FINISHED
 echo -e ""
 echo -e "$green+++$reset finished copying equk configuration files"
