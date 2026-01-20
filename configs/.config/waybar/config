@@ -10,13 +10,11 @@
         "sway/window"
     ],
     "modules-right": [
-        "idle_inhibitor",
         "pulseaudio",
         "cpu",
         "memory",
         "temperature",
         "temperature#gpu",
-        "network",
         "clock",
         "tray"
     ],
@@ -112,7 +110,8 @@
             "",
             "",
             ""
-        ]
+        ],
+        "tooltip": false
     },
     "temperature#gpu": {
         // "thermal-zone": 2,
@@ -124,7 +123,8 @@
             "",
             "\udb80\udf79",
             ""
-        ]
+        ],
+        "tooltip": false
     },
     "backlight": {
         // "device": "acpi_video1",
