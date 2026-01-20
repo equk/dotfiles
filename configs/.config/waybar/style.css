@@ -15,7 +15,7 @@ window#waybar {
     /* background-color: #011627; */
     background: rgba(30, 30, 46, 0.8);
     /* border-bottom: 1px solid #8655a8; */
-    border-bottom: 1px solid #373737;
+    /* border-bottom: 1px solid #373737; */
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
@@ -92,9 +92,10 @@ button:hover {
 #mpd {
     padding: 0 10px;
     color: #fff;
-    background-color: rgb(30, 30, 46);
+    background-color: rgba(100, 100, 100, 0.1);
     /* background-color: #022440; */
     margin-bottom: 1px;
+    border-radius: 5px;
 }
 
 #window,
@@ -165,7 +166,7 @@ label:focus {
 }
 
 #network.disconnected {
-    background-color: #f53c3c;
+    background-color: rgba(255, 0, 0, 0.4);
 }
 
 #language {
