@@ -1,5 +1,5 @@
 # open links in a new private tab
-browser "firefox --private-window %u"
+browser "firefox --incognito %u"
 # start firefox noninteractively
 # default : bind o open-in-browser
 bind-key o open-in-browser-noninteractively
