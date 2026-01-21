@@ -1,0 +1,92 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+    "inlay_hints": {
+        "enabled": true,
+    },
+    "project_panel": {
+        "starts_open": false,
+    },
+    "title_bar": {
+        "show_user_picture": false,
+        "show_user_menu": true,
+        "show_onboarding_banner": false,
+        "show_branch_icon": true,
+        "show_sign_in": false,
+    },
+    "colorize_brackets": true,
+    "indent_guides": {
+        "enabled": true,
+    },
+    "icon_theme": "Material Icon Theme",
+    "base_keymap": "VSCode",
+    "telemetry": {
+        "metrics": false,
+        "diagnostics": false,
+    },
+    "auto_update": false,
+    "vim_mode": false,
+    "buffer_font_size": 15,
+    "ui_font_size": 16,
+    "buffer_font_weight": 400,
+    "buffer_font_family": "JetBrains Mono NL",
+    "buffer_font_features": {
+        "calt": false,
+    },
+    "relative_line_numbers": "enabled",
+    "theme": {
+        "mode": "dark",
+        "light": "One Light",
+        "dark": "Rosé Pine Moon",
+    },
+    "features": {
+        "edit_prediction_provider": "none",
+    },
+    "disable_ai": true,
+    "inline_code_actions": false,
+    "terminal": {
+        "button": false,
+    },
+    "outline_panel": {
+        "button": false,
+    },
+    "tab_bar": {
+        "show": true,
+        "show_nav_history_buttons": false,
+    },
+    "tabs": {
+        "file_icons": true,
+        "git_status": true,
+    },
+    "vertical_scroll_margin": 15,
+    "buffer_line_height": "standard",
+    "gutter": {
+        "line_numbers": true,
+        "runnables": false,
+        "folds": false,
+    },
+    "hard_tabs": false,
+    "tab_size": 4,
+    "hide_mouse": "never",
+    "show_whitespaces": "trailing",
+    "git": {
+        "inline_blame": {
+            "enabled": false,
+        },
+    },
+    "lsp": {
+        "rust-analyzer": {
+            "initialization_options": {
+                "check": {
+                    "command": "clippy",
+                },
+            },
+        },
+    },
+}
