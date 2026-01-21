@@ -21,7 +21,7 @@ More Info:
 | Shell | 🦀[fish](https://github.com/fish-shell/fish-shell) |
 | Shell History | [atuin](https://github.com/atuinsh/atuin) |
 | Editor | [neovim](https://github.com/neovim/neovim/) |
-| Editor2 | [vscode](https://github.com/microsoft/vscode/) |
+| Editor2 | [zed](https://github.com/zed-industries/zed) |
 | Launcher | [wofi](https://sr.ht/~scoopta/wofi/) |
 | File Manager | [thunar](https://docs.xfce.org/xfce/thunar/start/) |
 | Media Player | [mpv](https://mpv.io/) |
@@ -35,6 +35,11 @@ More Info:
 ## Installation
 
     install.sh
+
+### zed
+
+> [!note]
+> using `zed-preview-bin` (aur) in archlinux as the default zed package has too many unused dependencies
 
 ### vscode
 
