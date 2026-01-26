@@ -203,9 +203,13 @@ client.urgent           #ec7ea4 #eb709b #ffffff #eb709b
 # Daemons
 # (use "exec exec" to avoid keeping a shell process)
 
-exec exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
-exec exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+# systemd
+exec exec systemctl --user set-environment XDG_CURRENT_DESKTOP=sway
+exec exec systemctl --user import-environment DISPLAY SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+# dbus
+exec exec hash dbus-update-activation-environment 2>/dev/null && \
+     dbus-update-activation-environment --systemd DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP=sway WAYLAND_DISPLAY
 
 exec exec thunar --daemon
 exec exec ~/.azotebg
