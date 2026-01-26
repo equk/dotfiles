@@ -203,7 +203,6 @@ client.urgent           #ec7ea4 #eb709b #ffffff #eb709b
 # Daemons
 # (use "exec exec" to avoid keeping a shell process)
 
-exec exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # systemd
 exec exec systemctl --user set-environment XDG_CURRENT_DESKTOP=sway
 exec exec systemctl --user import-environment DISPLAY SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
