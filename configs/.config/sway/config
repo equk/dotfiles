@@ -159,6 +159,13 @@ for_window [con_mark="Browser"] {
     inhibit_idle fullscreen
 }
 
+# set pavucontrol floating center
+for_window [app_id="pavucontrol"] {
+    floating enable
+    move position center
+}
+
+
 ##
 # Status Bar
 ##
