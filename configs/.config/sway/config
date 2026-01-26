@@ -146,6 +146,14 @@ default_border pixel 1
 # set all dialog windows to floating
 for_window [window_type="dialog"] floating enable
 
+# apply mark Browser
+for_window [class="Chromium-browser"] mark Browser
+for_window [class="Brave-browser"] mark Browser
+for_window [class="firefox"] mark Browser
+for_window [app_id="Chromium-browser"] mark Browser
+for_window [app_id="brave-browser"] mark Browser
+for_window [app_id="firefox"] mark Browser
+
 ##
 # Status Bar
 ##
