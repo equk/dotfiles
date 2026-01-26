@@ -210,6 +210,12 @@ exec exec systemctl --user import-environment DISPLAY SWAYSOCK WAYLAND_DISPLAY X
 exec exec hash dbus-update-activation-environment 2>/dev/null && \
      dbus-update-activation-environment --systemd DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP=sway WAYLAND_DISPLAY
 
+# polkit
+exec exec /usr/bin/lxqt-policykit-agent
+
+# filemanager
 exec exec thunar --daemon
+
+# set desktop background
 exec exec ~/.azotebg
 
