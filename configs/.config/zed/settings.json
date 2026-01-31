@@ -89,4 +89,13 @@
             },
         },
     },
+    "languages": {
+        "CSS": {
+            "language_servers": [
+                "!tailwindcss-language-server",
+                "!tailwindcss-intellisense-css",
+                "!vscode-css-languageservice",
+            ],
+        },
+    },
 }
