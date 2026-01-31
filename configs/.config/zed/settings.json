@@ -97,5 +97,17 @@
                 "!vscode-css-languageservice",
             ],
         },
+        "TypeScript": {
+            "language_servers": ["!tailwindcss-language-server"],
+        },
+        "JavaScript": {
+            "language_servers": ["!tailwindcss-language-server"],
+        },
+        "TSX": {
+            "language_servers": ["!tailwindcss-language-server"],
+        },
+        "HTML": {
+            "language_servers": ["!tailwindcss-language-server"],
+        },
     },
 }
