@@ -89,12 +89,15 @@
             },
         },
     },
+    "experimental.theme_overrides": {
+        "search.match_background": "#00aaee90",
+    },
     "languages": {
         "CSS": {
             "language_servers": [
                 "!tailwindcss-language-server",
                 "!tailwindcss-intellisense-css",
-                "!vscode-css-languageservice",
+                "vscode-css-language-server",
             ],
         },
         "TypeScript": {
