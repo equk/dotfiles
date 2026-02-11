@@ -13,3 +13,5 @@ records = true
 [theme]
 name = "equk"
 [search]
+[tmux]
+enabled = false
