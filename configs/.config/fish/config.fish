@@ -7,6 +7,12 @@ if status is-interactive
   if test -z "$TMUX"
     exec tmux
   end
+  # init zoxide
+  # https://github.com/ajeetdsouza/zoxide
+  zoxide init --cmd j fish | source
+  # init atuin
+  # https://github.com/atuinsh/atuin
+  atuin init fish --disable-up-arrow | source
 end
 
 set -U fish_greeting
@@ -40,14 +46,6 @@ set -gx BROWSER (which firefox)
 
 # use sccache for rustc
 set -gx RUSTC_WRAPPER (which sccache)
-
-# init zoxide
-# https://github.com/ajeetdsouza/zoxide
-zoxide init --cmd j fish | source
-
-# init atuin
-# https://github.com/atuinsh/atuin
-atuin init fish --disable-up-arrow | source
 
 ## aliases
 # use colors
@@ -123,4 +121,3 @@ if command -v zeditor &>/dev/null
   alias z zeditor
   alias code zeditor
 end
-
