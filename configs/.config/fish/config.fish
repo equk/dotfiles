@@ -12,7 +12,9 @@ if status is-interactive
   zoxide init --cmd j fish | source
   # init atuin
   # https://github.com/atuinsh/atuin
-  atuin init fish --disable-up-arrow | source
+  ##atuin init fish --disable-up-arrow | source
+  ##atuin now seperated in conf.d/atuin.fish
+  ##atuin script has some custom changes
 end
 
 set -U fish_greeting
