@@ -7,7 +7,10 @@
 # github.com/equk
 ##
 if status is-interactive
-    set -gx ATUIN_SESSION (atuin uuid)
+    if not set -q ATUIN_SESSION; or test "$ATUIN_SHLVL" != "$SHLVL"
+        set -gx ATUIN_SESSION (atuin uuid)
+        set -gx ATUIN_SHLVL $SHLVL
+    end
     set --erase ATUIN_HISTORY_ID
 
     function _atuin_preexec --on-event fish_preexec
