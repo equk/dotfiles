@@ -115,6 +115,7 @@ alias pacdl 'p -Syuw'
 # dropped paru as outdated libalpm (why no static linking)
 if command -v yay &>/dev/null
   alias p yay
+  alias paccleanup 'yay -Sc'
 end
 
 # use zed editor
