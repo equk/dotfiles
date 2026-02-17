@@ -86,6 +86,10 @@
                 "check": {
                     "command": "clippy",
                 },
+                "files": {
+                    "watcher": "server",
+                    "exclude": ["**/.git/**", "**/target/**"],
+                },
             },
         },
     },
