@@ -7,6 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+    "edit_predictions": {
+        "provider": "none",
+    },
     "inlay_hints": {
         "enabled": true,
     },
@@ -44,9 +47,6 @@
         "mode": "dark",
         "light": "One Light",
         "dark": "Rosé Pine Moon",
-    },
-    "features": {
-        "edit_prediction_provider": "none",
     },
     "disable_ai": true,
     "inline_code_actions": false,
