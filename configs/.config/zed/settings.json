@@ -93,6 +93,11 @@
         "search.match_background": "#00aaee90",
     },
     "languages": {
+        "Rust": {
+            "inlay_hints": {
+                "enabled": false,
+            },
+        },
         "CSS": {
             "language_servers": [
                 "!tailwindcss-language-server",
