@@ -90,6 +90,14 @@
                     "watcher": "server",
                     "exclude": ["**/.git/**", "**/target/**"],
                 },
+                // disabe checkOnSave for large projects
+                // disable diagnostics for large projects
+                // use bacon instead
+                // https://github.com/Canop/bacon
+                "checkOnSave": false,
+                "diagnostics": {
+                    "enable": false,
+                },
             },
         },
     },
