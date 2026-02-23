@@ -179,6 +179,9 @@ copy ~/.config/sway/config
 echo -e "$gplus copying zed editor configuration"
 copy ~/.config/zed/settings.json
 
+echo -e "$gplus copying kitty configuration files"
+copy ~/.config/kitty/kitty.conf
+
 # FINISHED
 echo -e ""
 echo -e "$green+++$reset finished copying equk configuration files"
