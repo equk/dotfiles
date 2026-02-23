@@ -46,3 +46,5 @@ vim.opt.listchars:append {
   multispace = '·',
 }
 vim.opt.list = true
+-- disable mouse
+vim.opt.mouse = ''
