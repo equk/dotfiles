@@ -167,6 +167,12 @@ for file in $(find ~/.config/eza -type f); do
     copy $file
 done
 
+echo -e "$gplus copying zellij configuration files"
+for file in $(find ~/.config/zellij/layouts -type f); do
+    copy $file
+done
+copy ~/.config/zellij/config.kdl
+
 # echo -e "$gplus copying visual studio code flags for wayland"
 # copy ~/.config/code-flags.conf
 
