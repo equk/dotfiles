@@ -17,7 +17,8 @@ More Info:
 | Lock Screen | [Swaylock](https://github.com/swaywm/swaylock) |
 | Status Bar | [Waybar](https://github.com/Alexays/Waybar) |
 | Notifications | [fnott](https://codeberg.org/dnkl/fnott) |
-| Terminal | 🦀[Alacritty](https://alacritty.org/) |
+| Terminal | [kitty](https://github.com/kovidgoyal/kitty) |
+| T-Multiplexer | [tmux](https://github.com/tmux/tmux) |
 | Shell | 🦀[fish](https://github.com/fish-shell/fish-shell) |
 | Shell History | [atuin](https://github.com/atuinsh/atuin) |
 | Editor | [neovim](https://github.com/neovim/neovim/) |
