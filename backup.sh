@@ -77,6 +77,9 @@ function copy() {
 
 # START COPYING FILES
 
+echo -e "$gplus copying bash configuration"
+copy ~/.bashrc
+
 echo -e "$gplus copying zsh configuration files"
 copy ~/.zsh/config.sh
 for file in $(find ~/.zsh/lib -type f); do
