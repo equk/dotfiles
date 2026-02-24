@@ -20,7 +20,6 @@ bold="\033[1;37m"
 reset="\033[0m"
 
 # VARIABLES
-base_files=".bashrc .zshrc .tmux.conf .Xdefaults .Xresources"
 day=$(date '+%d/%m/%Y')
 
 gplus="[$green+$reset]"
@@ -77,10 +76,6 @@ function copy() {
 }
 
 # START COPYING FILES
-echo -e "$gplus copying base files"
-for file in $base_files; do
-    copy $HOME/$file
-done
 
 echo -e "$gplus copying zsh configuration files"
 copy ~/.zsh/config.sh
