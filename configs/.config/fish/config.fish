@@ -7,6 +7,8 @@ if status is-interactive
   #if test -z "$TMUX"
   #  exec tmux
   #end
+  # start zellij
+  eval (zellij setup --generate-auto-start fish | string collect)
   # init zoxide
   # https://github.com/ajeetdsouza/zoxide
   zoxide init --cmd j fish | source
