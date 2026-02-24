@@ -4,11 +4,9 @@ if status is-interactive
     exec sway
   end
   # start tmux
-  #if test -z "$TMUX"
-  #  exec tmux
-  #end
-  # start zellij
-  eval (zellij setup --generate-auto-start fish | string collect)
+  if test -z "$TMUX"
+    exec tmux
+  end
   # init zoxide
   # https://github.com/ajeetdsouza/zoxide
   zoxide init --cmd j fish | source
