@@ -125,8 +125,8 @@ if command -v zeditor &>/dev/null
   alias code zeditor
 end
 
-# zellij new named tab using layout
-if command -v zellij &>/dev/null
-  alias dev 'zellij action new-tab --layout dev --name $(fish_prompt_pwd_dir_length=1 prompt_pwd)'
+# tmux new named tab using layout
+if test -n "$TMUX"
+  alias dev '~/.config/tmux/layouts/dev.fish'
 end
 
