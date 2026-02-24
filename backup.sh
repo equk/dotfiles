@@ -171,6 +171,12 @@ for file in $(find ~/.config/zellij/layouts -type f); do
 done
 copy ~/.config/zellij/config.kdl
 
+echo -e "$gplus copying tmux configuration files"
+for file in $(find ~/.config/tmux/layouts -type f); do
+    copy $file
+done
+copy ~/.config/tmux/tmux.conf
+
 # echo -e "$gplus copying visual studio code flags for wayland"
 # copy ~/.config/code-flags.conf
 
