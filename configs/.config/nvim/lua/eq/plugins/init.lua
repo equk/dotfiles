@@ -143,10 +143,6 @@ return require('lazy').setup {
       { '<c-j>', '<cmd><C-U>TmuxNavigateDown<cr>' },
       { '<c-k>', '<cmd><C-U>TmuxNavigateUp<cr>' },
       { '<c-l>', '<cmd><C-U>TmuxNavigateRight<cr>' },
-      { '<c-Left>', '<cmd><C-U>TmuxNavigateLeft<cr>' },
-      { '<c-Down>', '<cmd><C-U>TmuxNavigateDown<cr>' },
-      { '<c-Up>', '<cmd><C-U>TmuxNavigateUp<cr>' },
-      { '<c-Right>', '<cmd><C-U>TmuxNavigateRight<cr>' },
     },
   },
   ---- linter on save
