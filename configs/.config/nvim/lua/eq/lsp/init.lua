@@ -12,6 +12,14 @@ lspconf.rust_analyzer = {
       check = {
         command = 'clippy',
       },
+      files = {
+        watcher = 'server',
+        exclude = { '**/.git/**', '**/target/**' },
+      },
+      -- disable cache priming to speedup startup
+      cachePriming = {
+        enable = false,
+      },
     },
   },
 }
