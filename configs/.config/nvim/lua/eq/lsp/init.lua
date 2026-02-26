@@ -9,12 +9,6 @@ lspconf.rust_analyzer = {
   capabilities = capabilities,
   settings = {
     ['rust-analyzer'] = {
-      cargo = {
-        loadOutDirsFromCheck = true,
-      },
-      procMacro = {
-        enable = true,
-      },
       check = {
         command = 'clippy',
       },
