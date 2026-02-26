@@ -7,7 +7,13 @@ More Info:
 - [Automated dotfiles - equk's blog](https://equk.co.uk/2019/07/24/automated-dotfiles)
 - [Switching to Wayland - equk's blog](https://equk.co.uk/2023/09/08/switching-to-wayland/)
 
-![](./screenshots/hyprland_desktop.jpg)
+- [Hyprland Screenshot - 2023](https://raw.githubusercontent.com/equk/dotfiles/master/screenshots/hyprland_desktop.jpg)
+
+> [!note]
+> Now using Sway as main Window Manager
+
+> [!important]
+> Changed terminal to `kitty` & have setup `tmux` with custom binds for splits
 
 | | |
 |---|---|
