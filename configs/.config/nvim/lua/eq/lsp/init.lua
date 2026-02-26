@@ -16,11 +16,25 @@ lspconf.rust_analyzer = {
         watcher = 'server',
         exclude = { '**/.git/**', '**/target/**' },
       },
+      -- disabe checkOnSave for bacon-ls
+      -- disable diagnostics for bacon-ls
+      checkOnSave = false,
+      diagnostics = {
+        enable = false,
+      },
       -- disable cache priming to speedup startup
       cachePriming = {
         enable = false,
       },
     },
+  },
+}
+-- [lsp] bacon-ls
+lspconf.bacon_ls = {
+  capabilities = capabilities,
+  init_options = {
+    updateOnSave = true,
+    updateOnSaveWaitMillis = 1000,
   },
 }
 -- [lsp] typescript
@@ -86,6 +100,7 @@ lspconf.lua_ls = {
 ---- enable lsp sources
 vim.lsp.enable {
   'rust_analyzer',
+  'bacon_ls',
   'ts_ls',
   'vue_ls',
   'svelte',
