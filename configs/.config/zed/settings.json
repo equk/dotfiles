@@ -90,14 +90,14 @@
                     "watcher": "server",
                     "exclude": ["**/.git/**", "**/target/**"],
                 },
-                // disabe checkOnSave for large projects
-                // disable diagnostics for large projects
-                // use bacon instead
-                // https://github.com/Canop/bacon
-                "checkOnSave": false,
-                "diagnostics": {
-                    "enable": false,
-                },
+                // disabe checkOnSave for bacon-ls
+                // disable diagnostics for bacon-ls
+                // bacon-ls not supported in zed yet
+                // "checkOnSave": false,
+                // "diagnostics": {
+                //     "enable": false,
+                // },
+                // disable cache priming to speedup startup
                 "cachePriming": {
                     "enable": false,
                 },
