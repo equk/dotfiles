@@ -48,3 +48,5 @@ vim.opt.listchars:append {
 vim.opt.list = true
 -- disable mouse
 vim.opt.mouse = ''
+-- set clipboard for tmux
+vim.opt.clipboard = 'unnamedplus'
