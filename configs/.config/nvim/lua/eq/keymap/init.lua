@@ -9,6 +9,7 @@ local lsp_active_keymap = augroup('LSPAttached', {})
 
 -- telescope
 vim.keymap.set('n', '<C-p>', ':lua require"telescope.builtin".find_files { previewer = false }<CR>')
+vim.keymap.set('n', '<C-]>', require('telescope.builtin').diagnostics)
 
 -- general
 vim.keymap.set('n', '<leader>q', ':q<CR>')
@@ -75,9 +76,6 @@ autocmd('LspAttach', {
       vim.diagnostic.goto_next()
     end, opts)
     vim.keymap.set('n', ']d', function()
-      vim.diagnostic.goto_prev()
-    end, opts)
-    vim.keymap.set('n', '<C-]>', function()
       vim.diagnostic.goto_prev()
     end, opts)
     vim.keymap.set('n', '<C-i>', function()
