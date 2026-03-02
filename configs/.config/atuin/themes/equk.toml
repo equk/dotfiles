@@ -2,11 +2,11 @@
 name = "equk"
 
 [colors]
-AlertInfo = "#68fd5b"
-AlertWarn = "#ff8f40"
-AlertError = "#e6b450"
-Annotation = "#59C2FF"
+AlertInfo = "#a6da95"
+AlertWarn = "#eb6f92"
+AlertError = "#f0fa8b"
+Annotation = "#9ccfd8"
 Base = "#ffffff"
-Guidance = "#b3b3b3"
-Important = "#ef4049"
-Title = "#59C2FF"
+Guidance = "#c3c3c3"
+Important = "#e54270"
+Title = "#3e8fb0"
