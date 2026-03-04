@@ -55,8 +55,10 @@ lspconf.gopls = {
   capabilities = capabilities,
 }
 -- [lsp] elixir
-lspconf.elixirls = {
-  cmd = { 'elixir-ls' },
+lspconf.expert = {
+  cmd = { 'expert', '--stdio' },
+  root_markers = { 'mix.exs', '.git' },
+  filetypes = { 'elixir', 'eelixir', 'heex' },
   capabilities = capabilities,
 }
 -- [lsp] lua_ls
@@ -105,6 +107,6 @@ vim.lsp.enable {
   'vue_ls',
   'svelte',
   'gopls',
-  'elixirls',
+  'expert',
   'lua_ls',
 }
