@@ -40,6 +40,11 @@ vim.keymap.set('n', '<S-l>', '<cmd>bnext<cr>')
 --vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 --vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+-- open git tui in tmux window
+vim.keymap.set('n', 'g', function()
+  os.execute 'tmux popup -h 75% -w 75% -E lazygit'
+end, { desc = 'open git tui in new tmux popup' })
+
 -- lazy
 vim.keymap.set('n', '<leader>l', '<cmd>Lazy<cr>')
 
