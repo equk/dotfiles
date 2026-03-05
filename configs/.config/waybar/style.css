@@ -92,10 +92,10 @@ button:hover {
 #mpd {
     padding: 0 10px;
     color: #fff;
-    background-color: rgba(100, 100, 100, 0.1);
+    background-color: rgba(134, 85, 168, 0.3);
     /* background-color: #022440; */
     margin-bottom: 1px;
-    border-radius: 5px;
+    /* border-radius: 5px; */
 }
 
 #window,
