@@ -145,10 +145,6 @@ return require('lazy').setup {
       { '<c-l>', '<cmd><C-U>TmuxNavigateRight<cr>' },
     },
   },
-  ---- linter on save
-  'dense-analysis/ale',
-  ---- display indentation lines
-  -- 'lukas-reineke/indent-blankline.nvim', -- disabled to test indent dots
   ---- helpers / misc plugins
   {
     'windwp/nvim-autopairs',
