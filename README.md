@@ -6,14 +6,9 @@ More Info:
 
 - [Automated dotfiles - equk's blog](https://equk.co.uk/2019/07/24/automated-dotfiles)
 - [Switching to Wayland - equk's blog](https://equk.co.uk/2023/09/08/switching-to-wayland/)
+- [Using Sway in 2026 - equk's blog](https://equk.co.uk/2026/01/18/using-sway-in-2026/)
 
 - [Hyprland Screenshot - 2023](https://raw.githubusercontent.com/equk/dotfiles/master/screenshots/hyprland_desktop.jpg)
-
-> [!note]
-> Now using Sway as main Window Manager
-
-> [!important]
-> Changed terminal to `kitty` & have setup `tmux` with custom binds for splits
 
 | | |
 |---|---|
@@ -48,17 +43,21 @@ More Info:
 > [!note]
 > using `zed-preview-bin` (aur) in archlinux as the default zed package has too many unused dependencies
 
+### neovim
+
+neovim config should install plugins automatically using `lazy.nvim`
+
+language servers are installed using linux package manager (not mason)
+
+---
+
+## Old
+
 ### vscode
 
 to install vscode extensions run
 
     xargs -n 1 -a lists/vscode_extensions.txt code --install-extension
-
-### neovim
-
-neovim config should install plugins automatically using lazy.nvim
-
-language servers are installed using linux package manager (not mason)
 
 ### firefox
 
