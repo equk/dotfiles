@@ -12,6 +12,5 @@ require 'eq.lualine'
 require 'eq.bufferline'
 require 'eq.telescope'
 require 'eq.treesitter'
-require 'eq.ale'
 require 'eq.keymap'
 ----
