@@ -13,4 +13,5 @@ require 'eq.bufferline'
 require 'eq.telescope'
 require 'eq.treesitter'
 require 'eq.keymap'
+require 'eq.filetype'
 ----
