@@ -5,6 +5,8 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 local lspconf = vim.lsp.config
 --- eslint on_attach
 local eslint_on_attach = vim.lsp.config.eslint.on_attach
+--- oxlint on_attach
+local oxlint_on_attach = vim.lsp.config.oxlint.on_attach
 ---- lsp sources
 -- [lsp] rust-analyzer
 lspconf.rust_analyzer = {
@@ -52,6 +54,17 @@ vim.lsp.config("eslint", {
     vim.api.nvim_create_autocmd("BufWritePre", {
       buffer = bufnr,
       command = "LspEslintFixAll",
+    })
+  end,
+})
+-- [lsp] oxlint
+vim.lsp.config("oxlint", {
+  on_attach = function(client, bufnr)
+    if not oxlint_on_attach then return end
+    oxlint_on_attach(client, bufnr)
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      buffer = bufnr,
+      command = "LspOxlintFixAll",
     })
   end,
 })
@@ -117,6 +130,7 @@ vim.lsp.enable {
   'rust_analyzer',
   'bacon_ls',
   'ts_ls',
+  'oxlint',
   'eslint',
   'vue_ls',
   'svelte',
