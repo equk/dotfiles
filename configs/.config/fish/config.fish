@@ -81,7 +81,8 @@ alias cat 'bat'
 alias lg 'lazygit'
 # kubernetes
 alias k 'kubectl'
-
+# curl download
+alias dl 'curl -#LOC - '
 # network related
 alias ip 'ip -c'
 alias pscan 'proxychains nmap -sTV -PN -n -p21,22,25,80,3306,3389 '
