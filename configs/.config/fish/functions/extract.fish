@@ -16,7 +16,7 @@ function extract --description "Expand or extract bundled & compressed files"
         case "*.rar"
           unrar x $file
         case "*.zip"
-          unzip -uo $file -d (basename $file .zip)
+          unzip $file
         case "*.Z"
           uncompress $file
         case "*.pax"
