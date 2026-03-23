@@ -154,6 +154,9 @@ for_window [app_id="Chromium-browser"] mark Browser
 for_window [app_id="brave-browser"] mark Browser
 for_window [app_id="firefox"] mark Browser
 
+# godot floating
+for_window [class="^Godot$"] floating enable
+
 # disable screensaver for fullscreen browser windows
 for_window [con_mark="Browser"] {
     inhibit_idle fullscreen
